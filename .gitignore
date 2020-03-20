@@ -1,0 +1,8 @@
+.DS_Store
+
+public
+resources
+.idea
+hugo
+hugo.exe
+node_modules
