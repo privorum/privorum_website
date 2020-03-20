@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Team on Privorum Blockchain Software Development Company</title>
+    <link>https://privorum.com/team/</link>
+    <description>Recent content in Team on Privorum Blockchain Software Development Company</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 19 Nov 2018 10:47:58 +1000</lastBuildDate>
+    
+	<atom:link href="https://privorum.com/team/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Thomas Modeneis</title>
+      <link>https://privorum.com/team/thomas-modeneis/</link>
+      <pubDate>Mon, 19 Nov 2018 10:47:58 +1000</pubDate>
+      
+      <guid>https://privorum.com/team/thomas-modeneis/</guid>
+      <description>I help companies to identify and make the best use of their key performance indicators, services and Big Data.
+With 15 years of work experience on different projects, countries and languages, I&amp;rsquo;m a specialist in creating, designing, testing and managing high performance APIs and services.
+I have influenced decisions and performed work in several roles within the IT industry. From Developer to Director, including Solutions Architect and Technical Tester.
+I have been actively building Blockchain core software, currently we are engaged in Dusk Network Polkadot Gossamer, MDL, Smilo and ETC</description>
+    </item>
+    
+    <item>
+      <title>Elmo Modeneis</title>
+      <link>https://privorum.com/team/elmo-modeneis/</link>
+      <pubDate>Mon, 19 Nov 2018 10:47:58 +1000</pubDate>
+      
+      <guid>https://privorum.com/team/elmo-modeneis/</guid>
+      <description>We have built a network which allows users to bid for and offer virtual goods for sale in an interactive tender marketplace. By developing this app with Ethereum, We were able to demonstrate how to run a enterprise ready application and highlighted one of the best features that our customers want, privacy.</description>
+    </item>
+    
+  </channel>
+</rss>

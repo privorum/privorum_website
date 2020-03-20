@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Services on Privorum Blockchain Software Development Company</title>
+    <link>https://privorum.com/services/</link>
+    <description>Recent content in Services on Privorum Blockchain Software Development Company</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 28 Nov 2018 15:15:34 +1000</lastBuildDate>
+    
+	<atom:link href="https://privorum.com/services/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>DApp development</title>
+      <link>https://privorum.com/services/dapp-development/</link>
+      <pubDate>Sun, 18 Nov 2018 12:33:46 +1000</pubDate>
+      
+      <guid>https://privorum.com/services/dapp-development/</guid>
+      <description>Privorum is a technology company that provides a range of development services including DApp development and custom blockchain solutions.
+Our dApp Development Services Leveraging the our experience in product development, we help clients experience the potential of blockchain technology. From smart contracts to decentralized exchanges and applications, our dApp Development Team can help businesses stay on the competitive edge in the decentralized applications world.
+ MVP Consulting User Interface Decentralized Exchange Development Cloud Services Smart Contracts Decentralized Storage dApp Porting dApp Upgrade Services  We convert ideas into practical decentralized applications that are scalable and reliable.</description>
+    </item>
+    
+    <item>
+      <title>Security Audits</title>
+      <link>https://privorum.com/services/security-audit/</link>
+      <pubDate>Sun, 18 Nov 2018 12:33:46 +1000</pubDate>
+      
+      <guid>https://privorum.com/services/security-audit/</guid>
+      <description>Privorum team of specialists, is able to verify that your distributed systems work as intended by performing an audit. Our engineers will fully review your system’s architecture and codebase, and write a report that includes actionable feedback for every issue found.
+ CONTACT You specify an audit-ready code commit through the email below
+ QUOTE You get a quote and timeline
+ AUDIT We start the audit
+ REPORT We privately send the report to your team</description>
+    </item>
+    
+    <item>
+      <title>Blockchain Permissionless</title>
+      <link>https://privorum.com/services/permissionless/</link>
+      <pubDate>Wed, 28 Nov 2018 15:15:34 +1000</pubDate>
+      
+      <guid>https://privorum.com/services/permissionless/</guid>
+      <description>Privorum is a leading company that provides education, advisory, and blockchain development services focused on Ethereum, Polkadot, Dusk, Skycoin and Bitcoin codebases.
+Ethereum  go-ethereum go-ethereum Authors  Ethereum was initially proposed in 2013 in a white paper by Vitalik Buterin, a cryptocurrency researcher and programmer. In the white paper, Vitalik Buterin described Ethereum as a public, open-source, Blockchain-based computing platform featuring smart contract functionality. Since the release of Ethereum in 2015, several other projects featuring smart contract functionality have emerged, but these platforms are unable to host both private and public smart contracts.</description>
+    </item>
+    
+    <item>
+      <title>Blockchain Permissioned</title>
+      <link>https://privorum.com/services/permissioned/</link>
+      <pubDate>Wed, 28 Nov 2018 15:15:26 +1000</pubDate>
+      
+      <guid>https://privorum.com/services/permissioned/</guid>
+      <description>Privorum develops end-to-end enterprise-grade blockchain solutions for businesses that want to deploy blockchain technology.
+Distributed databases have emerged making it possible for many people to access certain parts of data simultaneously. However the significance of the databases have changed today and the world is asking for a global network that can allow different people to access the same data while guaranteeing the state of it as a whole, thereby improving the security and trust.</description>
+    </item>
+    
+    <item>
+      <title>Reduce operational costs</title>
+      <link>https://privorum.com/services/reduce-costs/</link>
+      <pubDate>Wed, 28 Nov 2018 15:14:54 +1000</pubDate>
+      
+      <guid>https://privorum.com/services/reduce-costs/</guid>
+      <description> Privorum is a financial technology company that provides enterprise-grade blockchain solutions to digitize assets, launch crypto markets, and reduce operational costs.
+Vosbor Exchange  Thomas Modeneis - CTO  </description>
+    </item>
+    
+    <item>
+      <title>Blockchain Advisory</title>
+      <link>https://privorum.com/services/blockchain-advisory/</link>
+      <pubDate>Wed, 28 Nov 2018 15:14:39 +1000</pubDate>
+      
+      <guid>https://privorum.com/services/blockchain-advisory/</guid>
+      <description> We provide advisory services for VC firms that wants to audit and understand if a blockchain project is feasible or not from the technology and development standpoint.
+WeShare Ventures  Blockchain Advisor - Thomas Modeneis  </description>
+    </item>
+    
+  </channel>
+</rss>
