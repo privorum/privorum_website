@@ -1,5 +1,17 @@
 [
   {
+    "title": "ChainSafe",
+    "description": "Chainsafe is a grassroots team of developers from Toronto, they organize a few community initiatives including the Görli testnet, University of Toronto Decentralized Tech Association, Blockchain Ryerson, UofT Blockchain Group and a few local hackathons!",
+    "image": "images/clients/chainsafe.png",
+    "link": "https://chainsafe.io/"
+  },
+  {
+    "title": "Dusk",
+    "description": "Dusk Network: the new blockchain standard for control, compliance and collaboration.\n Dusk Network is technology for securities. An open source and secure blockchain (DLT) infrastructure that businesses use to tokenize financial instruments and automate costly processes.",
+    "image": "images/clients/dusk.png",
+    "link": "https://chainsafe.io/"
+  },
+  {
     "title": "Ethereum",
     "description": "Ethereum is an open source, public, blockchain-based distributed computing platform and operating system featuring smart contract functionality. It supports a modified version of Nakamoto consensus via transaction-based state transitions.",
     "image": "images/clients/ethereum.png",
@@ -41,12 +53,7 @@
     "image": "images/clients/etc.png",
     "link": "https://etccooperative.org/"
   },
-  {
-    "title": "ChainSafe",
-    "description": "Chainsafe is a grassroots team of developers from Toronto, they organize a few community initiatives including the Görli testnet, University of Toronto Decentralized Tech Association, Blockchain Ryerson, UofT Blockchain Group and a few local hackathons!",
-    "image": "images/clients/chainsafe.png",
-    "link": "https://chainsafe.io/"
-  },
+
   {
     "title": "HolidayCheck",
     "description": "HolidayCheck Group AG, Munich, is a leading European digital company for holidaymakers. Employing around 400 personnel, the company brings four well-known holiday brands together under one roof.",
