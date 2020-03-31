@@ -42,6 +42,11 @@ theme = "hugo-serif-theme"
       url = "/clients/"
         weight = 3
 
+  [[menu.main]]
+      name = "Protocols"
+      url = "/protocols/"
+        weight = 4
+
   # Footer Menu
   [[menu.footer]]
     name = "Home"

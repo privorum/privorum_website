@@ -66,10 +66,6 @@ Besides, this consensus mechanism also empowers the community with the autonomy 
 Polkadot empowers blockchain networks to work together under the protection of shared security
 
 
-### Gossamer
-The Golang Polkadot Runtime Environment Implementation (WIP) - [Github](https://github.com/ChainSafe/gossamer)
-
-
 ## Skycoin
 
 ### MDL Talent Hub Blockchain (Skycoin codebase)
