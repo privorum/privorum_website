@@ -13,11 +13,6 @@
   </url>
   
   <url>
-    <loc>https://privorum.com/team/elmo-modeneis/</loc>
-    <lastmod>2018-11-19T10:47:58+10:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://privorum.com/services/security-audit/</loc>
     <lastmod>2018-11-18T12:33:46+10:00</lastmod>
   </url>
@@ -76,6 +71,10 @@
   
   <url>
     <loc>https://privorum.com/404/</loc>
+  </url>
+  
+  <url>
+    <loc>https://privorum.com/protocols/</loc>
   </url>
   
   <url>
