@@ -7,5 +7,3 @@ draft: false
 
 Privorum is a financial technology company that provides enterprise-grade blockchain solutions to digitize assets, launch crypto markets, and reduce operational costs.
 
-## Vosbor Exchange
-* Thomas Modeneis - CTO
