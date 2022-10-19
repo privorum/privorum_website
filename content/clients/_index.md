@@ -5,7 +5,7 @@ intro_image_absolute: false
 intro_image_hide_on_mobile: true
 ---
 
-# Clients
+# Previous Clients
 
 
 Privorum is a reliable development company passionate about building successful, smooth-running, user-friendly, and resilient products for their clients. 
