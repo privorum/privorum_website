@@ -5,8 +5,8 @@ intro_image_absolute: true # edit /assets/scss/components/_intro-image.scss for 
 intro_image_hide_on_mobile: true
 ---
 
-# Privorum - A Blockchain Development Company.
+# Build AI sidebots and serious backend systems.
 
-## Privorum was founded in the year 2020 in Amsterdam by Thomas and is a dedicated R&D lab for Blockchain technologies. It offers a full range of services which include architecture design, blockchain consulting, support and maintenance, services and applications development and smart contracts.
-   
-.
+## Privorum helps companies design and ship workflow automation, AI-driven products, backend platforms, and distributed systems with the discipline needed for production.
+
+We bring senior technical leadership across AI services, backend engineering, platform reliability, and blockchain-native systems when the product requires deeper infrastructure experience.

@@ -5,17 +5,27 @@
 {{ define "main" }}
 <div class="intro">
   <div class="container">
-    <div class="row justify-content-start">
-      <div class="col-12 col-md-7 col-lg-6 order-2 order-md-1">
+    <div class="row align-items-center justify-content-start">
+      <div class="col-12 col-lg-6 order-2 order-md-1">
         {{ .Content }}
       </div>
-      {{ if .Params.intro_image }}
-      <div class="col-12 col-md-5 col-lg-6 order-1 order-md-2 position-relative">
-        <img
-          class="intro-image{{ if .Params.intro_image_absolute }} intro-image-absolute{{ end }}{{ if .Params.intro_image_hide_on_mobile }} intro-image-hide-mobile{{ end }}"
-          src="{{ .Params.intro_image | relURL }}" />
+      <div class="col-12 col-lg-6 order-1 order-md-2">
+        <div class="team-signal">
+          <div class="team-signal-grid"></div>
+          <div class="team-signal-card team-signal-card-primary">
+            <span class="team-signal-label">Team Focus</span>
+            <strong>Senior technical delivery</strong>
+            <p>Backend systems, AI products, infrastructure, analytics, and distributed software.</p>
+          </div>
+          <div class="team-signal-card team-signal-card-secondary">
+            <span class="team-signal-label">Working Style</span>
+            <strong>Practical execution</strong>
+            <p>Architecture, implementation, operations, and systems that need to work under real conditions.</p>
+          </div>
+          <div class="team-signal-node team-signal-node-a"></div>
+          <div class="team-signal-node team-signal-node-b"></div>
+        </div>
       </div>
-      {{ end }}
     </div>
   </div>
 </div>

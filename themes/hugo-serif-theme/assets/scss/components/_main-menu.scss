@@ -7,29 +7,34 @@
     display: flex;
     align-items: center;
     justify-content: flex-start;
+    gap: 6px;
     > li {
       list-style: none;
-      font-size: 1rem;
+      font-size: 0.95rem;
       > a {
-        padding: 10px 14px 10px 14px;
+        padding: 11px 14px;
         display: inline-block;
-        font-weight: regular;
+        font-weight: 500;
+        letter-spacing: 0.01em;
         text-decoration: none;
-        color: $primary;
+        color: $graphite;
+        border-radius: 999px;
+        transition: background-color 180ms ease, color 180ms ease;
         &:hover {
-          text-decoration: underline;
+          text-decoration: none;
+          background: rgba(59, 130, 246, 0.1);
+          color: $primary;
         }
       }
       &.active {
         > a {
-          background: $primary;
-          border-radius: 3px;
+          background: $graphite;
+          border-radius: 999px;
           text-decoration: none;
           color: #ffffff;
           &:hover {
             text-decoration: none;
-            background: $primary;
-            transition: all 225ms ease-in 0s;
+            background: $graphite;
             color: #ffffff;
           }
         }

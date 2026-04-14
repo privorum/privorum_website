@@ -16,60 +16,238 @@
 {{ end }}
 
 {{ define "main" }}
-<div class="intro">
+<section class="home-hero">
   <div class="container">
-    <div class="row justify-content-start">
-      <div class="col-12 col-md-7 col-lg-6 order-2 order-md-1">
+    <div class="row align-items-center">
+      <div class="col-12 col-lg-6">
+        <div class="intro-eyebrow">AI Systems, Backend Platforms, Distributed Software</div>
         {{ .Content }}
-        {{ partial "call.html" . }}
-      </div>
-      {{ if .Params.intro_image }}
-      <div class="col-12 col-md-5 col-lg-6 order-1 order-md-2 position-relative">
-        <img
-          class="intro-image{{ if .Params.intro_image_absolute }} intro-image-absolute{{ end }}{{ if .Params.intro_image_hide_on_mobile }} intro-image-hide-mobile{{ end }}"
-          src="{{ .Params.intro_image | relURL }}" />
-      </div>
-      {{ end }}
-    </div>
-  </div>
-</div>
-
-{{ $services := where (where .Site.RegularPages "Type" "services") ".Params.featured" true }}
-{{if gt (len $services) 0}}
-<div class="container pt-6 pb-md-5">
-  <div class="row justify-content-start">
-    {{ $services := where (where .Site.RegularPages "Type" "services") ".Params.featured" true }}
-    {{ range first 6 (sort $services ".Params.weight") }}
-    <div class="col-12 col-md-4 mb-1">
-      {{ .Render "summary" }}
-    </div>
-    {{ end }}
-    <div class="col-12 text-center">
-      <a class="button button-primary" href="{{ "services/" | relURL }}">View All Services</a>
-    </div>
-  </div>
-</div>
-{{end}}
-
-<div class="strip strip-grey">
-  <div class="container pt-6 pb-6 pt-md-10 pb-md-10">
-    <div class="row justify-content-center">
-      {{ range .Site.Data.features }}
-      <div class="col-12 col-md-6 col-lg-4 mb-2">
-        <div class="feature">
-          {{ if .image }}
-          <div class="feature-image"><img alt="{{ .title }} logo" src="{{ .image | relURL }}" /></div>
-          {{ end }}
-          <h2 class="feature-title">{{ .title }}</h2>
-          <div class="feature-content">
-            <p>{{ .description }}</p>
+        <div class="hero-actions">
+          <a class="button" href="{{ "contact/" | relURL }}">Book a Consultation</a>
+          <a class="hero-link" href="{{ "clients/" | relURL }}">View Clients</a>
+        </div>
+        <div class="hero-metrics">
+          <div class="hero-metric">
+            <strong>AI Workflows</strong>
+            <span>Connected to the tools, APIs, and operations around them.</span>
+          </div>
+          <div class="hero-metric">
+            <strong>Backend Depth</strong>
+            <span>Production-grade services, integrations, and data systems.</span>
+          </div>
+          <div class="hero-metric">
+            <strong>Distributed Systems</strong>
+            <span>Protocol and blockchain expertise where the architecture needs it.</span>
           </div>
         </div>
       </div>
-      {{end}}
+      <div class="col-12 col-lg-6">
+        <div class="systems-art">
+          <div class="systems-grid"></div>
+          <div class="systems-rail systems-rail-a"></div>
+          <div class="systems-rail systems-rail-b"></div>
+          <div class="systems-card systems-card-primary">
+            <span class="systems-label">Orchestration</span>
+            <strong>AI sidebots</strong>
+            <p>Connected to workflows, APIs, and production systems.</p>
+          </div>
+          <div class="systems-card systems-card-secondary">
+            <span class="systems-label">Delivery</span>
+            <strong>Backend platforms</strong>
+            <p>Reliable services, integrations, data pipelines, and observability.</p>
+          </div>
+          <div class="systems-card systems-card-tertiary">
+            <span class="systems-label">Depth</span>
+            <strong>Blockchain support</strong>
+            <p>Distributed systems expertise where protocol complexity actually matters.</p>
+          </div>
+          <div class="systems-panel systems-panel-main">
+            <span class="systems-label">Execution Layer</span>
+            <strong>Build, connect, operate.</strong>
+            <ul>
+              <li>Workflow design</li>
+              <li>System integration</li>
+              <li>Production reliability</li>
+            </ul>
+          </div>
+          <div class="systems-node systems-node-a"></div>
+          <div class="systems-node systems-node-b"></div>
+          <div class="systems-node systems-node-c"></div>
+        </div>
+      </div>
     </div>
   </div>
-</div>
+</section>
+
+<section class="home-proof">
+  <div class="container">
+    <div class="proof-shell">
+      <div class="row align-items-end">
+        <div class="col-12 col-lg-5">
+          <div class="proof-copy">
+            <span class="section-kicker">Selected Clients</span>
+            <h2>Trusted across AI, analytics, trading, infrastructure, and distributed software.</h2>
+            <p class="section-intro">The work spans new AI products, data-heavy platforms, backend systems, and blockchain-native environments where reliability actually matters.</p>
+          </div>
+        </div>
+        <div class="col-12 col-lg-7">
+          <div class="proof-grid">
+            {{ range first 8 .Site.Data.clients }}
+            <div class="proof-item">
+              <span>{{ .title }}</span>
+            </div>
+            {{ end }}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{{ $services := where (where .Site.RegularPages "Type" "services") ".Params.featured" true }}
+{{if gt (len $services) 0}}
+<section class="home-services">
+  <div class="container">
+    <div class="row align-items-end mb-3">
+      <div class="col-12 col-lg-7">
+        <span class="section-kicker">Capabilities</span>
+        <h2>What Privorum builds when the work needs technical depth.</h2>
+      </div>
+      <div class="col-12 col-lg-5">
+        <p class="section-intro">We support products that need practical architecture, integration discipline, and production-ready engineering rather than surface-level experimentation.</p>
+      </div>
+    </div>
+    <div class="row justify-content-start">
+      {{ range $i, $item := .Site.Data.service_areas }}
+      <div class="col-12 col-md-6 col-xl-4 mb-2">
+        <div class="overview-card">
+          <span class="overview-index">0{{ add $i 1 }}</span>
+          <h3>{{ $item.title }}</h3>
+          <p>{{ $item.description }}</p>
+        </div>
+      </div>
+      {{ end }}
+      <div class="col-12 pt-2">
+        <a class="button button-primary" href="{{ "services/" | relURL }}">View All Services</a>
+      </div>
+    </div>
+  </div>
+</section>
+{{end}}
+
+<section class="home-platform">
+  <div class="container">
+    <div class="row align-items-end mb-3">
+      <div class="col-12 col-lg-6">
+        <span class="section-kicker">Platform Thinking</span>
+        <h2>Designed for systems that need more than a prototype.</h2>
+      </div>
+      <div class="col-12 col-lg-6">
+        <p class="section-intro">Privorum works best when the product needs orchestration, integrations, and operational discipline rather than a thin AI layer. The delivery model is structured around three moves.</p>
+      </div>
+    </div>
+    <div class="row align-items-stretch">
+      <div class="col-12 col-lg-4 mb-2">
+        <div class="platform-card">
+          <span class="platform-label">01</span>
+          <h3>Define the workflow</h3>
+          <p>Map the business process, the user journey, and the system boundaries before implementation starts.</p>
+          <div class="platform-tags">
+            <span>Process design</span>
+            <span>Architecture scope</span>
+            <span>Risk reduction</span>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-lg-4 mb-2">
+        <div class="platform-card">
+          <span class="platform-label">02</span>
+          <h3>Connect the stack</h3>
+          <p>Wire AI, APIs, data sources, and operational systems into one reliable delivery layer with clear ownership.</p>
+          <div class="platform-tags">
+            <span>Integrations</span>
+            <span>Backend services</span>
+            <span>Data flow</span>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-lg-4 mb-2">
+        <div class="platform-card">
+          <span class="platform-label">03</span>
+          <h3>Operate in production</h3>
+          <p>Ship with observability, deployment discipline, and support for the complexity that appears after launch.</p>
+          <div class="platform-tags">
+            <span>Reliability</span>
+            <span>CI/CD</span>
+            <span>Observability</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="home-value-strip">
+  <div class="container">
+    <div class="value-shell">
+      <div class="row justify-content-center">
+        {{ range .Site.Data.features }}
+        <div class="col-12 col-md-6 col-lg-4 mb-2">
+          <div class="feature">
+            {{ if .image }}
+            <div class="feature-image"><img alt="{{ .title }} logo" src="{{ .image | relURL }}" /></div>
+            {{ end }}
+            <h2 class="feature-title">{{ .title }}</h2>
+            <div class="feature-content">
+              <p>{{ .description }}</p>
+            </div>
+          </div>
+        </div>
+        {{end}}
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="home-trust">
+  <div class="container">
+    <div class="row align-items-start">
+      <div class="col-12 col-lg-5 mb-3 mb-lg-0">
+        <span class="section-kicker">Why Privorum</span>
+        <h2>Senior technical leadership for systems that need to survive real use.</h2>
+        <p class="section-intro">Privorum works best when the product is important, the architecture matters, and the delivery needs to move beyond surface-level implementation.</p>
+      </div>
+      <div class="col-12 col-lg-7">
+        <div class="row">
+          <div class="col-12 col-md-6 mb-2">
+            <div class="trust-card">
+              <h3>Hands-on engineering</h3>
+              <p>Architecture, APIs, orchestration, cloud systems, and delivery execution with practical technical ownership.</p>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 mb-2">
+            <div class="trust-card">
+              <h3>AI plus infrastructure depth</h3>
+              <p>Not just prompts and wrappers. Privorum connects AI workflows to real systems, services, and operations.</p>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 mb-2">
+            <div class="trust-card">
+              <h3>Production mindset</h3>
+              <p>Reliability, observability, CI/CD, scaling, and maintainability are treated as part of the product, not afterthoughts.</p>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 mb-2">
+            <div class="trust-card">
+              <h3>Blockchain when it matters</h3>
+              <p>Privorum brings protocol and distributed-systems experience when the architecture genuinely requires it.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 {{ end }}
 
 {{ define "footer_js" }}

@@ -1,0 +1,22 @@
+[
+  {
+    "title": "Vosbor Exchange",
+    "description": "Commodity trading platform venture founded and built with hands-on technical leadership across APIs, mobile, DevOps, cloud infrastructure, and trading workflows.",
+    "link": "https://privorum.com/"
+  },
+  {
+    "title": "Unveil Art",
+    "description": "NFT marketplace MVP built by Privorum with Golang backend services, Solidity smart contracts, and marketplace integration flows.",
+    "link": "https://privorum.com/"
+  },
+  {
+    "title": "Biidin Appz",
+    "description": "Live product initiative focused on sidebot-style workflow automation and application orchestration.",
+    "link": "https://appz.biidin.com/"
+  },
+  {
+    "title": "NeverGoBlank",
+    "description": "AI career coaching product designed to help users prepare for interviews, reviews, negotiations, and other high-stakes moments.",
+    "link": "https://nevergoblank.com/"
+  }
+]

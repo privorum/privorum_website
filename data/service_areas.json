@@ -1,0 +1,26 @@
+[
+  {
+    "title": "AI Sidebots",
+    "description": "Design sidebots that connect models to workflows, products, internal tools, and customer operations."
+  },
+  {
+    "title": "Workflow Automation",
+    "description": "Reduce manual work by orchestrating tasks, systems, approvals, and operational handoffs."
+  },
+  {
+    "title": "Backend Platforms",
+    "description": "Build APIs, orchestration layers, services, and data pipelines that hold up in production."
+  },
+  {
+    "title": "Integrations & Infrastructure",
+    "description": "Connect cloud systems, third-party services, CI/CD, observability, and backend environments cleanly."
+  },
+  {
+    "title": "Analytics & Data Systems",
+    "description": "Create reliable data flows, dashboards, platform analytics, and operational reporting systems."
+  },
+  {
+    "title": "Blockchain & Distributed Systems",
+    "description": "Support blockchain-native and distributed architectures when protocol complexity actually matters."
+  }
+]

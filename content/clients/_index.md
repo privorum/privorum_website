@@ -5,9 +5,8 @@ intro_image_absolute: false
 intro_image_hide_on_mobile: true
 ---
 
-# Previous Clients
+# Clients
 
+Privorum has contributed to products, platforms, and technical initiatives across AI, analytics, marketplaces, trading infrastructure, backend systems, and blockchain-native software.
 
-Privorum is a reliable development company passionate about building successful, smooth-running, user-friendly, and resilient products for their clients. 
-With 20 years of experience, Thomas is a veteran in the custom software industry and has built best-selling, award-winning apps for clients worldwide.
- 
+This page brings older and newer clients together in one unified list.
