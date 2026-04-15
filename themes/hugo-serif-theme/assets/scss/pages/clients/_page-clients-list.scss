@@ -1,0 +1,37 @@
+.page-clients-list {
+  .clients-hero {
+    h1 {
+      max-width: 10ch;
+    }
+
+    p {
+      max-width: 40rem;
+    }
+  }
+
+  .clients-archive {
+    background:
+      linear-gradient(180deg, rgba(96, 165, 250, 0.08), rgba(203, 213, 225, 0.08)),
+      $cloud;
+  }
+
+  .client-archive-card {
+    min-height: 100%;
+
+    .feature-image {
+      align-items: center;
+    }
+
+    .feature-title {
+      margin-bottom: 0.8rem;
+    }
+
+    .feature-content {
+      p {
+        margin-bottom: 0;
+        font-size: 0.98rem;
+        line-height: 1.7;
+      }
+    }
+  }
+}

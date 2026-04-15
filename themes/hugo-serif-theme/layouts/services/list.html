@@ -3,28 +3,72 @@
 {{ define "header_classes" }}{{ end }}
 
 {{ define "main" }}
-<div class="intro">
+<section class="services-hero">
   <div class="container">
-    <div class="row justify-content-start">
-      <div class="col-12 col-md-7 col-lg-6 order-2 order-md-1">
+    <div class="row align-items-center">
+      <div class="col-12 col-lg-6">
+        <div class="intro-eyebrow">AI Workflows, Backend Engineering, Blockchain Systems</div>
         {{ .Content }}
+        <div class="hero-actions">
+          <a class="button" href="{{ "contact/" | relURL }}">Discuss Your System</a>
+        </div>
       </div>
-      {{ if .Params.intro_image }}
-      <div class="col-12 col-md-5 col-lg-6 order-1 order-md-2 position-relative">
-        <img
-          class="intro-image{{ if .Params.intro_image_absolute }} intro-image-absolute{{ end }}{{ if .Params.intro_image_hide_on_mobile }} intro-image-hide-mobile{{ end }}"
-          src="{{ .Params.intro_image | relURL }}" />
+      <div class="col-12 col-lg-6">
+        <div class="systems-art services-systems-art">
+          <div class="systems-grid"></div>
+          <div class="systems-card systems-card-primary">
+            <span class="systems-label">Build</span>
+            <strong>Production services</strong>
+            <p>APIs, orchestration, infrastructure, and data systems designed to last.</p>
+          </div>
+          <div class="systems-card systems-card-secondary">
+            <span class="systems-label">Adapt</span>
+            <strong>AI and automation</strong>
+            <p>Workflow systems that connect models to the tools and operations around them.</p>
+          </div>
+        </div>
       </div>
-      {{ end }}
     </div>
   </div>
-</div>
+</section>
 
-<div class="container pt-6 pb-md-12">
+<section class="services-overview">
+<div class="container">
+  <div class="row mb-3 align-items-end">
+    <div class="col-12 col-lg-8">
+      <span class="section-kicker">Service Areas</span>
+      <h2>What Privorum works on</h2>
+      <p>From AI-assisted workflows to distributed platforms, our services are designed for teams that need implementation depth, technical clarity, and production-ready systems.</p>
+    </div>
+  </div>
+  <div class="row">
+    {{ range $i, $item := .Site.Data.service_areas }}
+    <div class="col-12 col-md-6 col-xl-4 mb-2">
+      <div class="overview-card">
+        <span class="overview-index">0{{ add $i 1 }}</span>
+        <h3>{{ $item.title }}</h3>
+        <p>{{ $item.description }}</p>
+      </div>
+    </div>
+    {{ end }}
+  </div>
+</div>
+</section>
+
+<section class="services-overview services-specialized">
+<div class="container">
+  <div class="row mb-3 align-items-end">
+    <div class="col-12 col-lg-8">
+      <span class="section-kicker">Specialized Services</span>
+      <h2>Specialist and legacy service depth.</h2>
+      <p>These pages capture deeper blockchain-specific service areas and related technical capabilities that remain part of Privorum's experience.</p>
+    </div>
+  </div>
   <div class="row">
     {{ range .Pages.ByWeight }}
     <div class="col-12 col-md-6 mb-2 ">{{ .Render "summary" }}</div>
     {{ end }}
   </div>
 </div>
+</section>
 {{ end }}

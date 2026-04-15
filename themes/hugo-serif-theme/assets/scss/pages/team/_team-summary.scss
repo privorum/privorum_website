@@ -1,25 +1,161 @@
+.page-team-list {
+  .intro {
+    .container {
+      position: relative;
+    }
+
+    .row {
+      row-gap: 28px;
+    }
+  }
+
+  .team-signal {
+    position: relative;
+    min-height: 320px;
+    padding: 28px;
+    border: 1px solid rgba(59, 130, 246, 0.12);
+    border-radius: 26px;
+    background:
+      radial-gradient(circle at top right, rgba(96, 165, 250, 0.12), transparent 24%),
+      linear-gradient(160deg, rgba(17, 24, 39, 0.92), rgba(26, 34, 48, 0.9)),
+      #0f172a;
+    box-shadow: 0 24px 60px rgba(3, 7, 18, 0.24);
+    overflow: hidden;
+  }
+
+  .team-signal-grid {
+    position: absolute;
+    inset: 0;
+    background-image:
+      linear-gradient(rgba(96, 165, 250, 0.08) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(96, 165, 250, 0.08) 1px, transparent 1px);
+    background-size: 44px 44px;
+    mask-image: radial-gradient(circle at center, black 42%, transparent 88%);
+  }
+
+  .team-signal-card {
+    position: absolute;
+    max-width: 250px;
+    padding: 18px;
+    border: 1px solid rgba(96, 165, 250, 0.14);
+    border-radius: 18px;
+    background: linear-gradient(180deg, rgba(248, 250, 252, 0.96), rgba(226, 232, 240, 0.92));
+    box-shadow: 0 16px 32px rgba(3, 7, 18, 0.16);
+
+    strong {
+      display: block;
+      margin-bottom: 0.45rem;
+      color: $black;
+      font-size: 1.1rem;
+      line-height: 1.25;
+    }
+
+    p {
+      margin: 0;
+      font-size: 0.95rem;
+      line-height: 1.65;
+      color: $graphite;
+    }
+  }
+
+  .team-signal-label {
+    display: inline-block;
+    margin-bottom: 0.55rem;
+    color: $primary;
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  .team-signal-card-primary {
+    top: 32px;
+    left: 24px;
+  }
+
+  .team-signal-card-secondary {
+    right: 26px;
+    bottom: 30px;
+  }
+
+  .team-signal-node {
+    position: absolute;
+    border-radius: 999px;
+    background: radial-gradient(circle, rgba(59, 130, 246, 0.34), rgba(96, 165, 250, 0.04));
+  }
+
+  .team-signal-node-a {
+    width: 140px;
+    height: 140px;
+    top: -18px;
+    right: -10px;
+  }
+
+  .team-signal-node-b {
+    width: 86px;
+    height: 86px;
+    bottom: 24px;
+    left: 34px;
+  }
+
+  @media (max-width: 991px) {
+    .team-signal {
+      min-height: 280px;
+    }
+
+    .team-signal-card {
+      max-width: 220px;
+    }
+
+    .team-signal-card-primary {
+      top: 24px;
+      left: 20px;
+    }
+
+    .team-signal-card-secondary {
+      right: 18px;
+      bottom: 22px;
+    }
+  }
+}
+
 .team-summary {
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
+  height: 100%;
+  padding: 28px;
+  border: 1px solid rgba(42, 47, 56, 0.08);
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.78);
+  box-shadow: 0 14px 30px rgba(23, 25, 29, 0.04);
   .team-image {
-    margin-right: 10px;
+    margin-right: 18px;
+    margin-bottom: 14px;
     img {
-      border-radius: 50%;
-      height: 100px;
-      width: 100px;
+      border-radius: 24px;
+      height: 112px;
+      width: 112px;
+      object-fit: cover;
     }
   }
   .team-meta {
     flex: 1;
     h2 {
-      margin: 0;
+      margin: 0 0 0.2rem;
     }
     p {
-      margin: 0;
+      margin: 0 0 0.7rem;
+      color: $steel;
+    }
+    a {
+      color: $primary;
+      font-weight: 500;
+      text-decoration: none;
     }
   }
   .team-content {
     flex: 1 0 100%;
+    margin-top: 0.35rem;
   }
 }

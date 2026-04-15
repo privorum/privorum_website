@@ -6,29 +6,28 @@ featured: true
 weight: 2
 ---
 
-Privorum team of specialists, is able to verify that your distributed systems work as intended by performing an audit. 
-Our engineers will fully review your system’s architecture and codebase, and write a report that includes actionable feedback for every issue found.
+Privorum reviews distributed systems, smart contracts, and backend architectures to identify security issues, design weaknesses, and operational risk.
 
+Our audits are designed to produce actionable findings, not generic reports.
 
 1. CONTACT
-You specify an audit-ready code commit through the email below
+You share the audit scope and an audit-ready code commit.
 
 2. QUOTE
-You get a quote and timeline
+We provide a quote, scope, and timeline.
 
 3. AUDIT
-We start the audit
+We review architecture, code, and relevant system assumptions.
 
 4. REPORT
-We privately send the report to your team
+We send a private report with prioritized findings and practical remediation guidance.
 
 5. FIXES
-Your team fixes the issues
+Your team addresses the issues.
 
 6. PUBLISH
-We examine your fixes, update and publish the report (optional)
+We review the fixes and can update or publish the final report if needed.
 
 ## Security Standard
 
-Reduce barriers to entry by securely implementing blockchain-based technologies, using standard developer tools and platforms.
-
+Reduce risk by implementing distributed technologies with disciplined engineering, standard tooling, and clear review practices.

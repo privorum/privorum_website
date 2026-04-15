@@ -1,0 +1,22 @@
+[
+  {
+    "title": "Sphinx",
+    "description": "Hands-on CTO and engineering leadership for a high-throughput market-data and matching platform with strong reliability, observability, and scale requirements."
+  },
+  {
+    "title": "Genie AI",
+    "description": "Hands-on CTO leadership for AI product engineering, including LLM-powered services, release practices, and cloud-scale inference performance work."
+  },
+  {
+    "title": "Hydration / Basilisk DEX",
+    "description": "Lead architecture and infrastructure ownership across multi-cluster environments, high availability, monitoring, incident response, and automated rollouts."
+  },
+  {
+    "title": "Picasso",
+    "description": "Lead development contribution across service integrations, tooling, secure communication, performance hardening, and release readiness."
+  },
+  {
+    "title": "DefyTrends",
+    "description": "Built and led a crypto market intelligence platform focused on news aggregation, analytics, APIs, and reliable data pipelines for dashboards and alerts."
+  }
+]

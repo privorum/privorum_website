@@ -8,11 +8,10 @@ linkedinurl: "https://www.linkedin.com/in/thomasmodeneis"
 weight: 1
 ---
 
-I help companies to identify and make the best use of their key performance indicators, services and Big Data.
+I help companies define, build, and scale technical products that require strong architecture, operational discipline, and senior engineering judgment.
 
-With 20 years of work experience on different projects, countries and languages, I'm a specialist in creating, designing, testing and managing high performance APIs and services.
+With more than 20 years of experience across multiple industries, countries, and technical environments, I have worked in roles spanning founder, CTO, architect, developer, and technical advisor.
 
-I have influenced decisions and performed work in several roles within the IT industry. From Developer to Director, including Solutions Architect and Technical Tester.
+My background includes backend platforms, trading systems, blockchain products, analytics systems, distributed software, and cloud infrastructure.
 
-You have a Vision. I know the way to get you there.
-
+You have a vision. I help turn it into a system that can actually run.

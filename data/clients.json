@@ -1,5 +1,28 @@
 [
   {
+    "title": "Genie AI",
+    "description": "AI product platform supported through LLM-powered backend services, cloud infrastructure, release practices, and inference performance work.",
+    "image": "images/clients/genie.png",
+    "link": "https://opengenie.ai/"
+  },
+  {
+    "title": "DefyTrends",
+    "description": "Crypto intelligence and news aggregation platform built around analytics, APIs, and reliable data pipelines for dashboards and alerts.",
+    "image": "images/clients/defytrends.png"
+  },
+  {
+    "title": "Datafloq",
+    "description": "Datafloq is the one-stop source for big data, blockchain and artificial intelligence. We offer information, insights and opportunities to drive innovation with emerging technologies.\n",
+    "image": "images/clients/datafloq.png",
+    "link": "https://datafloq.com/"
+  },
+  {
+    "title": "Sphinx",
+    "description": "High-throughput trading and market-data platform supported through backend engineering, reliability, observability, and platform scale work.",
+    "image": "images/clients/sphinx.png",
+    "link": "https://www.sphx.io/"
+  },
+  {
     "title": "ChainSafe Systems",
     "description": "Chainsafe is a grassroots team of developers from Toronto, they organize a few community initiatives including the Görli testnet, University of Toronto Decentralized Tech Association, Blockchain Ryerson, UofT Blockchain Group and a few local hackathons!",
     "image": "images/clients/chainsafe.png",
@@ -66,12 +89,6 @@
     "link": "https://soujava.org.br/"
   },
   {
-    "title": "Datafloq",
-    "description": "Datafloq is the one-stop source for big data, blockchain and artificial intelligence. We offer information, insights and opportunities to drive innovation with emerging technologies.\n",
-    "image": "images/clients/datafloq.png",
-    "link": "https://datafloq.com/"
-  },
-  {
     "title": "Comentarismo",
     "description": "",
     "image": "images/clients/comentarismo.png",
@@ -79,8 +96,8 @@
   },
   {
     "title": "Mavin.org",
-    "description": "",
-    "image": "images/features/noun_3d modeling_1885342.svg",
+    "description": "A content rating tool to instantly recognise articles you can trust and to rate content yourself.",
+    "image": "images/clients/mavin.png",
     "link": "https://mavin.org"
   },
   {
@@ -88,6 +105,25 @@
     "description": "",
     "image": "images/clients/weshare.png",
     "link": "https://www.weshareventures.com/"
+  },
+  {
+    "title": "Vosbor Exchange",
+    "description": "Commodity trading platform built from concept through MVP, funding, and closed beta delivery with hands-on technical leadership across backend, frontend, DevOps, and cloud infrastructure.",
+    "image": "images/clients/vosbor.png",
+    "link": "https://privorum.com/"
+  },
+  {
+    "title": "Unveil Art",
+    "description": "NFT marketplace MVP built with Golang backend services, Solidity smart contracts, and marketplace integration flows.",
+    "image": "images/clients/unveil.svg",
+    "link": "https://privorum.com/"
+  },
+  {
+    "title": "Hydration / Basilisk DEX",
+    "description": "DEX and infrastructure platform supported through architecture, high availability, monitoring, runbooks, and automated rollouts."
+  },
+  {
+    "title": "Picasso",
+    "description": "Platform and integration work across secure inter-service communication, tooling, performance hardening, and release readiness."
   }
 ]
-

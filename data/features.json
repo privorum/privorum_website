@@ -1,17 +1,17 @@
 [
   {
-    "title": "Free Consultation",
-    "description": "New clients receive an obligation free consultation.",
+    "title": "AI Sidebots",
+    "description": "Design and deliver sidebots that plug into real workflows, tools, and business operations.",
     "image": "images/features/noun_branding_1885335.svg"
   },
   {
-    "title": "Certified Developers",
-    "description": "All members of our team are certified blockchain experts.",
+    "title": "Backend Platforms",
+    "description": "Build reliable APIs, services, orchestration layers, and data pipelines that hold up in production.",
     "image": "images/features/noun_The Process_1885341.svg"
   },
   {
-    "title": "Cost effective",
-    "description": "We stay up to date on the latest changes, always being able to deliver new tech fast and cost effective.",
+    "title": "Distributed Systems",
+    "description": "Apply deep experience in blockchain and high-complexity platforms when the system architecture demands it.",
     "image": "images/features/noun_3d modeling_1885342.svg"
   }
 ]

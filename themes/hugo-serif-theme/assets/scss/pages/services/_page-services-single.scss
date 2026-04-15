@@ -1,13 +1,114 @@
+.page-services-list {
+  .services-hero {
+    h1 {
+      max-width: 11ch;
+    }
+
+    p {
+      max-width: 40rem;
+    }
+  }
+}
+
+.service-summary {
+  height: 100%;
+  padding: 28px;
+  border: 1px solid rgba(59, 130, 246, 0.12);
+  border-radius: 18px;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.9), rgba(233, 238, 245, 0.9));
+  box-shadow: 0 16px 32px rgba(16, 20, 27, 0.06);
+
+  .service-content {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+
+  .service-title {
+    margin-bottom: 0.85rem;
+
+    a {
+      color: $black;
+      text-decoration: none;
+    }
+  }
+
+  p {
+    margin-bottom: 1.25rem;
+  }
+
+  .service-link {
+    margin-top: auto;
+    color: $primary;
+    font-weight: 600;
+    text-decoration: none;
+  }
+}
+
+.services-overview {
+  .service-summary {
+    min-height: 100%;
+  }
+}
+
 .page-services-single {
+  .service-single {
+    padding: 12px 0;
+  }
+
+  .service-kicker {
+    margin-bottom: 0.9rem;
+    color: $primary;
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  .title {
+    margin-bottom: 1.2rem;
+  }
+
   .content {
     > p {
       &:first-of-type {
-        font-size: 1.6rem;
-        line-height: 1.4;
-        margin-bottom: 40px;
-        font-weight: regular;
-        color: rgb(104, 104, 104);
+        font-size: 1.35rem;
+        line-height: 1.65;
+        margin-bottom: 2rem;
+        font-weight: 400;
+        color: $graphite;
       }
+    }
+
+    h2,
+    h3 {
+      margin-top: 2.2rem;
+    }
+
+    ul,
+    ol {
+      margin-bottom: 1.4rem;
+      padding-left: 1.25rem;
+
+      li {
+        margin-bottom: 0.55rem;
+      }
+    }
+  }
+
+  .service-sidebar {
+    padding: 24px;
+    border: 1px solid rgba(59, 130, 246, 0.12);
+    border-radius: 18px;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.9), rgba(233, 238, 245, 0.9));
+    box-shadow: 0 16px 32px rgba(16, 20, 27, 0.06);
+
+    h3 {
+      margin-bottom: 0.7rem;
+    }
+
+    p {
+      margin-bottom: 1.2rem;
     }
   }
 }

@@ -5,6 +5,9 @@ layout: contact
 menu: 'main'
 ---
 
+If you are planning an AI workflow, backend platform, analytics system, or distributed product, Privorum can help you shape the architecture and move the implementation forward.
+
+Use the contact details below to start a conversation.
 
 | Day       | Opening Hours   |
 | --------- | --------------- |

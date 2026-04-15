@@ -1,36 +1,52 @@
 {{ define "header_css" }}{{ end }}
-{{ define "body_classes" }}page-services-list{{ end }}
+{{ define "body_classes" }}page-clients-list{{ end }}
 {{ define "header_classes" }}{{ end }}
 
 {{ define "main" }}
-<div class="intro">
+<section class="clients-hero">
   <div class="container">
-    <div class="row justify-content-start">
-      <div class="col-12 col-md-7 col-lg-6 order-2 order-md-1">
+    <div class="row align-items-center">
+      <div class="col-12 col-lg-6">
+        <div class="intro-eyebrow">AI, Trading, Analytics, Platforms, Distributed Systems</div>
         {{ .Content }}
       </div>
-      {{ if .Params.intro_image }}
-      <div class="col-12 col-md-5 col-lg-6 order-1 order-md-2 position-relative">
-        <img
-          class="intro-image{{ if .Params.intro_image_absolute }} intro-image-absolute{{ end }}{{ if .Params.intro_image_hide_on_mobile }} intro-image-hide-mobile{{ end }}"
-          src="{{ .Params.intro_image | relURL }}" />
+      <div class="col-12 col-lg-6">
+        <div class="systems-art clients-systems-art">
+          <div class="systems-grid"></div>
+          <div class="systems-card systems-card-primary">
+            <span class="systems-label">Proof</span>
+            <strong>Older and newer clients</strong>
+            <p>One unified client view across platforms, products, and technical delivery.</p>
+          </div>
+          <div class="systems-card systems-card-secondary">
+            <span class="systems-label">Range</span>
+            <strong>Deep technical coverage</strong>
+            <p>AI products, backend systems, analytics, marketplaces, and blockchain-native platforms.</p>
+          </div>
+        </div>
       </div>
-      {{ end }}
     </div>
   </div>
-</div>
+</section>
 
 
-<div class="strip strip-grey">
-  <div class="container pt-6 pb-6 pt-md-10 pb-md-10">
-    <div class="row justify-content-center">
+<section class="clients-archive">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 text-center mb-3">
+        <span class="section-kicker">Unified Client Archive</span>
+        <h2>Selected companies and platforms supported over time.</h2>
+        <p>AI clients are shown first, followed by broader platform, infrastructure, and blockchain-related work.</p>
+      </div>
+    </div>
+    <div class="row justify-content-center client-archive-grid">
       {{ range .Site.Data.clients }}
         <div class="col-12 col-md-6 col-lg-4 mb-2">
-          <div class="feature">
+          <div class="feature client-archive-card">
             {{ if .image }}
               <div class="feature-image"><img alt="{{ .title }} logo" src="{{ .image | relURL }}" /></div>
             {{ end }}
-            <h2 class="feature-title"><a href="{{ .link }}" >{{ .title }}</a></h2>
+            <h2 class="feature-title"><a href="{{ .link }}" target="_blank" rel="noopener noreferrer">{{ .title }}</a></h2>
             <div class="feature-content">
               <p>{{ .description }}</p>
             </div>
@@ -39,7 +55,7 @@
       {{end}}
     </div>
   </div>
-</div>
+</section>
 
 
 {{ end }}

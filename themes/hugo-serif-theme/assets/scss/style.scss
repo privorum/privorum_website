@@ -31,16 +31,19 @@
 
 // Pages
 @import 'pages/home';
+@import 'pages/clients/page-clients-list';
 @import 'pages/team/team-summary';
 @import 'pages/services/page-services-single';
 
 body {
   font-size: 16px;
-  line-height: 1.1;
+  line-height: 1.45;
   font-family: $font-family-base;
+  color: $black;
+  background: linear-gradient(180deg, $paper 0%, #fbfbf8 100%);
   @include media-breakpoint-up(md) {
     font-size: 17px;
-    line-height: 1.2;
+    line-height: 1.55;
   }
 }
 

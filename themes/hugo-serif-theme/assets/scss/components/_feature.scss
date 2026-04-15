@@ -1,26 +1,31 @@
 .feature {
   height: 100%;
-  border: 1px solid $ghost;
-  border-radius: 3px;
-  padding: 20px;
-  background-color: #ffffff;
+  border: 1px solid rgba(26, 34, 48, 0.08);
+  border-radius: 18px;
+  padding: 26px;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.88), rgba(233, 238, 245, 0.92));
+  backdrop-filter: blur(8px);
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   flex-direction: column;
-  text-align: center;
+  text-align: left;
+  box-shadow: 0 14px 30px rgba(23, 25, 29, 0.04);
   .feature-image {
     flex: 0 0 auto;
-    width: 80px;
-    height: 80px;
+    width: 64px;
+    height: 64px;
     display: flex;
-    margin-bottom: 20px;
-    text-align: center;
+    margin-bottom: 18px;
+    text-align: left;
   }
   img {
     width: 100%;
     height: auto;
   }
-  .feature-title {
+  .feature-title,
+  .feature-title a {
+    color: $black;
+    text-decoration: none;
   }
   .feature-content {
     margin-bottom: 0;
