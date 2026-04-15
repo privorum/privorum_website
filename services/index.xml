@@ -1,78 +1,100 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Services on Privorum Blockchain Software Development Company</title>
-    <link>https://privorum.com/services/</link>
-    <description>Recent content in Services on Privorum Blockchain Software Development Company</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Wed, 28 Nov 2018 15:15:34 +1000</lastBuildDate>
-    
-	<atom:link href="https://privorum.com/services/index.xml" rel="self" type="application/rss+xml" />
-    
-    
-    <item>
-      <title>DApp development</title>
-      <link>https://privorum.com/services/dapp-development/</link>
-      <pubDate>Sun, 18 Nov 2018 12:33:46 +1000</pubDate>
-      
-      <guid>https://privorum.com/services/dapp-development/</guid>
-      <description>Privorum is a technology company that provides a range of development services including DApp development and custom blockchain solutions.
-Our dApp Development Services Leveraging the our experience in product development, we help clients experience the potential of blockchain technology. From smart contracts to decentralized exchanges and applications, our dApp Development Team can help businesses stay on the competitive edge in the decentralized applications world.
- MVP Consulting User Interface Decentralized Exchange Development Cloud Services Smart Contracts Decentralized Storage dApp Porting dApp Upgrade Services  We convert ideas into practical decentralized applications that are scalable and reliable.</description>
-    </item>
-    
-    <item>
-      <title>Security Audits</title>
-      <link>https://privorum.com/services/security-audit/</link>
-      <pubDate>Sun, 18 Nov 2018 12:33:46 +1000</pubDate>
-      
-      <guid>https://privorum.com/services/security-audit/</guid>
-      <description>Privorum team of specialists, is able to verify that your distributed systems work as intended by performing an audit. Our engineers will fully review your system’s architecture and codebase, and write a report that includes actionable feedback for every issue found.
- CONTACT You specify an audit-ready code commit through the email below
- QUOTE You get a quote and timeline
- AUDIT We start the audit
- REPORT We privately send the report to your team</description>
-    </item>
-    
-    <item>
-      <title>Blockchain Permissionless</title>
-      <link>https://privorum.com/services/permissionless/</link>
-      <pubDate>Wed, 28 Nov 2018 15:15:34 +1000</pubDate>
-      
-      <guid>https://privorum.com/services/permissionless/</guid>
-      <description>Privorum is a leading company that provides education, advisory, and blockchain development services focused on Ethereum, Polkadot, Dusk, Skycoin and Bitcoin codebases.
-Ethereum  go-ethereum go-ethereum Authors  Ethereum was initially proposed in 2013 in a white paper by Vitalik Buterin, a cryptocurrency researcher and programmer. In the white paper, Vitalik Buterin described Ethereum as a public, open-source, Blockchain-based computing platform featuring smart contract functionality. Since the release of Ethereum in 2015, several other projects featuring smart contract functionality have emerged, but these platforms are unable to host both private and public smart contracts.</description>
-    </item>
-    
-    <item>
-      <title>Blockchain Permissioned</title>
-      <link>https://privorum.com/services/permissioned/</link>
-      <pubDate>Wed, 28 Nov 2018 15:15:26 +1000</pubDate>
-      
-      <guid>https://privorum.com/services/permissioned/</guid>
-      <description>Privorum develops end-to-end enterprise-grade blockchain solutions for businesses that want to deploy blockchain technology.
-Distributed databases have emerged making it possible for many people to access certain parts of data simultaneously. However the significance of the databases have changed today and the world is asking for a global network that can allow different people to access the same data while guaranteeing the state of it as a whole, thereby improving the security and trust.</description>
-    </item>
-    
-    <item>
-      <title>Reduce operational costs</title>
-      <link>https://privorum.com/services/reduce-costs/</link>
-      <pubDate>Wed, 28 Nov 2018 15:14:54 +1000</pubDate>
-      
-      <guid>https://privorum.com/services/reduce-costs/</guid>
-      <description>Privorum is a financial technology company that provides enterprise-grade blockchain solutions to digitize assets, launch crypto markets, and reduce operational costs.</description>
-    </item>
-    
-    <item>
-      <title>Blockchain Advisory</title>
-      <link>https://privorum.com/services/blockchain-advisory/</link>
-      <pubDate>Wed, 28 Nov 2018 15:14:39 +1000</pubDate>
-      
-      <guid>https://privorum.com/services/blockchain-advisory/</guid>
-      <description> We provide advisory services for VC firms that wants to audit and understand if a blockchain project is feasible or not from the technology and development standpoint.
-WeShare Ventures  Blockchain Advisor - Thomas Modeneis  </description>
-    </item>
-    
-  </channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Services on Privorum — AI, Automation &amp; Backend Engineering</title><link>https://privorum.com/services/</link><description>Recent content in Services on Privorum — AI, Automation &amp; Backend Engineering</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Wed, 15 Apr 2026 10:00:00 +0000</lastBuildDate><atom:link href="https://privorum.com/services/index.xml" rel="self" type="application/rss+xml"/><item><title>AI Workflows</title><link>https://privorum.com/services/ai-workflows/</link><pubDate>Wed, 15 Apr 2026 10:00:00 +0000</pubDate><guid>https://privorum.com/services/ai-workflows/</guid><description>&lt;p&gt;Privorum designs and ships AI workflows for teams that need real product outcomes — not a demo that falls apart on the second week in production.&lt;/p&gt;
+&lt;p&gt;We help answer practical questions such as:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Which parts of this workflow actually benefit from an LLM, and which should stay deterministic?&lt;/li&gt;
+&lt;li&gt;How do we keep cost, latency, and failure modes predictable?&lt;/li&gt;
+&lt;li&gt;Where does retrieval belong, and where is it overkill?&lt;/li&gt;
+&lt;li&gt;How do we evaluate this beyond vibes, and catch regressions before users do?&lt;/li&gt;
+&lt;li&gt;What does the human review path look like when the model is wrong?&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="typical-engagement-areas"&gt;Typical engagement areas&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;LLM-backed workflow design and orchestration&lt;/li&gt;
+&lt;li&gt;retrieval-augmented generation (RAG) architecture and indexing&lt;/li&gt;
+&lt;li&gt;evaluation harnesses, guardrails, and regression suites&lt;/li&gt;
+&lt;li&gt;cost, latency, and reliability tuning&lt;/li&gt;
+&lt;li&gt;integration with existing backend services and data stores&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="example"&gt;Example&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Production AI workflows inside existing backend platforms, delivered with senior engineering judgment rather than prompt-only prototypes.&lt;/li&gt;
+&lt;/ul&gt;</description></item><item><title>Workflow Automation</title><link>https://privorum.com/services/workflow-automation/</link><pubDate>Wed, 15 Apr 2026 10:00:00 +0000</pubDate><guid>https://privorum.com/services/workflow-automation/</guid><description>&lt;p&gt;Privorum automates internal workflows, operational processes, and cross-system coordination for teams that are tired of glue code that breaks quietly.&lt;/p&gt;
+&lt;p&gt;We help answer practical questions such as:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Which manual steps are actually worth automating, and which are worth keeping explicit?&lt;/li&gt;
+&lt;li&gt;How do we connect the services and tools we already use without building a fragile middle layer?&lt;/li&gt;
+&lt;li&gt;Where do we need a durable job runner, and where does a simple script suffice?&lt;/li&gt;
+&lt;li&gt;How do we make this observable when something fails at 3am?&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="typical-engagement-areas"&gt;Typical engagement areas&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;process automation across internal tooling and SaaS&lt;/li&gt;
+&lt;li&gt;event-driven services, queues, and job orchestration&lt;/li&gt;
+&lt;li&gt;integrations between CRMs, data warehouses, and internal systems&lt;/li&gt;
+&lt;li&gt;human-in-the-loop approval flows and audit trails&lt;/li&gt;
+&lt;li&gt;operational dashboards, alerting, and runbooks&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Automation is only useful when it reduces overhead without adding silent failure modes. We design for both.&lt;/p&gt;</description></item><item><title>Backend Platforms</title><link>https://privorum.com/services/backend-platforms/</link><pubDate>Wed, 15 Apr 2026 10:00:00 +0000</pubDate><guid>https://privorum.com/services/backend-platforms/</guid><description>&lt;p&gt;Privorum designs and builds backend platforms for products that need to hold up beyond an MVP — reliable APIs, clean service boundaries, and infrastructure that an on-call engineer can actually operate.&lt;/p&gt;
+&lt;p&gt;We help answer practical questions such as:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Where should the service boundaries sit, and which ones are premature?&lt;/li&gt;
+&lt;li&gt;What does the data model need to look like once the product is a year older?&lt;/li&gt;
+&lt;li&gt;How do we make deploys boring and rollbacks fast?&lt;/li&gt;
+&lt;li&gt;Which parts of the stack need SLOs, and which don&amp;rsquo;t?&lt;/li&gt;
+&lt;li&gt;How do we keep the platform maintainable as the team grows?&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="typical-engagement-areas"&gt;Typical engagement areas&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;API design, service decomposition, and platform architecture&lt;/li&gt;
+&lt;li&gt;data modelling, migrations, and storage strategy&lt;/li&gt;
+&lt;li&gt;CI/CD, deployment pipelines, and infrastructure-as-code&lt;/li&gt;
+&lt;li&gt;observability, SLOs, alerting, and incident response&lt;/li&gt;
+&lt;li&gt;performance, reliability, and cost tuning&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="technology-depth"&gt;Technology depth&lt;/h2&gt;
+&lt;p&gt;Golang, Java, Node.js, TypeScript, Kubernetes, Docker, Terraform, PostgreSQL, Redis, AWS, and related production infrastructure.&lt;/p&gt;</description></item><item><title>Security Audits</title><link>https://privorum.com/services/security-audit/</link><pubDate>Sun, 18 Nov 2018 12:33:46 +1000</pubDate><guid>https://privorum.com/services/security-audit/</guid><description>&lt;p&gt;Privorum reviews distributed systems, smart contracts, and backend architectures to identify security issues, design weaknesses, and operational risk.&lt;/p&gt;
+&lt;p&gt;Our audits are designed to produce actionable findings, not generic reports.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;Contact&lt;/strong&gt; — You share the audit scope and an audit-ready code commit.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Quote&lt;/strong&gt; — We provide a quote, scope, and timeline.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Audit&lt;/strong&gt; — We review architecture, code, and relevant system assumptions.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Report&lt;/strong&gt; — We send a private report with prioritized findings and practical remediation guidance.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Fixes&lt;/strong&gt; — Your team addresses the issues.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Publish&lt;/strong&gt; — We review the fixes and can update or publish the final report if needed.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id="security-standard"&gt;Security standard&lt;/h2&gt;
+&lt;p&gt;Reduce risk by implementing distributed technologies with disciplined engineering, standard tooling, and clear review practices.&lt;/p&gt;</description></item><item><title>Blockchain Systems</title><link>https://privorum.com/services/blockchain-systems/</link><pubDate>Wed, 15 Apr 2026 10:00:00 +0000</pubDate><guid>https://privorum.com/services/blockchain-systems/</guid><description>&lt;p&gt;Privorum designs and implements blockchain systems — both permissioned and permissionless — when distributed trust, settlement, or auditability is genuinely the right architecture rather than a marketing layer.&lt;/p&gt;
+&lt;p&gt;We help answer practical questions such as:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Is a blockchain actually the right substrate for this problem, or would a well-designed backend do the job more cheaply?&lt;/li&gt;
+&lt;li&gt;Permissioned or permissionless — and what are the operational consequences of each?&lt;/li&gt;
+&lt;li&gt;Which protocol, and why?&lt;/li&gt;
+&lt;li&gt;How do we integrate on-chain components with the backend systems the business already runs on?&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="where-permissioned-systems-fit"&gt;Where permissioned systems fit&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;regulated environments and multi-party data sharing&lt;/li&gt;
+&lt;li&gt;enterprise process coordination with known participants&lt;/li&gt;
+&lt;li&gt;private transaction flows and strong auditability&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Architectures we have worked with: Hyperledger, Corda, Quorum, Ethereum-based permissioned models.&lt;/p&gt;</description></item><item><title>Blockchain Advisory</title><link>https://privorum.com/services/blockchain-advisory/</link><pubDate>Wed, 28 Nov 2018 15:14:39 +1000</pubDate><guid>https://privorum.com/services/blockchain-advisory/</guid><description>&lt;p&gt;Privorum provides blockchain advisory for investors, operators, and product teams that need technical clarity before they commit to implementation.&lt;/p&gt;
+&lt;p&gt;We help answer practical questions such as:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Is the architecture viable?&lt;/li&gt;
+&lt;li&gt;Does the protocol choice make sense?&lt;/li&gt;
+&lt;li&gt;What are the operational and security tradeoffs?&lt;/li&gt;
+&lt;li&gt;What should be built now versus later?&lt;/li&gt;
+&lt;li&gt;Where are the real technical risks?&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="typical-engagement-areas"&gt;Typical engagement areas&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;protocol and architecture review&lt;/li&gt;
+&lt;li&gt;feasibility assessment&lt;/li&gt;
+&lt;li&gt;smart contract and platform strategy&lt;/li&gt;
+&lt;li&gt;team and delivery evaluation&lt;/li&gt;
+&lt;li&gt;infrastructure and operational planning&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="example"&gt;Example&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;WeShare Ventures: blockchain advisory and technical review support&lt;/li&gt;
+&lt;/ul&gt;</description></item></channel></rss>

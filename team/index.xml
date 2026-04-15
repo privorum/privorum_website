@@ -1,27 +1,7 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Team on Privorum Blockchain Software Development Company</title>
-    <link>https://privorum.com/team/</link>
-    <description>Recent content in Team on Privorum Blockchain Software Development Company</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Mon, 19 Nov 2018 10:47:58 +1000</lastBuildDate>
-    
-	<atom:link href="https://privorum.com/team/index.xml" rel="self" type="application/rss+xml" />
-    
-    
-    <item>
-      <title>Thomas Modeneis</title>
-      <link>https://privorum.com/team/thomas-modeneis/</link>
-      <pubDate>Mon, 19 Nov 2018 10:47:58 +1000</pubDate>
-      
-      <guid>https://privorum.com/team/thomas-modeneis/</guid>
-      <description>I help companies to identify and make the best use of their key performance indicators, services and Big Data.
-With 20 years of work experience on different projects, countries and languages, I&amp;rsquo;m a specialist in creating, designing, testing and managing high performance APIs and services.
-I have influenced decisions and performed work in several roles within the IT industry. From Developer to Director, including Solutions Architect and Technical Tester.
-You have a Vision.</description>
-    </item>
-    
-  </channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Team on Privorum — AI, Automation &amp; Backend Engineering</title><link>https://privorum.com/team/</link><description>Recent content in Team on Privorum — AI, Automation &amp; Backend Engineering</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Wed, 01 Apr 2026 10:00:00 +0000</lastBuildDate><atom:link href="https://privorum.com/team/index.xml" rel="self" type="application/rss+xml"/><item><title>Thomas Modeneis</title><link>https://privorum.com/team/thomas-modeneis/</link><pubDate>Mon, 19 Nov 2018 10:47:58 +1000</pubDate><guid>https://privorum.com/team/thomas-modeneis/</guid><description>&lt;p&gt;I help companies define, build, and scale technical products that require strong architecture, operational discipline, and senior engineering judgment.&lt;/p&gt;
+&lt;p&gt;With more than 20 years of experience across multiple industries, countries, and technical environments, I have worked in roles spanning founder, CTO, architect, developer, and technical advisor.&lt;/p&gt;
+&lt;p&gt;My background includes backend platforms, trading systems, blockchain products, analytics systems, distributed software, and cloud infrastructure.&lt;/p&gt;
+&lt;p&gt;You have a vision. I help turn it into a system that can actually run.&lt;/p&gt;</description></item><item><title>Ivens Signorini</title><link>https://privorum.com/team/ivens-signorini/</link><pubDate>Wed, 01 Apr 2026 10:00:00 +0000</pubDate><guid>https://privorum.com/team/ivens-signorini/</guid><description>&lt;p&gt;I am a Senior Backend Engineer with more than 18 years of experience designing, building, and maintaining high-performance systems across fintech, e-commerce, blockchain, and analytics.&lt;/p&gt;
+&lt;p&gt;I specialize in Golang, Java, and Solidity, with strong expertise in microservices architecture, CI/CD automation, and cloud deployment.&lt;/p&gt;
+&lt;p&gt;Throughout my career, I have focused on building scalable, reliable, and maintainable systems with a practical, solution-oriented approach.&lt;/p&gt;
+&lt;p&gt;I work best when the system has to hold up under real load, integrate cleanly with the rest of the stack, and stay maintainable once it&amp;rsquo;s in production.&lt;/p&gt;</description></item></channel></rss>
