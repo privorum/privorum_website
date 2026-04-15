@@ -7,7 +7,26 @@
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   <title>{{ block "title" . }}{{ .Title }} - {{ .Site.Title }}{{ end }}</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  {{ block "meta_tags" . }}{{end}}
+  {{ block "meta_tags" . }}
+  {{ $desc := or .Description .Site.Params.homepage_meta_tags.meta_description }}
+  {{ $ogTitle := cond .IsHome .Site.Params.homepage_meta_tags.meta_og_title (printf "%s — %s" .Title .Site.Title) }}
+  {{ $ogImage := "images/og-cover.png" | absURL }}
+  <meta name="description" content="{{ $desc }}" />
+  <meta property="og:title" content="{{ $ogTitle }}" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="{{ .Permalink }}" />
+  <meta property="og:image" content="{{ $ogImage }}" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:description" content="{{ $desc }}" />
+  <meta property="og:site_name" content="{{ .Site.Title }}" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="{{ .Site.Params.homepage_meta_tags.meta_twitter_site }}" />
+  <meta name="twitter:creator" content="{{ .Site.Params.homepage_meta_tags.meta_twitter_creator }}" />
+  <meta name="twitter:title" content="{{ $ogTitle }}" />
+  <meta name="twitter:description" content="{{ $desc }}" />
+  <meta name="twitter:image" content="{{ $ogImage }}" />
+  {{ end }}
   <link rel="icon" href="{{ "favicon-32x32.png" | relURL }}">
   <link rel="preload" as="font" type="font/woff2" href="{{ "fonts/fraunces-600.woff2" | relURL }}" crossorigin>
   <link rel="preload" as="font" type="font/woff2" href="{{ "fonts/ibm-plex-sans-400.woff2" | relURL }}" crossorigin>

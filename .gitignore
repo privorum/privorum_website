@@ -8,3 +8,4 @@ hugo.exe
 node_modules
 /AGENTS.md
 /CLAUDE.md
+/.hugo_build.lock

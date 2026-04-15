@@ -11,7 +11,7 @@ theme = "hugo-serif-theme"
 
   [params.logo]
     mobile = "images/logo-mobile.svg"
-    standard  = "images/logo.png"
+    standard  = "images/logo.svg"
     alt = "Privorum — AI, Automation & Backend Engineering"
 
   [params.homepage_meta_tags]
@@ -19,9 +19,9 @@ theme = "hugo-serif-theme"
     meta_og_title = "Privorum — AI, Automation & Backend Engineering"
     meta_og_type = "website"
     meta_og_url = "https://privorum.com"
-    meta_og_image = "https://privorum.com/images/logo.png"
+    meta_og_image = "https://privorum.com/images/og-cover.png"
     meta_og_description = "Privorum designs and ships AI workflows, automation, and backend platforms with the engineering discipline required for production."
-    meta_twitter_card = "summary"
+    meta_twitter_card = "summary_large_image"
     meta_twitter_site = "@privorum"
     meta_twitter_creator = "@privorum"
 

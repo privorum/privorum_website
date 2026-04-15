@@ -1,37 +1,30 @@
-##!/bin/sh
-#
-#if [ "`git status -s`" ]
-#then
-#    echo "The working directory is dirty. Please commit any pending changes."
-#    exit 1;
-#fi
+#!/bin/sh
+set -e
 
-## Initialize a gh-pages branch... GitHub expects this branch to exist to publish a project website from it.
-#git checkout --orphan gh-pages
-#git reset --hard
-#git commit --allow-empty -m "Initializing gh-pages branch"
-#git push origin gh-pages
-#git checkout master
+# Deploy the Hugo site to the gh-pages branch.
+# Assumes `public/` is a git worktree tracking origin/gh-pages.
+# First-time setup (run once):
+#   rm -rf public
+#   git worktree add -B gh-pages public origin/gh-pages
 
+if [ ! -d public/.git ] && [ ! -f public/.git ]; then
+    echo "public/ is not a gh-pages worktree. Run:"
+    echo "  rm -rf public && git worktree add -B gh-pages public origin/gh-pages"
+    exit 1
+fi
 
-#echo "Deleting old publication"
-#rm -rf public
-#mkdir public
-#git worktree prune
-#rm -rf .git/worktrees/public/
-#
-#echo "Checking out gh-pages branch into public"
-#git worktree add -B gh-pages public origin/gh-pages
-#
-#echo "Removing existing files"
-#rm -rf public/*
+echo "Cleaning previous build"
+find public -mindepth 1 -maxdepth 1 ! -name '.git' -exec rm -rf {} +
 
+echo "Building site"
+hugo --minify
 
-echo "Generating site"
-./hugo
-
-echo "Updating gh-pages branch"
-cd public && git pull && git add --all && git commit -m "Publishing to gh-pages (publish.sh)"
-
-#echo "Pushing to github"
-git push --all
+echo "Publishing to gh-pages"
+cd public
+git add -A
+if git diff --cached --quiet; then
+    echo "No changes to publish."
+    exit 0
+fi
+git commit -m "Publish site to gh-pages"
+git push origin gh-pages
