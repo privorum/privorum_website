@@ -1,25 +1,90 @@
+// Team — hairline rows, not cards.
+
+.team-archive {
+  padding: 64px 0 128px;
+  background: $paper;
+}
+
+.team-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  border-top: 1px solid $rule;
+}
+
+.team-row {
+  padding: 2.5rem 0;
+  border-bottom: 1px solid $rule;
+}
+
 .team-summary {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
+  display: grid;
+  grid-template-columns: 120px 1fr;
+  gap: 2rem;
+  align-items: start;
+
+  @include media-breakpoint-down(md) {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
   .team-image {
-    margin-right: 10px;
     img {
-      border-radius: 50%;
-      height: 100px;
-      width: 100px;
+      display: block;
+      width: 120px;
+      height: 120px;
+      object-fit: cover;
+      border-radius: 2px;
+      filter: grayscale(100%) contrast(1.05);
     }
   }
+
   .team-meta {
-    flex: 1;
-    h2 {
-      margin: 0;
+    .team-name {
+      font-family: $font-display;
+      font-weight: 500;
+      margin: 0 0 0.25rem 0;
+      color: $ink;
     }
-    p {
-      margin: 0;
+
+    .team-description {
+      font-family: $font-mono;
+      font-size: 0.82rem;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      margin: 0 0 0.75rem 0;
+      color: $mute;
+    }
+
+    a {
+      color: $accent;
+      font-family: $font-mono;
+      font-size: 0.82rem;
+      text-decoration: none;
+      border-bottom: 1px solid $accent;
+      padding-bottom: 1px;
+      letter-spacing: 0.02em;
+
+      &:hover {
+        color: darken($accent, 8%);
+        border-color: darken($accent, 8%);
+      }
     }
   }
+
   .team-content {
-    flex: 1 0 100%;
+    grid-column: 1 / -1;
+    color: $mute;
+    line-height: 1.6;
+    max-width: 56rem;
+
+    p {
+      margin: 0 0 1rem 0;
+      color: $mute;
+    }
+
+    p:last-child {
+      margin-bottom: 0;
+    }
   }
 }

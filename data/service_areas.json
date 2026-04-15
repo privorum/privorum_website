@@ -1,0 +1,26 @@
+[
+  {
+    "title": "AI Workflows",
+    "description": "Design LLM-backed workflows that connect models to real products, operations, and internal tools — with evaluation and guardrails, not just prompts."
+  },
+  {
+    "title": "Workflow Automation",
+    "description": "Reduce manual overhead by orchestrating tasks, systems, approvals, and cross-team handoffs with durable, observable job runners."
+  },
+  {
+    "title": "Backend Platforms",
+    "description": "Design APIs, service boundaries, data models, and deployment pipelines that hold up beyond an MVP and stay maintainable as the team grows."
+  },
+  {
+    "title": "Integrations & Infrastructure",
+    "description": "Connect cloud systems, third-party services, CI/CD, and observability into one coherent platform instead of a collection of scripts."
+  },
+  {
+    "title": "Analytics & Data Systems",
+    "description": "Build reliable data flows, dashboards, and operational reporting systems that engineering and the business both trust."
+  },
+  {
+    "title": "Blockchain & Distributed Systems",
+    "description": "Apply protocol-level experience when the architecture genuinely needs it — not as a marketing layer over a standard backend."
+  }
+]

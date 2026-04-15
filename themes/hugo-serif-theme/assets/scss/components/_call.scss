@@ -1,52 +1,58 @@
 .call {
   position: relative;
-  overflow: hidden;
-  background-color: $ghost;
-  border-radius: 4px;
-  // box-shadow: 0 15px 35px rgba(50, 50, 93, 0.1), 0 5px 15px rgba(0, 0, 0, 0.07);
   width: 100%;
   display: flex;
-  align-items: center;
-  flex-direction: row;
-  flex-wrap: wrap;
-  z-index: 2;
-  @include media-breakpoint-up(sm) {
-    align-items: center;
+  align-items: stretch;
+  flex-direction: column;
+  border-top: 1px solid $rule;
+  border-bottom: 1px solid $rule;
+
+  @include media-breakpoint-up(md) {
     flex-direction: row;
-    flex-wrap: wrap;
+    align-items: center;
   }
+
   .call-box-top {
-    flex: 1 0 auto;
-    padding: 20px;
+    flex: 1 1 auto;
+    padding: 1.5rem 0;
+
     @include media-breakpoint-up(md) {
+      padding: 1.75rem 2rem 1.75rem 0;
     }
   }
+
   .call-box-bottom {
     flex: 0 0 auto;
-    padding: 20px;
-    @include media-breakpoint-up(sm) {
+    padding: 0 0 1.5rem;
+
+    @include media-breakpoint-up(md) {
+      padding: 1.75rem 0;
     }
   }
+
   .call-name {
-    font-size: 1.1rem;
-    font-weight: bold;
+    font-family: $font-display;
+    font-size: 1.2rem;
+    font-weight: 500;
   }
+
   .call-phone {
-    margin-bottom: 5px;
+    margin-bottom: 0.5rem;
   }
+
+  .call-email,
+  .call-phone {
+    color: $ink;
+    font-family: $font-mono;
+    font-size: 0.95rem;
+  }
+
   strong {
-    font-weight: bold;
-  }
-  svg {
-    fill: lighten($secondary, 40%);
-    position: absolute;
-    bottom: -9px;
-    right: 0;
-    width: 100px;
-    height: 100px;
-    @include media-breakpoint-up(sm) {
-      width: 120px;
-      height: 120px;
-    }
+    font-family: $font-mono;
+    font-size: 0.78rem;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: $mute;
+    font-weight: 500;
   }
 }

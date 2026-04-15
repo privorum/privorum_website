@@ -1,13 +1,159 @@
+// Services — list and single templates
+// Hairline rows, mono labels, no cards.
+
+.page-hero {
+  padding: 128px 0 64px;
+  background: $paper;
+  border-bottom: 1px solid $rule;
+
+  @include media-breakpoint-up(md) {
+    padding: 160px 0 96px;
+  }
+
+  h1 {
+    max-width: 22ch;
+  }
+
+  > .container > p:first-of-type,
+  p:first-of-type {
+    font-size: 1.2rem;
+    color: $mute;
+    max-width: 46rem;
+    line-height: 1.55;
+  }
+}
+
+.services-specialized {
+  padding: 128px 0;
+  background: $paper-deep;
+  border-bottom: 1px solid $rule;
+}
+
+.services-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  border-top: 1px solid $rule;
+}
+
+.services-row {
+  border-bottom: 1px solid $rule;
+}
+
+.services-row-link {
+  display: grid;
+  grid-template-columns: minmax(220px, 1fr) 3fr auto;
+  gap: 2rem;
+  padding: 1.75rem 0;
+  color: $ink;
+  text-decoration: none;
+  align-items: baseline;
+  transition: color 180ms ease;
+
+  &:hover {
+    color: $accent;
+    text-decoration: none;
+
+    .services-arrow {
+      transform: translateX(4px);
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    transition: none;
+    .services-arrow { transition: none; }
+  }
+
+  @include media-breakpoint-down(md) {
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+  }
+}
+
+.services-title {
+  font-family: $font-display;
+  font-weight: 500;
+  font-size: 1.35rem;
+  line-height: 1.2;
+}
+
+.services-summary {
+  font-family: $font-body;
+  font-size: 0.98rem;
+  color: $mute;
+  line-height: 1.55;
+}
+
+.services-arrow {
+  font-family: $font-mono;
+  transition: transform 180ms ease;
+}
+
+// -- Single service page ------------------------------------------------------
+
 .page-services-single {
+  .service-body {
+    padding: 96px 0 128px;
+    background: $paper;
+  }
+
+  .service-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 2fr) minmax(0, 1fr);
+    gap: 4rem;
+    align-items: start;
+
+    @include media-breakpoint-down(lg) {
+      grid-template-columns: 1fr;
+      gap: 3rem;
+    }
+  }
+
+  .service-main {
+    min-width: 0;
+  }
+
+  .title {
+    margin-bottom: 1.5rem;
+    max-width: 24ch;
+  }
+
   .content {
-    > p {
-      &:first-of-type {
-        font-size: 1.6rem;
-        line-height: 1.4;
-        margin-bottom: 40px;
-        font-weight: regular;
-        color: rgb(104, 104, 104);
+    > p:first-of-type {
+      font-size: 1.25rem;
+      line-height: 1.55;
+      margin-bottom: 2rem;
+      color: $ink;
+    }
+
+    h2,
+    h3 {
+      margin-top: 2.5rem;
+    }
+
+    ul,
+    ol {
+      margin-bottom: 1.4rem;
+      padding-left: 1.25rem;
+
+      li {
+        margin-bottom: 0.55rem;
       }
+    }
+  }
+
+  .service-sidebar {
+    padding: 1.75rem 0;
+    border-top: 1px solid $rule;
+    border-bottom: 1px solid $rule;
+
+    h3 {
+      margin-bottom: 0.75rem;
+    }
+
+    p {
+      margin-bottom: 1.2rem;
+      color: $mute;
     }
   }
 }

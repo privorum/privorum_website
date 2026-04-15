@@ -16,60 +16,211 @@
 {{ end }}
 
 {{ define "main" }}
-<div class="intro">
+<section class="home-hero">
   <div class="container">
-    <div class="row justify-content-start">
-      <div class="col-12 col-md-7 col-lg-6 order-2 order-md-1">
+    <div class="hero-grid">
+
+      <div class="hero-lede">
+        <div class="hero-eyebrow">Privorum — since 2020</div>
         {{ .Content }}
-        {{ partial "call.html" . }}
-      </div>
-      {{ if .Params.intro_image }}
-      <div class="col-12 col-md-5 col-lg-6 order-1 order-md-2 position-relative">
-        <img
-          class="intro-image{{ if .Params.intro_image_absolute }} intro-image-absolute{{ end }}{{ if .Params.intro_image_hide_on_mobile }} intro-image-hide-mobile{{ end }}"
-          src="{{ .Params.intro_image | relURL }}" />
-      </div>
-      {{ end }}
-    </div>
-  </div>
-</div>
-
-{{ $services := where (where .Site.RegularPages "Type" "services") ".Params.featured" true }}
-{{if gt (len $services) 0}}
-<div class="container pt-6 pb-md-5">
-  <div class="row justify-content-start">
-    {{ $services := where (where .Site.RegularPages "Type" "services") ".Params.featured" true }}
-    {{ range first 6 (sort $services ".Params.weight") }}
-    <div class="col-12 col-md-4 mb-1">
-      {{ .Render "summary" }}
-    </div>
-    {{ end }}
-    <div class="col-12 text-center">
-      <a class="button button-primary" href="{{ "services/" | relURL }}">View All Services</a>
-    </div>
-  </div>
-</div>
-{{end}}
-
-<div class="strip strip-grey">
-  <div class="container pt-6 pb-6 pt-md-10 pb-md-10">
-    <div class="row justify-content-center">
-      {{ range .Site.Data.features }}
-      <div class="col-12 col-md-6 col-lg-4 mb-2">
-        <div class="feature">
-          {{ if .image }}
-          <div class="feature-image"><img alt="{{ .title }} logo" src="{{ .image | relURL }}" /></div>
-          {{ end }}
-          <h2 class="feature-title">{{ .title }}</h2>
-          <div class="feature-content">
-            <p>{{ .description }}</p>
+        <dl class="hero-metrics">
+          <div class="hero-metric">
+            <dt>Engineering years</dt>
+            <dd>20+ across backend, protocols, and platforms</dd>
           </div>
+          <div class="hero-metric">
+            <dt>Primary stack</dt>
+            <dd>Go · Java · Rust · TypeScript · Python · Kubernetes · AWS</dd>
+          </div>
+          <div class="hero-metric">
+            <dt>Open-source</dt>
+            <dd>Ethereum · Polkadot · Cosmos · Dusk</dd>
+          </div>
+        </dl>
+        <div class="hero-actions">
+          <a class="button" href="{{ "contact/" | relURL }}">Start a conversation</a>
+          <a class="text-link" href="{{ "services/" | relURL }}">See what we build <span aria-hidden="true">&rarr;</span></a>
         </div>
       </div>
-      {{end}}
+
+      <aside class="execution-ledger" aria-label="Selected engagement ledger">
+        <header class="ledger-header">
+          <span class="ledger-eyebrow">Execution Ledger</span>
+          <span class="ledger-note">Selected engagements</span>
+        </header>
+        <ol class="ledger-list">
+          <li class="ledger-row">
+            <span class="ledger-scope">Founding</span>
+            <span class="ledger-client">Vosbor Exchange</span>
+            <span class="ledger-outcome">Commodity trading platform built from concept through MVP, funding, and closed beta with hands-on technical leadership.</span>
+          </li>
+          <li class="ledger-row">
+            <span class="ledger-scope">Advisory</span>
+            <span class="ledger-client">SouJava</span>
+            <span class="ledger-outcome">Board seat and JCP representative at the Brazilian Java User Group.</span>
+          </li>
+          <li class="ledger-row">
+            <span class="ledger-scope">Advisory</span>
+            <span class="ledger-client">WeShare Ventures</span>
+            <span class="ledger-outcome">Technical review and architecture guidance on product direction.</span>
+          </li>
+          <li class="ledger-row">
+            <span class="ledger-scope">Open-source</span>
+            <span class="ledger-client">Ethereum</span>
+            <span class="ledger-outcome">Upstream contributions to go-ethereum, the reference Ethereum client.</span>
+          </li>
+          <li class="ledger-row">
+            <span class="ledger-scope">Open-source</span>
+            <span class="ledger-client">Polkadot</span>
+            <span class="ledger-outcome">Contributions across the Polkadot ecosystem and related tooling.</span>
+          </li>
+          <li class="ledger-row">
+            <span class="ledger-scope">Under&nbsp;NDA</span>
+            <span class="ledger-client">Named on request</span>
+            <span class="ledger-outcome">Backend platforms, AI agent deliveries, and ML pipeline work.</span>
+          </li>
+        </ol>
+      </aside>
+
     </div>
   </div>
-</div>
+</section>
+
+{{ $services := where (where .Site.RegularPages "Type" "services") ".Params.featured" true }}
+{{ if gt (len $services) 0 }}
+<section class="home-capabilities">
+  <div class="container">
+    <header class="section-head">
+      <span class="section-eyebrow">01 · Capabilities</span>
+      <h2>What Privorum builds when the work needs technical depth.</h2>
+      <p class="section-intro">We support products that need practical architecture, integration discipline, and production-ready engineering rather than surface-level experimentation.</p>
+    </header>
+
+    <ol class="capability-list">
+      {{ range $i, $item := hugo.Data.service_areas }}
+      <li class="capability-row">
+        <span class="capability-index">{{ printf "%02d" (add $i 1) }}</span>
+        <h3 class="capability-title">{{ $item.title }}</h3>
+        <p class="capability-body">{{ $item.description }}</p>
+      </li>
+      {{ end }}
+    </ol>
+
+    <div class="section-action">
+      <a class="text-link" href="{{ "services/" | relURL }}">All services <span aria-hidden="true">&rarr;</span></a>
+    </div>
+  </div>
+</section>
+{{ end }}
+
+<section class="home-platform">
+  <div class="container">
+    <header class="section-head">
+      <span class="section-eyebrow">02 · Delivery</span>
+      <h2>Designed for systems that need more than a prototype.</h2>
+      <p class="section-intro">Privorum works best when the product needs orchestration, integrations, and operational discipline rather than a thin AI layer. Three moves structure the delivery.</p>
+    </header>
+
+    <ol class="platform-list">
+      <li class="platform-row">
+        <span class="platform-index">01</span>
+        <div class="platform-body">
+          <h3>Define the workflow</h3>
+          <p>Map the business process, the user journey, and the system boundaries before implementation starts.</p>
+          <ul class="platform-tags">
+            <li>Process design</li>
+            <li>Architecture scope</li>
+            <li>Risk reduction</li>
+          </ul>
+        </div>
+      </li>
+      <li class="platform-row">
+        <span class="platform-index">02</span>
+        <div class="platform-body">
+          <h3>Connect the stack</h3>
+          <p>Wire AI, APIs, data sources, and operational systems into one reliable delivery layer with clear ownership.</p>
+          <ul class="platform-tags">
+            <li>Integrations</li>
+            <li>Backend services</li>
+            <li>Data flow</li>
+          </ul>
+        </div>
+      </li>
+      <li class="platform-row">
+        <span class="platform-index">03</span>
+        <div class="platform-body">
+          <h3>Operate in production</h3>
+          <p>Ship with observability, deployment discipline, and support for the complexity that appears after launch.</p>
+          <ul class="platform-tags">
+            <li>Reliability</li>
+            <li>CI/CD</li>
+            <li>Observability</li>
+          </ul>
+        </div>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<section class="home-trust">
+  <div class="container">
+    <header class="section-head">
+      <span class="section-eyebrow">03 · Why Privorum</span>
+      <h2>Senior engineering for systems that have to survive real use.</h2>
+      <p class="section-intro">Privorum works best when the product is important, the architecture matters, and the delivery needs to move beyond surface-level implementation.</p>
+    </header>
+
+    <ol class="trust-list">
+      <li class="trust-row">
+        <h3>Hands-on engineering</h3>
+        <p>Architecture, APIs, orchestration, cloud systems, and delivery execution with practical technical ownership.</p>
+      </li>
+      <li class="trust-row">
+        <h3>AI plus infrastructure depth</h3>
+        <p>Not just prompts and wrappers. Privorum connects AI workflows to real systems, services, and operations.</p>
+      </li>
+      <li class="trust-row">
+        <h3>Production mindset</h3>
+        <p>Reliability, observability, CI/CD, scaling, and maintainability are treated as part of the product, not afterthoughts.</p>
+      </li>
+      <li class="trust-row">
+        <h3>Blockchain when it matters</h3>
+        <p>Privorum brings protocol and distributed-systems experience when the architecture genuinely requires it.</p>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<section class="home-proof">
+  <div class="container">
+    <header class="section-head">
+      <span class="section-eyebrow">04 · Proof</span>
+      <h2>Selected clients and engagements.</h2>
+    </header>
+    <ul class="proof-strip">
+      {{ range first 12 hugo.Data.clients }}
+      <li class="proof-item">
+        {{ if .image }}
+        <img src="{{ .image | relURL }}" alt="{{ .title }} logo" loading="lazy" />
+        {{ else }}
+        <span class="proof-item-text">{{ .title }}</span>
+        {{ end }}
+      </li>
+      {{ end }}
+    </ul>
+    <p class="proof-note">Named clients are representative. Additional engagements are under NDA and available on request.</p>
+  </div>
+</section>
+
+<section class="home-cta">
+  <div class="container">
+    <div class="cta-body">
+      <h2>Have a system that needs to hold up?</h2>
+      <p>Privorum works with founders, operators, and technical teams that need senior engineering judgment applied end-to-end.</p>
+      <a class="text-link text-link--accent" href="{{ "contact/" | relURL }}">Start a conversation <span aria-hidden="true">&rarr;</span></a>
+    </div>
+  </div>
+</section>
 {{ end }}
 
 {{ define "footer_js" }}

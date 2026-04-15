@@ -1,14 +1,9 @@
 ---
 title: 'Team'
-intro_image: images/undraw_modern_professional_yt9h.svg
-intro_image_absolute: false
-intro_image_hide_on_mobile: false
 ---
 
-# Meet The Team
+# Meet the team
 
-Our team of qualified IT professionals can help your business at any stage of it's growth.
-Our experts can handle the intricacies of the Blockchain projects very well and offer them a solution according to their requirements. 
-In short, they can play an instrumental role in driving your business to achieve great heights by making your business processes even more effective.
+Privorum combines senior technical leadership with hands-on engineering across backend systems, AI products, infrastructure, analytics, and blockchain-native platforms.
 
-
+The team is built for companies that need practical execution, not just high-level advice.

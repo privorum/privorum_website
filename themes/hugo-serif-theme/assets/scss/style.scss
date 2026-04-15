@@ -9,7 +9,9 @@
 @import 'libraries/hamburgers/hamburgers';
 
 // Components
+@import 'components/fonts';
 @import 'components/reset';
+@import 'components/focus';
 @import 'components/type';
 @import 'components/page';
 @import 'components/header';
@@ -23,42 +25,44 @@
 @import 'components/call';
 @import 'components/title';
 @import 'components/content';
-@import 'components/intro';
-@import 'components/intro-image';
-@import 'components/strip';
-@import 'components/whitebox';
-@import 'components/feature';
 
 // Pages
 @import 'pages/home';
+@import 'pages/clients/page-clients-list';
 @import 'pages/team/team-summary';
 @import 'pages/services/page-services-single';
 
 body {
   font-size: 16px;
-  line-height: 1.1;
-  font-family: $font-family-base;
+  line-height: 1.55;
+  font-family: $font-body;
+  color: $ink;
+  background: $paper;
+
   @include media-breakpoint-up(md) {
     font-size: 17px;
-    line-height: 1.2;
+    line-height: 1.6;
   }
 }
 
-// Display breakpoints for DEV
-{{ if .Site.IsServer }}
-body:after {
-  color: #000000;
+// Dev-only breakpoint widget — only the local hugo server renders this
+// and only when the body has the `.dev` class.
+{{ if hugo.IsServer }}
+body.dev:after {
+  color: $ink;
   font-size: 12px;
   padding: 5px;
-  font-weight: bold;
+  font-weight: 500;
   right: 10px;
   position: fixed;
   text-align: center;
   text-transform: uppercase;
   bottom: 10px;
   width: 200px;
-  z-index: 9999;
-  border: solid 1px #000000;
+  z-index: $z-toast;
+  border: 1px solid $rule;
+  background: $paper;
+  font-family: $font-mono;
   @each $name, $value in $grid-breakpoints {
     @include media-breakpoint-up($name) {
       content: '#{$name} - min-width: #{$value}';

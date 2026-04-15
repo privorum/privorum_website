@@ -1,25 +1,37 @@
+// Button — one per section, the only non-neutral element allowed.
+// Sharp-cornered rectangle, burnt orange fill, accessible hit area.
+
 .button {
-  white-space: nowrap;
-  display: inline-block;
-  height: 40px;
-  line-height: 40px;
-  padding: 0 14px;
-  box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
-  background: $primary;
-  border-radius: 4px;
-  font-size: 15px;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.025em;
-  color: #ffffff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 48px;
+  min-width: 48px;
+  padding: 0 1.5rem;
+  background: $accent;
+  color: $paper;
+  border: 1px solid $accent;
+  border-radius: 2px;
+  font-family: $font-body;
+  font-size: 0.95rem;
+  font-weight: 500;
+  letter-spacing: 0.01em;
   text-decoration: none;
-  -webkit-transition: all 0.15s ease;
-  transition: all 0.15s ease;
+  white-space: nowrap;
+  transition: background-color 180ms ease, color 180ms ease, border-color 180ms ease;
+
   &:hover {
-    color: #ffffff;
-    background-color: lighten($primary, 10%);
-    transform: translateY(-1px);
-    box-shadow: 0 7px 14px rgba(50, 50, 93, 0.1), 0 3px 6px rgba(0, 0, 0, 0.08);
+    background: darken($accent, 6%);
+    border-color: darken($accent, 6%);
+    color: $paper;
     text-decoration: none;
   }
+
+  @media (prefers-reduced-motion: reduce) {
+    transition: none;
+  }
+}
+
+.button-primary {
+  @extend .button;
 }

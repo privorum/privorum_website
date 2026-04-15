@@ -6,3 +6,5 @@ resources
 hugo
 hugo.exe
 node_modules
+/AGENTS.md
+/CLAUDE.md
