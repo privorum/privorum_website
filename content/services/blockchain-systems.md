@@ -3,7 +3,7 @@ title: "Blockchain Systems"
 date: 2026-04-15T10:00:00+00:00
 featured: true
 draft: false
-weight: 5
+weight: 7
 ---
 
 Privorum designs and implements blockchain systems — both permissioned and permissionless — when distributed trust, settlement, or auditability is genuinely the right architecture rather than a marketing layer.

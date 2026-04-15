@@ -3,7 +3,7 @@ title: "Workflow Automation"
 date: 2026-04-15T10:00:00+00:00
 featured: true
 draft: false
-weight: 2
+weight: 4
 ---
 
 Privorum automates internal workflows, operational processes, and cross-system coordination for teams that are tired of glue code that breaks quietly.

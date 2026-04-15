@@ -2,15 +2,42 @@
 set -e
 
 # Deploy the Hugo site to the gh-pages branch.
-# Assumes `public/` is a git worktree tracking origin/gh-pages.
-# First-time setup (run once):
-#   rm -rf public
-#   git worktree add -B gh-pages public origin/gh-pages
+# `public/` is a git worktree tracking origin/gh-pages. If it's missing or
+# broken, this script repairs it automatically before building.
+#
+# Usage:
+#   ./deploy.sh           build + publish (repairs the worktree if needed)
+#   ./deploy.sh setup     just repair / create the worktree, do not publish
 
-if [ ! -d public/.git ] && [ ! -f public/.git ]; then
-    echo "public/ is not a gh-pages worktree. Run:"
-    echo "  rm -rf public && git worktree add -B gh-pages public origin/gh-pages"
-    exit 1
+setup_worktree() {
+    echo "Setting up public/ as a gh-pages worktree"
+    rm -rf public
+    git worktree prune
+    git fetch origin gh-pages
+    git worktree add -B gh-pages public origin/gh-pages
+}
+
+is_worktree() {
+    [ -d public/.git ] || [ -f public/.git ]
+}
+
+case "${1:-}" in
+    setup)
+        setup_worktree
+        echo "Done. Run ./deploy.sh to publish."
+        exit 0
+        ;;
+    ""|deploy)
+        ;;
+    *)
+        echo "Unknown command: $1" >&2
+        echo "Usage: $0 [setup|deploy]" >&2
+        exit 2
+        ;;
+esac
+
+if ! is_worktree; then
+    setup_worktree
 fi
 
 echo "Cleaning previous build"

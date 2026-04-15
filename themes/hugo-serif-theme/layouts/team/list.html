@@ -3,10 +3,17 @@
 {{ define "header_classes" }}{{ end }}
 
 {{ define "main" }}
-<section class="page-hero">
+<section class="page-hero{{ with .Params.intro_image }} page-hero--with-aside{{ end }}">
   <div class="container">
-    <div class="hero-eyebrow">Team</div>
-    {{ .Content }}
+    <div class="page-hero-body">
+      <div class="hero-eyebrow">Team</div>
+      {{ .Content }}
+    </div>
+    {{ with .Params.intro_image }}
+    <aside class="page-hero-aside" aria-hidden="true">
+      <img src="{{ . | relURL }}" alt="" loading="lazy" />
+    </aside>
+    {{ end }}
   </div>
 </section>
 

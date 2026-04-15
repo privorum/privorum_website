@@ -186,7 +186,7 @@
       <h2>Selected clients and engagements.</h2>
     </header>
     <ul class="proof-strip">
-      {{ range first 12 hugo.Data.clients }}
+      {{ range first 12 (where hugo.Data.clients "home_featured" true) }}
       <li class="proof-item">
         {{ if .image }}
         <img src="{{ .image | relURL }}" alt="{{ .title }} logo" loading="lazy" />

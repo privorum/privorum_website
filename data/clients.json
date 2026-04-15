@@ -4,44 +4,41 @@
     "legal_name": "Vosbor Exchange B.V.",
     "category": "direct",
     "featured": true,
+    "home_featured": true,
     "description": "Founder engagement. Led end-to-end delivery of the first digital marketplace for physical agricultural commodities — wheat, corn, soy, palm oil and other bulk cargoes — building the real-time matching engine, low-latency APIs, and streaming data pipelines from architecture through MVP and closed beta with 35 major agri-trading companies. Vosbor raised a $7M seed round led by Lux Capital with Market One Capital, FJ Labs, 7percent Ventures, Athos Capital and Nucleus Capital, plus strategic co-investment from Chris Mahoney (former CEO, Glencore Agriculture) and Soren Schroder (former CEO, Bunge).",
     "image": "images/clients/vosbor.png",
     "link": "https://vosbor.com/"
   },
   {
-    "title": "DeepDesk",
-    "legal_name": "DeepDesk B.V.",
-    "category": "direct",
-    "description": "Architected and delivered the go-whisper voice AI service end-to-end — a full STT / LLM / TTS pipeline with validation gates and PII detection, plus the React/TypeScript playground and the backend WebSocket integration powering contact-centre agent assist.",
-    "image": "images/clients/deepdesk.png",
-    "link": "https://deepdesk.com/"
-  },
-  {
     "title": "SPHX Exchange",
     "legal_name": "SPHX Inc.",
     "category": "direct",
+    "home_featured": false,
     "description": "Led core engineering across backend and frontend for a high-throughput digital-asset matching and market-data platform, owning architecture, scale, reliability and real-time SLAs.",
-    "image": "images/clients/sphinx.png",
+    "image": "images/clients/sphx.svg",
     "link": "https://www.sphx.io/"
   },
   {
     "title": "Genie AI",
     "legal_name": "Genie AI Inc.",
     "category": "direct",
+    "home_featured": true,
     "description": "Architected an AI-native data platform that automates the data-scientist role — RAG pipelines, sub-agent orchestration, guarded LLM integration and automated model training, validation and deployment. Genie AI is an NVIDIA Inception Program company backed by Alpha Sigma Capital.",
-    "image": "images/clients/genie.png",
+    "image": "images/clients/genie.svg",
     "link": "https://opengenie.ai/"
   },
   {
     "title": "Biidin",
     "category": "direct",
+    "home_featured": false,
     "description": "AI-native signal-filtering and trade-management platform for swing and position traders. Every TradingView or TrendSpider alert is evaluated against funding rates, sentiment, technicals, open positions and the economic calendar before execution, with active trailing-stop, breakeven and exit logic across IG, Alpaca, Phemex, Kraken, Binance and Hydra.",
     "image": "images/clients/biidin.svg",
-    "link": "https://appz.biidin.com/"
+    "link": "https://www.biidin.com/"
   },
   {
     "title": "NeverGoBlank",
     "category": "direct",
+    "home_featured": false,
     "description": "AI-powered career coaching platform that prepares professionals for high-stakes moments — interviews, performance reviews, negotiations — with personalised guidance and scenario practice.",
     "image": "images/clients/nevergoblank.svg",
     "link": "https://www.nevergoblank.com/"
@@ -50,6 +47,7 @@
     "title": "DefyTrends",
     "legal_name": "DefyTrends Inc.",
     "category": "direct",
+    "home_featured": false,
     "description": "Built a real-time crypto and NFT analytics platform combining on-chain data, market signals and social sentiment from more than one million data sources, with SLA-backed endpoints, data-quality checks and alerting. Backed by BIP Ventures, Ghaf Capital and Panoramic Ventures.",
     "image": "images/clients/defytrends.png"
   },
@@ -57,6 +55,7 @@
     "title": "Reusify",
     "legal_name": "Reusify B.V.",
     "category": "direct",
+    "home_featured": true,
     "description": "Dutch circular-economy platform that rewards consumers for using reusable cups at participating cafés — QR-registered cups, automated impact tracking, and a loyalty layer that turns packaging reuse into a consumer product.",
     "image": "images/clients/reusify.svg",
     "link": "https://reusify.io/"
@@ -65,14 +64,16 @@
     "title": "Zoover",
     "legal_name": "Zoover International B.V.",
     "category": "direct",
+    "home_featured": true,
     "description": "One of Europe's largest holiday-review portals, aggregating millions of traveller reviews and booking paths across hotels, resorts and campsites. Part of the Vakanties.nl group.",
     "image": "images/clients/zoover.svg",
     "link": "https://www.zoover.nl/"
   },
   {
-    "title": "Mavin.org",
+    "title": "Mavin",
     "legal_name": "Mavin B.V.",
     "category": "direct",
+    "home_featured": false,
     "description": "Owned full-stack development of high-performance web services and UIs for the collectibles price-research platform, with CI/CD, IaC and automated testing for predictable releases.",
     "image": "images/clients/mavin.png",
     "link": "https://mavin.org/"
@@ -81,19 +82,23 @@
     "title": "Unveil Art",
     "legal_name": "Unveil B.V.",
     "category": "direct",
+    "home_featured": true,
     "description": "Delivered an NFT marketplace with secure payment flows, content-rights management and a React SPA. Owned service hardening, access control and production support.",
     "image": "images/clients/unveil.svg"
   },
   {
     "title": "Datafloq",
+    "legal_name": "Datafloq B.V.",
     "category": "direct",
     "description": "Owned backend architecture for content and data products — Elasticsearch, relational stores, REST APIs, caching, staging and blue-green deploys with strong SLA adherence.",
     "image": "images/clients/datafloq.png",
     "link": "https://datafloq.com/"
   },
   {
-    "title": "DTG (De Telefoongids)",
+    "title": "DTG",
+    "legal_name": "De Telefoongids B.V.",
     "category": "direct",
+    "home_featured": true,
     "description": "Delivered SOA integrations enabling reliable communication between enterprise systems, with schema governance and contract testing across JBoss, Apache Camel and CXF.",
     "image": "images/clients/dtg.svg",
     "link": "https://www.detelefoongids.nl/"
@@ -102,6 +107,7 @@
     "title": "Weeronline",
     "legal_name": "Weeronline B.V.",
     "category": "direct",
+    "home_featured": true,
     "description": "Created reusable React component libraries and optimised high-throughput endpoints for the leading Dutch consumer weather service, with caching and queueing for low-latency experiences.",
     "image": "images/clients/weeronline.png",
     "link": "https://www.weeronline.nl/"
@@ -111,7 +117,8 @@
     "legal_name": "Coull Ltd.",
     "category": "direct",
     "status": "Acquired by Acuity Ads",
-    "description": "Built an OpenRTB-based bid switch for real-time video advertising — low latency, fault tolerance, profiling and canary releases with operational transparency."
+    "description": "Built an OpenRTB-based bid switch for real-time video advertising — low latency, fault tolerance, profiling and canary releases with operational transparency.",
+    "image": "images/clients/coull.jpeg"
   },
   {
     "title": "Bookerzzz",
@@ -123,13 +130,16 @@
   {
     "title": "HolidayCheck",
     "legal_name": "HolidayCheck AG",
+    "home_featured": true,
     "category": "direct",
     "description": "Backend engineering and data work for the DACH region's leading hotel-review and package-holiday platform, serving millions of travellers.",
     "image": "images/clients/holidaycheck.png",
     "link": "https://www.holidaycheck.de/"
   },
   {
-    "title": "William Hill Plc",
+    "title": "William Hill Online",
+    "legal_name": "William Hill Online PLC",
+    "home_featured": true,
     "category": "direct",
     "description": "Developed the Product Data Service for high availability and real-time betting data. Led test architecture and CI, partnering with platform teams on reliability and scale.",
     "image": "images/clients/wh.png",
@@ -138,6 +148,7 @@
   {
     "title": "IBM",
     "category": "direct",
+    "home_featured": true,
     "description": "Led development of the Customer Centre application managing worldwide computer leases. Drove performance tuning, release readiness and incident reduction against DB2 and MQ.",
     "image": "images/clients/ibm.gif",
     "link": "https://www.ibm.com/"
@@ -146,6 +157,7 @@
   {
     "title": "Ethereum",
     "category": "protocol",
+    "home_featured": true,
     "description": "Contributed to go-ethereum, the official Go implementation of the Ethereum protocol — reviewed upstream contributions to blockchain functionality and performance.",
     "image": "images/protocols/ethereum.png",
     "link": "https://github.com/ethereum/go-ethereum"
@@ -153,6 +165,7 @@
   {
     "title": "Polkadot",
     "category": "protocol",
+    "home_featured": true,
     "description": "Heterogeneous multi-chain protocol where parachains share the security of a central Relay Chain. Privorum contributed to ecosystem components during the ChainSafe engagement.",
     "image": "images/protocols/polkadot.png",
     "link": "https://polkadot.network/"
@@ -202,6 +215,14 @@
     "link": "https://gosmilo.com/"
   },
   {
+    "title": "Smilo Foundation",
+    "legal_name": "Smilo Stichting B.V.",
+    "category": "community",
+    "description": "Dutch non-profit stewarding the Smilo hybrid blockchain — a public/private smart-contract network giving individuals control of their personal data through a mobile light-node data wallet. The Foundation coordinates the open-source contributor community behind Smilo's permissionless and permissioned PoS/PoA consensus options, which adapt battle-tested algorithms (Clique, Tendermint DAO, Istanbul DAO, Sport, Sport DAO) and build on prior work from Ethereum, Clearmatics, Etherzero and JPMorgan Chase.",
+    "image": "images/protocols/smilo.jpeg",
+    "link": "https://www.smilo.foundation/"
+  },
+  {
     "title": "Skycoin",
     "category": "protocol",
     "description": "Designed and built core platform components including wallets and mobile clients. Owned release pipelines, cross-platform build quality and cross-protocol interoperability.",
@@ -213,7 +234,7 @@
     "title": "Visser & Van Baars",
     "legal_name": "Visser & Van Baars B.V.",
     "category": "agency",
-    "description": "Business intelligence, data and analytics delivery partner in the Netherlands. Engagements placed through Visser & Van Baars included work at HolidayCheck.",
+    "description": "Business intelligence, data and analytics delivery partner in the Netherlands. Placed Privorum on the Smilo blockchain engagement.",
     "image": "images/clients/visserenvanbaars.png",
     "link": "https://www.visservanbaars.nl/"
   },
@@ -221,7 +242,7 @@
     "title": "Progressive",
     "legal_name": "Progressive B.V.",
     "category": "agency",
-    "description": "Specialist staffing and delivery partner for technology engagements in the UK and continental Europe. Placed Privorum on the Smilo and DTG engagements.",
+    "description": "Specialist staffing and delivery partner for technology engagements in the UK and continental Europe. Placed Privorum on the DTG engagement.",
     "image": "images/clients/progressive.png",
     "link": "https://www.progressiverecruitment.com/"
   },
@@ -229,7 +250,7 @@
     "title": "Spilberg",
     "legal_name": "Spilberg B.V.",
     "category": "agency",
-    "description": "Dutch IT delivery partner specialising in development and testing engagements across enterprise clients. Placed Privorum on the Bookerzzz engagement.",
+    "description": "Dutch IT delivery partner specialising in development and testing engagements across enterprise clients. Placed Privorum on the Bookerzzz and HolidayCheck engagements.",
     "image": "images/clients/spilberg.png",
     "link": "https://www.spilberg.nl/"
   },
@@ -252,7 +273,6 @@
   {
     "title": "Comentarismo",
     "category": "community",
-    "status": "Open source · in revival",
     "description": "Open-source, self-hostable commenting engine and content API — a privacy-friendly alternative to Disqus for blogs and static sites.",
     "image": "images/clients/comentarismo.png",
     "link": "https://github.com/comentarismo"

@@ -16,4 +16,10 @@ start-watch:
 build:
 	rm -rf public && $(HUGO)
 
-.PHONY: start start-watch watch
+deploy-setup:
+	./deploy.sh setup
+
+deploy:
+	./deploy.sh
+
+.PHONY: start start-watch watch build deploy deploy-setup

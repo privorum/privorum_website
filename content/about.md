@@ -1,5 +1,6 @@
 ---
 title: 'About'
+intro_image: images/undraw_modern_professional_yt9h.svg
 ---
 
 Privorum is a technical consultancy focused on AI systems, backend platforms, workflow automation, and distributed software.

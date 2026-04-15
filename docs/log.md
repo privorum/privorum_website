@@ -20,7 +20,7 @@
 - Introduced a `legal_name` field rendered small under each card (SPHX Inc, Genie AI Inc, DefyTrends Inc, Unveil B.V., Mavin B.V., Dusk Network B.V., Weeronline B.V., Coull Ltd, Bookerzzz B.V., HolidayCheck AG, Spilberg B.V., Progressive B.V., Visser & Van Baars B.V., Reusify B.V., Zoover International B.V., DeepDesk B.V., Vosbor B.V.).
 - Added a `status` field + mono tag styling; used on Coull ("Acquired by Acuity Ads (2018)") and Comentarismo ("Open source · in revival").
 - Reframed SouJava as community / NGO (JCP Executive Committee seat) and Comentarismo as open-source.
-- New/replaced assets: `static/images/clients/dtg.svg` (via Wayback — live CDN behind Akamai), `genie.png` (refreshed to the purple full-logo variant), `reusify.svg`, `zoover.svg`, `nevergoblank.svg`, `biidin.svg`, and `static/images/protocols/cosmos.svg`.
+- New/replaced assets: `static/images/clients/dtg.svg` (via Wayback — live CDN behind Akamai), `genie.svg` (refreshed to the purple full-logo variant), `reusify.svg`, `zoover.svg`, `nevergoblank.svg`, `biidin.svg`, and `static/images/protocols/cosmos.svg`.
 - Additive SCSS in `_page-clients-list.scss` for `.clients-group`, `.clients-group-title`, `.clients-group-intro`, `.clients-row--featured`, `.clients-legal-name`, `.clients-eyebrow`, `.clients-status`.
 - `content/clients/_index.md` intro refreshed to reflect the five-group structure; removed the standalone "Open-source contributions" bullet list (now covered by the community category).
 
@@ -182,3 +182,15 @@
 - Upload logos for DeepDesk, HydraDX / Basilisk, Picasso, Weeronline, and DTG so the five remaining mono fallbacks can be swapped to real brand marks.
 - Decide whether to move the retained Spilberg / Progressive / Visser & Van Baars / SouJava / Comentarismo block into a visually distinct "Additional" cluster on the Clients page (currently they sit contiguously after the CV chronology).
 - Keep the logo-optimisation pass (WebP/AVIF, `<picture>`, responsive `srcset`) queued for the next perf pass.
+
+### Done (Services — add Machine Learning and Data Engineering pages)
+
+- Added `content/services/machine-learning.md` (weight 2) and `content/services/data-engineering.md` (weight 3) matching the existing service-page pattern: practical-question list, typical engagement areas, technology depth, and a closing production-mindset line. ML covers model design, training/eval, serving, MLOps, and drift monitoring. Data Engineering covers ingestion, ETL/ELT, warehousing, streaming, data quality/contracts, and feature stores feeding ML.
+- Reweighted existing service pages so the services index orders by topic adjacency: AI Workflows (1) → Machine Learning (2) → Data Engineering (3) → Workflow Automation (4) → Backend Platforms (5) → Security Audits (6) → Blockchain Systems (7) → Blockchain Advisory (8).
+- Updated `data/service_areas.json` so the homepage "What Privorum builds" capability list surfaces the two new areas. Replaced the generic "Analytics & Data Systems" card with more specific "Machine Learning" and "Data Engineering & Pipelines" entries; kept "Integrations & Infrastructure" and "Blockchain & Distributed Systems" so the list still reads as a full capability map.
+- Verified with `hugo`: build passes, `public/services/machine-learning/` and `public/services/data-engineering/` render, services index lists all eight pages.
+
+### Plan
+
+- Decide whether ML and Data Engineering warrant dedicated case-study rows on the Execution Ledger / Proof strip or should stay described at the service-page level only.
+- Consider adding inline references (github links, blog posts) on the ML and Data Engineering pages similar to Blockchain Systems, once non-NDA artefacts are available.

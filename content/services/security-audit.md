@@ -3,7 +3,7 @@ title: "Security Audits"
 date: 2018-11-18T12:33:46+10:00
 draft: false
 featured: true
-weight: 4
+weight: 6
 ---
 
 Privorum reviews distributed systems, smart contracts, and backend architectures to identify security issues, design weaknesses, and operational risk.

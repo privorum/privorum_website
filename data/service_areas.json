@@ -4,6 +4,14 @@
     "description": "Design LLM-backed workflows that connect models to real products, operations, and internal tools — with evaluation and guardrails, not just prompts."
   },
   {
+    "title": "Machine Learning",
+    "description": "Build, train, and operate ML models as production systems — with evaluation, monitoring, and retraining paths designed from day one."
+  },
+  {
+    "title": "Data Engineering & Pipelines",
+    "description": "Design ingestion, ETL/ELT, warehousing, and streaming systems that feed analytics, ML, and products from a data layer the team can trust."
+  },
+  {
     "title": "Workflow Automation",
     "description": "Reduce manual overhead by orchestrating tasks, systems, approvals, and cross-team handoffs with durable, observable job runners."
   },
@@ -14,10 +22,6 @@
   {
     "title": "Integrations & Infrastructure",
     "description": "Connect cloud systems, third-party services, CI/CD, and observability into one coherent platform instead of a collection of scripts."
-  },
-  {
-    "title": "Analytics & Data Systems",
-    "description": "Build reliable data flows, dashboards, and operational reporting systems that engineering and the business both trust."
   },
   {
     "title": "Blockchain & Distributed Systems",

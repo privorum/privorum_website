@@ -1,0 +1,45 @@
+.page-default-single,
+.page-contact {
+  .single-aside {
+    display: none;
+
+    @include media-breakpoint-up(md) {
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+      padding-top: 2.5rem;
+    }
+
+    img {
+      width: 100%;
+      max-width: 320px;
+      height: auto;
+      opacity: 0.85;
+    }
+  }
+}
+
+.page-hero--with-aside > .container {
+  @include media-breakpoint-up(md) {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 320px);
+    column-gap: 3rem;
+    align-items: center;
+  }
+}
+
+.page-hero-aside {
+  display: none;
+
+  @include media-breakpoint-up(md) {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  img {
+    width: 100%;
+    max-width: 320px;
+    height: auto;
+    opacity: 0.85;
+  }
+}

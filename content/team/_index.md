@@ -1,5 +1,6 @@
 ---
 title: 'Team'
+intro_image: images/undraw_problem_solving_ft81.svg
 ---
 
 # Meet the team

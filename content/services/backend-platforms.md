@@ -3,7 +3,7 @@ title: "Backend Platforms"
 date: 2026-04-15T10:00:00+00:00
 featured: true
 draft: false
-weight: 3
+weight: 5
 ---
 
 Privorum designs and builds backend platforms for products that need to hold up beyond an MVP — reliable APIs, clean service boundaries, and infrastructure that an on-call engineer can actually operate.
