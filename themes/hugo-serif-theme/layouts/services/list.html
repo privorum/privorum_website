@@ -3,72 +3,55 @@
 {{ define "header_classes" }}{{ end }}
 
 {{ define "main" }}
-<section class="services-hero">
+<section class="page-hero">
   <div class="container">
-    <div class="row align-items-center">
-      <div class="col-12 col-lg-6">
-        <div class="intro-eyebrow">AI Workflows, Backend Engineering, Blockchain Systems</div>
-        {{ .Content }}
-        <div class="hero-actions">
-          <a class="button" href="{{ "contact/" | relURL }}">Discuss Your System</a>
-        </div>
-      </div>
-      <div class="col-12 col-lg-6">
-        <div class="systems-art services-systems-art">
-          <div class="systems-grid"></div>
-          <div class="systems-card systems-card-primary">
-            <span class="systems-label">Build</span>
-            <strong>Production services</strong>
-            <p>APIs, orchestration, infrastructure, and data systems designed to last.</p>
-          </div>
-          <div class="systems-card systems-card-secondary">
-            <span class="systems-label">Adapt</span>
-            <strong>AI and automation</strong>
-            <p>Workflow systems that connect models to the tools and operations around them.</p>
-          </div>
-        </div>
-      </div>
+    <div class="hero-eyebrow">Services</div>
+    {{ .Content }}
+    <div class="hero-actions">
+      <a class="button" href="{{ "contact/" | relURL }}">Discuss your system</a>
     </div>
   </div>
 </section>
 
-<section class="services-overview">
-<div class="container">
-  <div class="row mb-3 align-items-end">
-    <div class="col-12 col-lg-8">
-      <span class="section-kicker">Service Areas</span>
+<section class="home-capabilities">
+  <div class="container">
+    <header class="section-head">
+      <span class="section-eyebrow">01 · Service areas</span>
       <h2>What Privorum works on</h2>
-      <p>From AI-assisted workflows to distributed platforms, our services are designed for teams that need implementation depth, technical clarity, and production-ready systems.</p>
-    </div>
+      <p class="section-intro">From AI-assisted workflows to distributed platforms, these are the capabilities we apply when the work needs implementation depth, technical clarity, and production-ready systems.</p>
+    </header>
+
+    <ol class="capability-list">
+      {{ range $i, $item := hugo.Data.service_areas }}
+      <li class="capability-row">
+        <span class="capability-index">{{ printf "%02d" (add $i 1) }}</span>
+        <h3 class="capability-title">{{ $item.title }}</h3>
+        <p class="capability-body">{{ $item.description }}</p>
+      </li>
+      {{ end }}
+    </ol>
   </div>
-  <div class="row">
-    {{ range $i, $item := .Site.Data.service_areas }}
-    <div class="col-12 col-md-6 col-xl-4 mb-2">
-      <div class="overview-card">
-        <span class="overview-index">0{{ add $i 1 }}</span>
-        <h3>{{ $item.title }}</h3>
-        <p>{{ $item.description }}</p>
-      </div>
-    </div>
-    {{ end }}
-  </div>
-</div>
 </section>
 
-<section class="services-overview services-specialized">
-<div class="container">
-  <div class="row mb-3 align-items-end">
-    <div class="col-12 col-lg-8">
-      <span class="section-kicker">Specialized Services</span>
-      <h2>Specialist and legacy service depth.</h2>
-      <p>These pages capture deeper blockchain-specific service areas and related technical capabilities that remain part of Privorum's experience.</p>
-    </div>
+<section class="services-specialized">
+  <div class="container">
+    <header class="section-head">
+      <span class="section-eyebrow">02 · Individual services</span>
+      <h2>Detailed service pages</h2>
+      <p class="section-intro">Each page below documents a specific service area in depth — AI workflows, automation, backend platforms, security audits, and blockchain systems.</p>
+    </header>
+
+    <ol class="services-list">
+      {{ range .Pages.ByWeight }}
+      <li class="services-row">
+        <a href="{{ .RelPermalink }}" class="services-row-link">
+          <span class="services-title">{{ .Title }}</span>
+          <span class="services-summary">{{ .Summary | plainify | truncate 160 }}</span>
+          <span class="services-arrow" aria-hidden="true">&rarr;</span>
+        </a>
+      </li>
+      {{ end }}
+    </ol>
   </div>
-  <div class="row">
-    {{ range .Pages.ByWeight }}
-    <div class="col-12 col-md-6 mb-2 ">{{ .Render "summary" }}</div>
-    {{ end }}
-  </div>
-</div>
 </section>
 {{ end }}

@@ -1,6 +1,6 @@
 baseURL = "https://privorum.com"
 languageCode = "en-us"
-title = "Privorum Blockchain Software Development Company"
+title = "Privorum — AI, Automation & Backend Engineering"
 themesDir = "themes"
 theme = "hugo-serif-theme"
 
@@ -12,15 +12,15 @@ theme = "hugo-serif-theme"
   [params.logo]
     mobile = "images/logo-mobile.svg"
     standard  = "images/logo.png"
-    alt = "Privorum Blockchain Software Development Company"
+    alt = "Privorum — AI, Automation & Backend Engineering"
 
   [params.homepage_meta_tags]
-    meta_description = "Privorum was founded in the year 2020 in Amsterdam and is a dedicated lab of R&D experts for Blockchain technologies."
-    meta_og_title = "Privorum Blockchain Software Development Company"
+    meta_description = "Privorum is a senior engineering consultancy for AI workflows, automation, and backend platforms. We design and ship production systems that hold up."
+    meta_og_title = "Privorum — AI, Automation & Backend Engineering"
     meta_og_type = "website"
     meta_og_url = "https://privorum.com"
-    meta_og_image = "https://raw.githubusercontent.com/JugglerX/hugo-serif-theme/master/images/tn.png"
-    meta_og_description = "odeneis was founded in the year 2017 in Amsterdam and is a dedicated lab of R&D experts for Blockchain technologies."
+    meta_og_image = "https://privorum.com/images/logo.png"
+    meta_og_description = "Privorum designs and ships AI workflows, automation, and backend platforms with the engineering discipline required for production."
     meta_twitter_card = "summary"
     meta_twitter_site = "@privorum"
     meta_twitter_creator = "@privorum"
@@ -33,19 +33,24 @@ theme = "hugo-serif-theme"
       weight = 1
 
   [[menu.main]]
+      name = "About"
+      url = "/about/"
+      weight = 2
+
+  [[menu.main]]
       name = "Team"
       url = "/team/"
-      weight = 2
+      weight = 3
 
   [[menu.main]]
       name = "Clients"
       url = "/clients/"
-        weight = 3
+        weight = 4
 
   [[menu.main]]
-      name = "Protocols"
-      url = "/protocols/"
-        weight = 4
+      name = "Contact"
+      url = "/contact/"
+        weight = 5
 
   # Footer Menu
   [[menu.footer]]

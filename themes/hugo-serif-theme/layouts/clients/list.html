@@ -3,59 +3,88 @@
 {{ define "header_classes" }}{{ end }}
 
 {{ define "main" }}
-<section class="clients-hero">
+<section class="page-hero">
   <div class="container">
-    <div class="row align-items-center">
-      <div class="col-12 col-lg-6">
-        <div class="intro-eyebrow">AI, Trading, Analytics, Platforms, Distributed Systems</div>
-        {{ .Content }}
-      </div>
-      <div class="col-12 col-lg-6">
-        <div class="systems-art clients-systems-art">
-          <div class="systems-grid"></div>
-          <div class="systems-card systems-card-primary">
-            <span class="systems-label">Proof</span>
-            <strong>Older and newer clients</strong>
-            <p>One unified client view across platforms, products, and technical delivery.</p>
-          </div>
-          <div class="systems-card systems-card-secondary">
-            <span class="systems-label">Range</span>
-            <strong>Deep technical coverage</strong>
-            <p>AI products, backend systems, analytics, marketplaces, and blockchain-native platforms.</p>
-          </div>
-        </div>
-      </div>
-    </div>
+    <div class="hero-eyebrow">Clients</div>
+    {{ .Content }}
   </div>
 </section>
-
 
 <section class="clients-archive">
   <div class="container">
-    <div class="row">
-      <div class="col-12 text-center mb-3">
-        <span class="section-kicker">Unified Client Archive</span>
-        <h2>Selected companies and platforms supported over time.</h2>
-        <p>AI clients are shown first, followed by broader platform, infrastructure, and blockchain-related work.</p>
-      </div>
-    </div>
-    <div class="row justify-content-center client-archive-grid">
-      {{ range .Site.Data.clients }}
-        <div class="col-12 col-md-6 col-lg-4 mb-2">
-          <div class="feature client-archive-card">
-            {{ if .image }}
-              <div class="feature-image"><img alt="{{ .title }} logo" src="{{ .image | relURL }}" /></div>
-            {{ end }}
-            <h2 class="feature-title"><a href="{{ .link }}" target="_blank" rel="noopener noreferrer">{{ .title }}</a></h2>
-            <div class="feature-content">
-              <p>{{ .description }}</p>
+    <header class="section-head">
+      <span class="section-eyebrow">Archive</span>
+      <h2>Selected companies and platforms.</h2>
+      <p class="section-intro">Organised by engagement type — direct clients first, then protocols, agencies that placed us, advisory, and community work.</p>
+    </header>
+
+    {{ $groups := slice
+      (dict "key" "direct"    "label" "Direct clients"          "intro" "Product and platform engagements — founder, fractional-CTO, and senior-engineering work delivered directly.")
+      (dict "key" "protocol"  "label" "Blockchain protocols"    "intro" "Protocol-level engineering and operations. Polkadot and Cosmos ecosystem work was delivered through an engagement with ChainSafe Systems.")
+      (dict "key" "agency"    "label" "Agency engagements"      "intro" "Delivery and staffing partners who placed Privorum on specific client engagements. The end clients are listed in their own sections above.")
+      (dict "key" "advisory"  "label" "Advisory"                "intro" "Board-level and technical advisory engagements.")
+      (dict "key" "community" "label" "Community &amp; open source" "intro" "Non-profit community work and open-source projects.")
+    }}
+
+    {{ range $groups }}
+    {{ $entries := where hugo.Data.clients "category" .key }}
+    {{ if $entries }}
+    <section class="clients-group" id="group-{{ .key }}">
+      <header class="clients-group-head">
+        <h3 class="clients-group-title">{{ .label | safeHTML }}</h3>
+        {{ with .intro }}<p class="clients-group-intro">{{ . | safeHTML }}</p>{{ end }}
+      </header>
+
+      <ol class="clients-list">
+        {{ range $entries }}
+        {{ $client := . }}
+        {{ $alt := printf "%s logo" $client.title }}
+        {{ with $client.legal_name }}{{ $alt = printf "%s (%s) logo" $client.title . }}{{ end }}
+        <li class="clients-row{{ if .featured }} clients-row--featured{{ end }}">
+          {{ if .link }}
+          <a href="{{ .link }}" target="_blank" rel="noopener noreferrer" class="clients-row-link">
+            <div class="clients-logo">
+              {{ if .image }}
+              <img src="{{ .image | relURL }}" alt="{{ $alt }}" loading="lazy" />
+              {{ else }}
+              <span class="clients-logo-fallback">{{ .title }}</span>
+              {{ end }}
             </div>
+            <div class="clients-meta">
+              {{ if .featured }}<span class="clients-eyebrow">Founder engagement</span>{{ end }}
+              <span class="clients-title">{{ .title }}</span>
+              {{ with .legal_name }}<span class="clients-legal-name">{{ . }}</span>{{ end }}
+              {{ with .status }}<span class="clients-status">{{ . }}</span>{{ end }}
+            </div>
+            <p class="clients-description">{{ .description }}</p>
+            <span class="clients-arrow" aria-hidden="true">&rarr;</span>
+          </a>
+          {{ else }}
+          <div class="clients-row-link clients-row-link--static">
+            <div class="clients-logo">
+              {{ if .image }}
+              <img src="{{ .image | relURL }}" alt="{{ $alt }}" loading="lazy" />
+              {{ else }}
+              <span class="clients-logo-fallback">{{ .title }}</span>
+              {{ end }}
+            </div>
+            <div class="clients-meta">
+              {{ if .featured }}<span class="clients-eyebrow">Founder engagement</span>{{ end }}
+              <span class="clients-title">{{ .title }}</span>
+              {{ with .legal_name }}<span class="clients-legal-name">{{ . }}</span>{{ end }}
+              {{ with .status }}<span class="clients-status">{{ . }}</span>{{ end }}
+            </div>
+            <p class="clients-description">{{ .description }}</p>
           </div>
-        </div>
-      {{end}}
-    </div>
+          {{ end }}
+        </li>
+        {{ end }}
+      </ol>
+    </section>
+    {{ end }}
+    {{ end }}
+
+    <p class="clients-note">Additional engagements are under NDA and available on request.</p>
   </div>
 </section>
-
-
 {{ end }}

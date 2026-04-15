@@ -1,7 +1,7 @@
 [
   {
-    "title": "AI Sidebots",
-    "description": "Design and deliver sidebots that plug into real workflows, tools, and business operations.",
+    "title": "AI Workflows",
+    "description": "Design and deliver LLM-backed workflows that plug into real products, tools, and business operations.",
     "image": "images/features/noun_branding_1885335.svg"
   },
   {
@@ -11,7 +11,7 @@
   },
   {
     "title": "Distributed Systems",
-    "description": "Apply deep experience in blockchain and high-complexity platforms when the system architecture demands it.",
+    "description": "Apply deep experience in blockchain and high-complexity platforms when the architecture genuinely requires it.",
     "image": "images/features/noun_3d modeling_1885342.svg"
   }
 ]

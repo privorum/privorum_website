@@ -4,14 +4,17 @@
       <div class="col-12">
         <div class="sub-footer-inner">
           <ul>
-{{ if .Site.Data.contact.phone }}
-            <li><strong>Phone: </strong><span>{{ .Site.Data.contact.phone }}</span></li>
+{{ if hugo.Data.contact.phone }}
+            <li><strong>Phone: </strong><span>{{ hugo.Data.contact.phone }}</span></li>
 {{ end }}
-            <li><strong>Email: </strong><a href="mailto:{{ .Site.Data.contact.email }}">
-                {{ .Site.Data.contact.email }}</a></li>
+            <li><strong>Email: </strong><a href="mailto:{{ hugo.Data.contact.email }}">
+                {{ hugo.Data.contact.email }}</a></li>
           </ul>
           <a class="privorum" href="https://www.privorum.com">www.privorum.com</a>
         </div>
+        <p class="sub-footer-legal">
+          Privorum BV — founded 2020, Amsterdam. KVK 77768213 · VAT NL861135453B01.
+        </p>
       </div>
     </div>
   </div>

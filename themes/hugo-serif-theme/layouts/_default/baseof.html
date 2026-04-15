@@ -9,12 +9,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   {{ block "meta_tags" . }}{{end}}
   <link rel="icon" href="{{ "favicon-32x32.png" | relURL }}">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="preload" as="font" type="font/woff2" href="{{ "fonts/fraunces-600.woff2" | relURL }}" crossorigin>
+  <link rel="preload" as="font" type="font/woff2" href="{{ "fonts/ibm-plex-sans-400.woff2" | relURL }}" crossorigin>
 
   <!-- CSS-->
-  {{ if .Site.IsServer }}
+  {{ if hugo.IsServer }}
   {{ $style := resources.Get "scss/style.scss" | resources.ExecuteAsTemplate "style.scss" . | toCSS (dict "targetPath" "css/style.css" "enableSourceMap" true) }}
   <link rel="stylesheet" href="{{ ($style).RelPermalink }}">
   {{ else }}
@@ -45,7 +44,7 @@
   {{ block "footer_js" . }}
   {{ end }}
 
-  {{ if .Site.IsServer }}
+  {{ if hugo.IsServer }}
   <script type="text/javascript" src="{{ $scripts.RelPermalink }}"></script>
   {{ else }}
   <script type="text/javascript" src="{{ ($scripts | minify | fingerprint).RelPermalink }}"></script>

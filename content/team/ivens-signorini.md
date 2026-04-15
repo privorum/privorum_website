@@ -14,4 +14,4 @@ I specialize in Golang, Java, and Solidity, with strong expertise in microservic
 
 Throughout my career, I have focused on building scalable, reliable, and maintainable systems with a practical, solution-oriented approach.
 
-You have a vision. I build the systems that make it real.
+I work best when the system has to hold up under real load, integrate cleanly with the rest of the stack, and stay maintainable once it's in production.

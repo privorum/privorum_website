@@ -1,42 +1,56 @@
 .main-menu {
   display: none;
+
   @include media-breakpoint-up(md) {
     display: block;
   }
+
   > ul {
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    gap: 6px;
+    gap: 0.5rem;
+
     > li {
       list-style: none;
+      font-family: $font-body;
       font-size: 0.95rem;
+
       > a {
-        padding: 11px 14px;
-        display: inline-block;
+        padding: 12px 16px;
+        min-height: 44px;
+        display: inline-flex;
+        align-items: center;
         font-weight: 500;
         letter-spacing: 0.01em;
         text-decoration: none;
-        color: $graphite;
-        border-radius: 999px;
-        transition: background-color 180ms ease, color 180ms ease;
+        color: $ink;
+        border-radius: 2px;
+        transition: color 180ms ease;
+
         &:hover {
           text-decoration: none;
-          background: rgba(59, 130, 246, 0.1);
-          color: $primary;
+          color: $accent;
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+          transition: none;
         }
       }
-      &.active {
-        > a {
-          background: $graphite;
-          border-radius: 999px;
-          text-decoration: none;
-          color: #ffffff;
-          &:hover {
-            text-decoration: none;
-            background: $graphite;
-            color: #ffffff;
-          }
+
+      &.active > a {
+        color: $accent;
+        text-decoration: none;
+        position: relative;
+
+        &::after {
+          content: '';
+          position: absolute;
+          left: 16px;
+          right: 16px;
+          bottom: 6px;
+          height: 1px;
+          background: $accent;
         }
       }
     }

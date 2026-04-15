@@ -3,31 +3,34 @@
 {{ define "header_classes" }}{{ end }}
 
 {{ define "main" }}
-<div class="container pb-6 pt-6 pt-md-10 pb-md-10">
-  <div class="row justify-content-start">
-    <div class="col-12 col-lg-8">
-      <div class="service service-single">
-        <div class="service-kicker">Service</div>
-        <h1 class="title">{{.Title}}</h1>
-        <div class="content">{{.Content}}</div>
-      </div>
-    </div>
-    <div class="col-12 col-lg-4 mt-4 mt-lg-0">
-      <div class="service-sidebar">
+<section class="page-hero">
+  <div class="container">
+    <div class="hero-eyebrow">Service</div>
+    <h1 class="title">{{ .Title }}</h1>
+  </div>
+</section>
+
+<section class="service-body">
+  <div class="container">
+    <div class="service-grid">
+      <article class="service-main">
+        <div class="content">{{ .Content }}</div>
+      </article>
+      <aside class="service-sidebar">
         <h3>How we work</h3>
         <p>Privorum supports products that need clear architecture, practical implementation, and technical decisions that hold up under real operating conditions.</p>
         <a class="button" href="{{ "contact/" | relURL }}">Book a consultation</a>
-      </div>
+      </aside>
     </div>
   </div>
-</div>
+</section>
 {{ end }}
 
 {{ define "footer_js" }}
 {{ $library := resources.Get "js/libs/library.js" }}
 {{ $services := resources.Get "js/pages/services.js" }}
 {{ $servicesJS := slice $library $services |resources.Concat "js/services.js" }}
-{{ if .Site.IsServer }}
+{{ if hugo.IsServer }}
   <script type="text/javascript" src="{{ $servicesJS.RelPermalink }}"></script>
   {{ else }}
   <script type="text/javascript" src="{{ ($servicesJS | minify | fingerprint).RelPermalink }}"></script>

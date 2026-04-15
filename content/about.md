@@ -1,6 +1,5 @@
 ---
 title: 'About'
-menu: 'main'
 ---
 
 Privorum is a technical consultancy focused on AI systems, backend platforms, workflow automation, and distributed software.
@@ -11,7 +10,8 @@ We work with companies that need more than generic implementation support. Our r
 
 Privorum supports products and platforms across:
 
-- AI sidebots and workflow automation
+- AI workflows and agent systems
+- workflow automation across internal tooling and operations
 - backend APIs and platform engineering
 - data pipelines and analytics systems
 - cloud infrastructure, CI/CD, and observability
@@ -19,7 +19,12 @@ Privorum supports products and platforms across:
 
 ## Technical depth
 
-Our engineering experience spans Golang, Java, Node.js, React, React Native, Kubernetes, Docker, Terraform, PostgreSQL, ArangoDB, Redis, Solidity, and cloud infrastructure on AWS and related environments.
+Our engineering experience spans:
+
+- **Languages** — Golang, Java, Node.js, TypeScript, Solidity
+- **Frontend** — React, React Native
+- **Infrastructure** — Kubernetes, Docker, Terraform, AWS
+- **Data** — PostgreSQL, ArangoDB, Redis
 
 That breadth matters because most serious systems are not isolated. They involve product constraints, infrastructure tradeoffs, data flows, integrations, and operational reliability.
 

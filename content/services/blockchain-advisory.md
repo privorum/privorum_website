@@ -3,6 +3,7 @@ title: "Blockchain Advisory"
 date: 2018-11-28T15:14:39+10:00
 featured: true
 draft: false
+weight: 6
 ---
 
 Privorum provides blockchain advisory for investors, operators, and product teams that need technical clarity before they commit to implementation.

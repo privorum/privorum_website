@@ -1,129 +1,260 @@
 [
   {
-    "title": "Genie AI",
-    "description": "AI product platform supported through LLM-powered backend services, cloud infrastructure, release practices, and inference performance work.",
-    "image": "images/clients/genie.png",
-    "link": "https://opengenie.ai/"
+    "title": "Vosbor Exchange",
+    "legal_name": "Vosbor Exchange B.V.",
+    "category": "direct",
+    "featured": true,
+    "description": "Founder engagement. Led end-to-end delivery of the first digital marketplace for physical agricultural commodities — wheat, corn, soy, palm oil and other bulk cargoes — building the real-time matching engine, low-latency APIs, and streaming data pipelines from architecture through MVP and closed beta with 35 major agri-trading companies. Vosbor raised a $7M seed round led by Lux Capital with Market One Capital, FJ Labs, 7percent Ventures, Athos Capital and Nucleus Capital, plus strategic co-investment from Chris Mahoney (former CEO, Glencore Agriculture) and Soren Schroder (former CEO, Bunge).",
+    "image": "images/clients/vosbor.png",
+    "link": "https://vosbor.com/"
   },
   {
-    "title": "DefyTrends",
-    "description": "Crypto intelligence and news aggregation platform built around analytics, APIs, and reliable data pipelines for dashboards and alerts.",
-    "image": "images/clients/defytrends.png"
+    "title": "DeepDesk",
+    "legal_name": "DeepDesk B.V.",
+    "category": "direct",
+    "description": "Architected and delivered the go-whisper voice AI service end-to-end — a full STT / LLM / TTS pipeline with validation gates and PII detection, plus the React/TypeScript playground and the backend WebSocket integration powering contact-centre agent assist.",
+    "image": "images/clients/deepdesk.png",
+    "link": "https://deepdesk.com/"
   },
   {
-    "title": "Datafloq",
-    "description": "Datafloq is the one-stop source for big data, blockchain and artificial intelligence. We offer information, insights and opportunities to drive innovation with emerging technologies.\n",
-    "image": "images/clients/datafloq.png",
-    "link": "https://datafloq.com/"
-  },
-  {
-    "title": "Sphinx",
-    "description": "High-throughput trading and market-data platform supported through backend engineering, reliability, observability, and platform scale work.",
+    "title": "SPHX Exchange",
+    "legal_name": "SPHX Inc.",
+    "category": "direct",
+    "description": "Led core engineering across backend and frontend for a high-throughput digital-asset matching and market-data platform, owning architecture, scale, reliability and real-time SLAs.",
     "image": "images/clients/sphinx.png",
     "link": "https://www.sphx.io/"
   },
   {
-    "title": "ChainSafe Systems",
-    "description": "Chainsafe is a grassroots team of developers from Toronto, they organize a few community initiatives including the Görli testnet, University of Toronto Decentralized Tech Association, Blockchain Ryerson, UofT Blockchain Group and a few local hackathons!",
-    "image": "images/clients/chainsafe.png",
-    "link": "https://chainsafe.io/"
+    "title": "Genie AI",
+    "legal_name": "Genie AI Inc.",
+    "category": "direct",
+    "description": "Architected an AI-native data platform that automates the data-scientist role — RAG pipelines, sub-agent orchestration, guarded LLM integration and automated model training, validation and deployment. Genie AI is an NVIDIA Inception Program company backed by Alpha Sigma Capital.",
+    "image": "images/clients/genie.png",
+    "link": "https://opengenie.ai/"
   },
   {
-    "title": "Dusk BV",
-    "description": "Dusk Network: the new blockchain standard for control, compliance and collaboration.\n Dusk Network is technology for securities. An open source and secure blockchain (DLT) infrastructure that businesses use to tokenize financial instruments and automate costly processes.",
-    "image": "images/protocols/dusk.png",
-    "link": "https://dusk.network/"
+    "title": "Biidin",
+    "category": "direct",
+    "description": "AI-native signal-filtering and trade-management platform for swing and position traders. Every TradingView or TrendSpider alert is evaluated against funding rates, sentiment, technicals, open positions and the economic calendar before execution, with active trailing-stop, breakeven and exit logic across IG, Alpaca, Phemex, Kraken, Binance and Hydra.",
+    "image": "images/clients/biidin.svg",
+    "link": "https://appz.biidin.com/"
+  },
+  {
+    "title": "NeverGoBlank",
+    "category": "direct",
+    "description": "AI-powered career coaching platform that prepares professionals for high-stakes moments — interviews, performance reviews, negotiations — with personalised guidance and scenario practice.",
+    "image": "images/clients/nevergoblank.svg",
+    "link": "https://www.nevergoblank.com/"
+  },
+  {
+    "title": "DefyTrends",
+    "legal_name": "DefyTrends Inc.",
+    "category": "direct",
+    "description": "Built a real-time crypto and NFT analytics platform combining on-chain data, market signals and social sentiment from more than one million data sources, with SLA-backed endpoints, data-quality checks and alerting. Backed by BIP Ventures, Ghaf Capital and Panoramic Ventures.",
+    "image": "images/clients/defytrends.png"
+  },
+  {
+    "title": "Reusify",
+    "legal_name": "Reusify B.V.",
+    "category": "direct",
+    "description": "Dutch circular-economy platform that rewards consumers for using reusable cups at participating cafés — QR-registered cups, automated impact tracking, and a loyalty layer that turns packaging reuse into a consumer product.",
+    "image": "images/clients/reusify.svg",
+    "link": "https://reusify.io/"
+  },
+  {
+    "title": "Zoover",
+    "legal_name": "Zoover International B.V.",
+    "category": "direct",
+    "description": "One of Europe's largest holiday-review portals, aggregating millions of traveller reviews and booking paths across hotels, resorts and campsites. Part of the Vakanties.nl group.",
+    "image": "images/clients/zoover.svg",
+    "link": "https://www.zoover.nl/"
+  },
+  {
+    "title": "Mavin.org",
+    "legal_name": "Mavin B.V.",
+    "category": "direct",
+    "description": "Owned full-stack development of high-performance web services and UIs for the collectibles price-research platform, with CI/CD, IaC and automated testing for predictable releases.",
+    "image": "images/clients/mavin.png",
+    "link": "https://mavin.org/"
+  },
+  {
+    "title": "Unveil Art",
+    "legal_name": "Unveil B.V.",
+    "category": "direct",
+    "description": "Delivered an NFT marketplace with secure payment flows, content-rights management and a React SPA. Owned service hardening, access control and production support.",
+    "image": "images/clients/unveil.svg"
+  },
+  {
+    "title": "Datafloq",
+    "category": "direct",
+    "description": "Owned backend architecture for content and data products — Elasticsearch, relational stores, REST APIs, caching, staging and blue-green deploys with strong SLA adherence.",
+    "image": "images/clients/datafloq.png",
+    "link": "https://datafloq.com/"
+  },
+  {
+    "title": "DTG (De Telefoongids)",
+    "category": "direct",
+    "description": "Delivered SOA integrations enabling reliable communication between enterprise systems, with schema governance and contract testing across JBoss, Apache Camel and CXF.",
+    "image": "images/clients/dtg.svg",
+    "link": "https://www.detelefoongids.nl/"
+  },
+  {
+    "title": "Weeronline",
+    "legal_name": "Weeronline B.V.",
+    "category": "direct",
+    "description": "Created reusable React component libraries and optimised high-throughput endpoints for the leading Dutch consumer weather service, with caching and queueing for low-latency experiences.",
+    "image": "images/clients/weeronline.png",
+    "link": "https://www.weeronline.nl/"
+  },
+  {
+    "title": "Coull",
+    "legal_name": "Coull Ltd.",
+    "category": "direct",
+    "status": "Acquired by Acuity Ads",
+    "description": "Built an OpenRTB-based bid switch for real-time video advertising — low latency, fault tolerance, profiling and canary releases with operational transparency."
+  },
+  {
+    "title": "Bookerzzz",
+    "legal_name": "Bookerzzz B.V.",
+    "category": "direct",
+    "image": "images/clients/bookerzzz.png",
+    "description": "Developed microservices for payments and booking with resilience, observability, scalability and AWS deployment automation. Owned service SLOs and on-call playbooks."
   },
   {
     "title": "HolidayCheck",
-    "description": "HolidayCheck Group AG, Munich, is a leading European digital company for holidaymakers. Employing around 400 personnel, the company brings four well-known holiday brands together under one roof.",
+    "legal_name": "HolidayCheck AG",
+    "category": "direct",
+    "description": "Backend engineering and data work for the DACH region's leading hotel-review and package-holiday platform, serving millions of travellers.",
     "image": "images/clients/holidaycheck.png",
     "link": "https://www.holidaycheck.de/"
   },
   {
-    "title": "BookerZzz",
-    "description": "BookerZzz is dedicated to providing our customers with the perfect stay with more value for money, hassle free. We are local specialists with more than 15 years experience and our knowledge is based on feedback from millions of previous guests. Each year, more than 1 million happy travellers trust our advice.",
-    "image": "images/clients/bookerzzz.png",
-    "link": "https://www.bookerzzz.com/"
-  },
-  {
-    "title": "Spilberg",
-    "description": "Spilberg is your sidekick within the IT development market. We specialize in staffing for all components of IT Development. We have built up a very large network of developers and testers over the years.",
-    "image": "images/clients/spilberg.png",
-    "link": "https://www.spilberg.nl/"
-  },
-  {
-    "title": "Progressive",
-    "description": "As your company adapts to changing market conditions, we grow stronger ensuring you receive professional guidance and expertise on your changing staffing needs.",
-    "image": "images/clients/progressive.png",
-    "link": "https://www.progressiverecruitment.com/en-gb/"
-  },
-  {
-    "title": "Visser & Van Baars",
-    "description": "Visser & Van Baars has the largest Business Intelligence, Data & Analytics network in the Netherlands. Thanks to our niche-oriented approach, we are the leader in staffing for the BI, Data & Analytics market.",
-    "image": "images/clients/visserenvanbaars.png",
-    "link": "https://www.visservanbaars.nl/"
-  },
-  {
     "title": "William Hill Plc",
-    "description": "William Hill is one of the most recognisable and reputable names in the gaming and betting industry. With extensive operations in the UK, Ireland, Bulgaria and Israel the company employs in excess of 15,000 people; with 2,300 retail shops and a large UK telephone betting business. William Hill PLC was floated on the London Stock Exchange in 2002.",
+    "category": "direct",
+    "description": "Developed the Product Data Service for high availability and real-time betting data. Led test architecture and CI, partnering with platform teams on reliability and scale.",
     "image": "images/clients/wh.png",
     "link": "http://www.williamhillplc.com/"
   },
   {
     "title": "IBM",
-    "description": "International Business Machines (IBM), is a global technology company that provides hardware, software, cloud-based services and cognitive computing. Founded in 1911 following the merger of four companies in New York State by Charles Ranlett Flint, it was originally called Computing-Tabulating-Recording Company.",
+    "category": "direct",
+    "description": "Led development of the Customer Centre application managing worldwide computer leases. Drove performance tuning, release readiness and incident reduction against DB2 and MQ.",
     "image": "images/clients/ibm.gif",
-    "link": "https://www.ibm.com/nl-en"
+    "link": "https://www.ibm.com/"
+  },
+
+  {
+    "title": "Ethereum",
+    "category": "protocol",
+    "description": "Contributed to go-ethereum, the official Go implementation of the Ethereum protocol — reviewed upstream contributions to blockchain functionality and performance.",
+    "image": "images/protocols/ethereum.png",
+    "link": "https://github.com/ethereum/go-ethereum"
   },
   {
-    "title": "Coull",
-    "description": "We're an independent advertising technology company, born in the UK's creative hub over ten years ago. Bristol is home to Coull HQ and we also have a great commercial team in London.",
-    "image": "images/clients/Coull_logo.png",
-    "link": "https://coull.com/"
+    "title": "Polkadot",
+    "category": "protocol",
+    "description": "Heterogeneous multi-chain protocol where parachains share the security of a central Relay Chain. Privorum contributed to ecosystem components during the ChainSafe engagement.",
+    "image": "images/protocols/polkadot.png",
+    "link": "https://polkadot.network/"
   },
+  {
+    "title": "Cosmos",
+    "category": "protocol",
+    "description": "The \"Internet of Blockchains\" — sovereign chains built with the Cosmos SDK and CometBFT consensus, interoperating via IBC. Privorum worked across Cosmos during ChainSafe and later built Polkadot ↔ Cosmos IBC bridge components at Composable Finance.",
+    "image": "images/protocols/cosmos.svg",
+    "link": "https://cosmos.network/"
+  },
+  {
+    "title": "Dusk Network",
+    "legal_name": "Dusk Network B.V.",
+    "category": "protocol",
+    "description": "Contributed to privacy-preserving distributed protocols and secure transaction flows — performance tuning, code quality, test coverage and formalised benchmarks across core services.",
+    "image": "images/protocols/dusk.png",
+    "link": "https://dusk.network/"
+  },
+  {
+    "title": "HydraDX",
+    "category": "protocol",
+    "description": "Infrastructure architecture and operations for the HydraDX omnipool (Polkadot parachain) — multi-cluster high availability, monitoring, on-call runbooks and automated rollouts across test, pre-prod and production.",
+    "image": "images/clients/hydradx.png",
+    "link": "https://hydradx.io/"
+  },
+  {
+    "title": "Basilisk",
+    "category": "protocol",
+    "description": "Extended the HydraDX infrastructure platform to Basilisk (Kusama sister chain), with shared observability and release pipelines across both networks.",
+    "image": "images/clients/basilisk.png",
+    "link": "https://bsx.fi/"
+  },
+  {
+    "title": "Composable Finance (Picasso)",
+    "category": "protocol",
+    "description": "Built cross-ecosystem messaging and data movement for the Picasso parachain, including Cosmos ↔ Polkadot IBC bridge components. The project has since wound down.",
+    "image": "images/clients/composable.png",
+    "link": "https://picasso.xyz/"
+  },
+  {
+    "title": "Smilo",
+    "legal_name": "Smilo B.V.",
+    "category": "protocol",
+    "description": "Led development of a distributed platform with consensus, API services and operational tooling. Integrated frontend applications and CI/CD for production readiness.",
+    "image": "images/protocols/smilo.jpeg",
+    "link": "https://gosmilo.com/"
+  },
+  {
+    "title": "Skycoin",
+    "category": "protocol",
+    "description": "Designed and built core platform components including wallets and mobile clients. Owned release pipelines, cross-platform build quality and cross-protocol interoperability.",
+    "image": "images/protocols/skycoin.png",
+    "link": "https://www.skycoin.com/"
+  },
+
+  {
+    "title": "Visser & Van Baars",
+    "legal_name": "Visser & Van Baars B.V.",
+    "category": "agency",
+    "description": "Business intelligence, data and analytics delivery partner in the Netherlands. Engagements placed through Visser & Van Baars included work at HolidayCheck.",
+    "image": "images/clients/visserenvanbaars.png",
+    "link": "https://www.visservanbaars.nl/"
+  },
+  {
+    "title": "Progressive",
+    "legal_name": "Progressive B.V.",
+    "category": "agency",
+    "description": "Specialist staffing and delivery partner for technology engagements in the UK and continental Europe. Placed Privorum on the Smilo and DTG engagements.",
+    "image": "images/clients/progressive.png",
+    "link": "https://www.progressiverecruitment.com/"
+  },
+  {
+    "title": "Spilberg",
+    "legal_name": "Spilberg B.V.",
+    "category": "agency",
+    "description": "Dutch IT delivery partner specialising in development and testing engagements across enterprise clients. Placed Privorum on the Bookerzzz engagement.",
+    "image": "images/clients/spilberg.png",
+    "link": "https://www.spilberg.nl/"
+  },
+
+  {
+    "title": "WeShare Ventures",
+    "category": "advisory",
+    "description": "Blockchain advisory and technical review — architecture review, feasibility assessment and delivery evaluation.",
+    "image": "images/clients/weshare.png",
+    "link": "https://www.weshareventures.com/"
+  },
+
   {
     "title": "SouJava",
-    "description": "The biggest Java User Group in the world, SouJava was founded in September 1999. The name (also spelled as SOUJava) is an acronym for \"Sociedade de Usuarios Java\" (\"Java Users Society\"), and \"Sou Java\" also means \"I'm Java\" in Portuguese.",
+    "category": "community",
+    "description": "Non-profit Brazilian Java User Group — one of the world's largest — holding an elected seat on the Java Community Process Executive Committee. Thomas Modeneis serves as a board member and JCP representative, contributing to Java core specifications and advocating for community-driven standards.",
     "image": "images/clients/SouJava_logo.jpg",
     "link": "https://soujava.org.br/"
   },
   {
     "title": "Comentarismo",
-    "description": "",
+    "category": "community",
+    "status": "Open source · in revival",
+    "description": "Open-source, self-hostable commenting engine and content API — a privacy-friendly alternative to Disqus for blogs and static sites.",
     "image": "images/clients/comentarismo.png",
-    "link": "https://api.comentarismo.com"
-  },
-  {
-    "title": "Mavin.org",
-    "description": "A content rating tool to instantly recognise articles you can trust and to rate content yourself.",
-    "image": "images/clients/mavin.png",
-    "link": "https://mavin.org"
-  },
-  {
-    "title": "WeShare Ventures",
-    "description": "",
-    "image": "images/clients/weshare.png",
-    "link": "https://www.weshareventures.com/"
-  },
-  {
-    "title": "Vosbor Exchange",
-    "description": "Commodity trading platform built from concept through MVP, funding, and closed beta delivery with hands-on technical leadership across backend, frontend, DevOps, and cloud infrastructure.",
-    "image": "images/clients/vosbor.png",
-    "link": "https://privorum.com/"
-  },
-  {
-    "title": "Unveil Art",
-    "description": "NFT marketplace MVP built with Golang backend services, Solidity smart contracts, and marketplace integration flows.",
-    "image": "images/clients/unveil.svg",
-    "link": "https://privorum.com/"
-  },
-  {
-    "title": "Hydration / Basilisk DEX",
-    "description": "DEX and infrastructure platform supported through architecture, high availability, monitoring, runbooks, and automated rollouts."
-  },
-  {
-    "title": "Picasso",
-    "description": "Platform and integration work across secure inter-service communication, tooling, performance hardening, and release readiness."
+    "link": "https://github.com/comentarismo"
   }
 ]

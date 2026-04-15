@@ -1,9 +1,9 @@
 <div class="service service-summary">
   <div class="service-content">
     <h2 class="service-title">
-      <a href="{{ .Permalink }}">{{ .Title }}</a>
+      <a href="{{ .RelPermalink }}">{{ .Title }}</a>
     </h2>
     <p>{{ .Content | plainify | htmlUnescape | truncate 155 "…" }}</p>
-    <a class="service-link" href="{{ .Permalink }}">View service</a>
+    <a class="service-link" href="{{ .RelPermalink }}">View service</a>
   </div>
 </div>

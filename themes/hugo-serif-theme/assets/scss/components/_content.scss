@@ -1,66 +1,80 @@
 .content {
   ul,
   ol {
-    margin-top: 10px;
-    margin-bottom: 20px;
+    margin-top: 0.5rem;
+    margin-bottom: 1.5rem;
+    padding-left: 1.25rem;
     list-style: disc;
+
     li {
-      margin-bottom: 5px;
-      margin-left: 20px;
-      color: $steel;
+      margin-bottom: 0.5rem;
+      color: $ink;
     }
   }
+
   a {
+    color: $accent;
     text-decoration: underline;
+    text-underline-offset: 0.2em;
+
+    &:hover {
+      color: darken($accent, 8%);
+    }
   }
+
   p {
-    font-family: $font-family-base;
-    color: $steel;
+    font-family: $font-body;
+    color: $ink;
+    line-height: 1.65;
   }
-  h1 {
-    font-family: $font-family-heading;
-    line-height: 1.2;
-    font-weight: 400;
-    @include media-breakpoint-up(md) {
-      line-height: 1.2;
-      font-weight: 400;
-    }
-  }
+
   h2 {
-    font-family: $font-family-heading;
-    font-size: 24px;
-    line-height: 1.4;
-    @include media-breakpoint-up(md) {
-      line-height: 1.4;
-    }
+    font-family: $font-display;
+    font-size: 1.7rem;
+    font-weight: 500;
+    line-height: 1.15;
+    letter-spacing: -0.015em;
+    margin-top: 2.5rem;
+    margin-bottom: 0.75rem;
+    color: $ink;
   }
+
   h3 {
-    color: $primary;
-    line-height: 1.4;
-    font-weight: 400;
-    letter-spacing: 1px;
-    @include media-breakpoint-up(md) {
-      line-height: 1.4;
-      letter-spacing: 1.8px;
-      font-weight: 400;
-    }
+    font-family: $font-display;
+    font-weight: 500;
+    font-size: 1.2rem;
+    line-height: 1.25;
+    margin-top: 2rem;
+    margin-bottom: 0.5rem;
+    color: $ink;
   }
+
   table {
     width: 100%;
+    border-collapse: collapse;
+    margin: 1.5rem 0;
+    font-size: 0.95rem;
+
     th,
     td {
-      padding: 5px;
+      padding: 0.75rem 1rem 0.75rem 0;
       vertical-align: top;
-      border-top: 1px solid $ghost;
-    }
-    thead th {
-      vertical-align: bottom;
-      border-bottom: 1px solid $ghost;
+      border-bottom: 1px solid $rule;
       text-align: left;
-      font-weight: bold;
     }
-    tbody + tbody {
-      border-top: 1px solid $ghost;
+
+    thead th {
+      font-family: $font-mono;
+      font-size: 0.78rem;
+      font-weight: 500;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      color: $mute;
     }
+  }
+
+  strong {
+    font-weight: 600;
+    color: $ink;
   }
 }

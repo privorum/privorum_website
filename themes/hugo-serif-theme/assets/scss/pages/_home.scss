@@ -1,274 +1,483 @@
-.section-kicker {
+// =============================================================================
+// Homepage — Technical Editorial
+// =============================================================================
+// Hairline rows replace cards. Warm paper background. One accent per section.
+// No backdrop-filter, no radial gradients, no rounded containers.
+// Motion budget for the homepage: three animations total.
+//   1. Hero H1 letter-spacing tighten on load (one-shot)
+//   2. Ledger entry stagger fade on scroll
+//   3. CTA underline draw on hover
+
+// -- Shared section scaffolding -----------------------------------------------
+
+.page-home {
+  background: $paper;
+  color: $ink;
+}
+
+.section-head {
+  max-width: 52rem;
+  margin-bottom: 3rem;
+
+  h2 {
+    font-family: $font-display;
+    font-weight: 600;
+    font-size: clamp(1.9rem, 3.4vw, 2.75rem);
+    line-height: 1.12;
+    letter-spacing: -0.015em;
+    color: $ink;
+    margin: 0 0 1rem 0;
+  }
+}
+
+.section-eyebrow {
   display: inline-block;
   margin-bottom: 1rem;
-  color: $primary;
-  font-size: 0.8rem;
-  font-weight: 600;
-  letter-spacing: 0.08em;
+  padding-bottom: 0.4rem;
+  border-bottom: 1px solid $rule;
+  font-family: $font-mono;
+  font-size: 0.78rem;
+  font-weight: 500;
+  letter-spacing: 0.04em;
   text-transform: uppercase;
+  color: $ink;
 }
 
 .section-intro {
-  color: $steel;
-  max-width: 34rem;
+  max-width: 38rem;
   font-size: 1.02rem;
-  line-height: 1.8;
+  line-height: 1.65;
+  color: $mute;
+  margin: 0;
+}
+
+.section-action {
+  margin-top: 2rem;
+}
+
+.text-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  color: $ink;
+  font-weight: 500;
+  text-decoration: none;
+  border-bottom: 1px solid $rule;
+  padding-bottom: 2px;
+  transition: color 180ms ease, border-color 180ms ease;
+
+  &:hover {
+    color: $accent;
+    border-color: $accent;
+    text-decoration: none;
+  }
+
+  &--accent {
+    color: $accent;
+    border-color: $accent;
+  }
+}
+
+// =============================================================================
+// Hero — Execution Ledger
+// =============================================================================
+
+.home-hero {
+  padding: 128px 0 96px;
+  background: $paper;
+  border-bottom: 1px solid $rule;
+
+  @include media-breakpoint-up(md) {
+    padding: 160px 0 128px;
+  }
+
+  h1 {
+    font-family: $font-display;
+    font-weight: 600;
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    line-height: 1.05;
+    letter-spacing: -0.02em;
+    max-width: 20ch;
+    color: $ink;
+    margin: 0 0 1.5rem 0;
+    // Single hero animation: letter-spacing tightens on load.
+    animation: heroTighten 480ms cubic-bezier(0.2, 0, 0.1, 1) both;
+
+    @media (prefers-reduced-motion: reduce) {
+      animation: none;
+    }
+  }
+
+  h2 {
+    font-family: $font-body;
+    font-weight: 400;
+    font-size: 1.2rem;
+    line-height: 1.5;
+    color: $mute;
+    max-width: 46rem;
+    margin: 0 0 1.5rem 0;
+  }
+
+  p {
+    font-size: 1.05rem;
+    line-height: 1.65;
+    color: $ink;
+    max-width: 44rem;
+    margin: 0 0 1.5rem 0;
+  }
+}
+
+@keyframes heroTighten {
+  from { letter-spacing: 0.01em; opacity: 0.6; }
+  to   { letter-spacing: -0.02em; opacity: 1; }
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 64px;
+
+  @include media-breakpoint-up(lg) {
+    grid-template-columns: 7fr 5fr;
+    gap: 80px;
+  }
+}
+
+.hero-eyebrow {
+  display: inline-block;
+  margin-bottom: 1.25rem;
+  padding-bottom: 0.3rem;
+  border-bottom: 1px solid $rule;
+  font-family: $font-mono;
+  font-size: 0.78rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: $ink;
+}
+
+.hero-metrics {
+  margin: 2.25rem 0 0 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0;
+  border-top: 1px solid $rule;
+
+  .hero-metric {
+    display: grid;
+    grid-template-columns: minmax(140px, 1fr) 3fr;
+    gap: 1.5rem;
+    padding: 0.9rem 0;
+    border-bottom: 1px solid $rule;
+
+    dt {
+      font-family: $font-mono;
+      font-size: 0.82rem;
+      letter-spacing: 0.02em;
+      text-transform: uppercase;
+      color: $mute;
+      margin: 0;
+    }
+
+    dd {
+      font-family: $font-body;
+      font-size: 0.98rem;
+      color: $ink;
+      margin: 0;
+    }
+  }
 }
 
 .hero-actions {
   display: flex;
   flex-wrap: wrap;
-  gap: 14px;
-  margin-top: 2rem;
+  gap: 1.5rem;
   align-items: center;
+  margin-top: 2.5rem;
 }
 
-.hero-metrics {
+// -- Execution Ledger (right column) -----------------------------------------
+
+.execution-ledger {
+  font-family: $font-mono;
+  font-size: 0.9rem;
+  color: $ink;
+}
+
+.ledger-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding-bottom: 0.6rem;
+  border-bottom: 1px solid $rule;
+  margin-bottom: 0;
+}
+
+.ledger-eyebrow {
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  font-size: 0.78rem;
+}
+
+.ledger-note {
+  color: $mute;
+  font-size: 0.78rem;
+  letter-spacing: 0.02em;
+}
+
+.ledger-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.ledger-row {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 14px;
-  margin-top: 2.25rem;
+  grid-template-columns: 112px 1fr;
+  grid-template-rows: auto auto;
+  grid-template-areas:
+    "scope client"
+    "scope outcome";
+  column-gap: 1rem;
+  row-gap: 0.25rem;
+  padding: 1rem 0;
+  border-bottom: 1px solid $rule;
+
+  &:last-child {
+    border-bottom: none;
+  }
+}
+
+.ledger-scope {
+  grid-area: scope;
+  font-size: 0.78rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: $accent;
+  align-self: start;
+}
+
+.ledger-client {
+  grid-area: client;
+  font-family: $font-body;
+  font-weight: 500;
+  color: $ink;
+  font-size: 0.98rem;
+  line-height: 1.2;
+}
+
+.ledger-outcome {
+  grid-area: outcome;
+  font-family: $font-body;
+  color: $mute;
+  font-size: 0.92rem;
+  line-height: 1.5;
+}
+
+// =============================================================================
+// Capabilities — numbered hairline rows
+// =============================================================================
+
+.home-capabilities {
+  padding: 128px 0;
+  background: $paper;
+  border-bottom: 1px solid $rule;
+}
+
+.capability-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  border-top: 1px solid $rule;
+}
+
+.capability-row {
+  display: grid;
+  grid-template-columns: 72px minmax(220px, 1fr) 2fr;
+  gap: 2rem;
+  padding: 2rem 0;
+  border-bottom: 1px solid $rule;
+  align-items: baseline;
 
   @include media-breakpoint-down(md) {
-    grid-template-columns: 1fr;
+    grid-template-columns: 48px 1fr;
+    grid-template-rows: auto auto;
+
+    .capability-body {
+      grid-column: 1 / -1;
+    }
   }
 }
 
-.hero-metric {
-  padding: 18px 18px 16px;
-  border: 1px solid rgba(147, 197, 253, 0.16);
-  border-radius: 18px;
-  background: rgba(15, 23, 42, 0.38);
-  backdrop-filter: blur(10px);
+.capability-index {
+  font-family: $font-mono;
+  font-size: 1rem;
+  letter-spacing: 0.02em;
+  color: $mute;
+}
 
-  strong {
-    display: block;
-    margin-bottom: 0.45rem;
-    color: #f8fbff;
-    font-size: 0.98rem;
+.capability-title {
+  font-family: $font-display;
+  font-weight: 500;
+  font-size: 1.4rem;
+  line-height: 1.2;
+  color: $ink;
+  margin: 0;
+}
+
+.capability-body {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: $mute;
+  margin: 0;
+
+  @include media-breakpoint-down(md) {
+    grid-column: 2 / -1;
+    margin-top: 0.5rem;
+  }
+}
+
+// =============================================================================
+// Platform — three-step delivery
+// =============================================================================
+
+.home-platform {
+  padding: 128px 0;
+  background: $paper-deep;
+  border-bottom: 1px solid $rule;
+}
+
+.platform-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  border-top: 1px solid $rule;
+}
+
+.platform-row {
+  display: grid;
+  grid-template-columns: 72px 1fr;
+  gap: 2rem;
+  padding: 2.5rem 0;
+  border-bottom: 1px solid $rule;
+}
+
+.platform-index {
+  font-family: $font-mono;
+  font-size: 1rem;
+  color: $accent;
+  letter-spacing: 0.04em;
+}
+
+.platform-body {
+  h3 {
+    font-family: $font-display;
+    font-weight: 500;
+    font-size: 1.4rem;
+    line-height: 1.2;
+    color: $ink;
+    margin: 0 0 0.75rem 0;
   }
 
-  span {
-    display: block;
-    color: rgba(226, 232, 240, 0.82);
-    font-size: 0.92rem;
+  p {
+    margin: 0 0 1.25rem 0;
+    color: $mute;
+    max-width: 48rem;
     line-height: 1.6;
   }
 }
 
-.hero-link {
-  color: $graphite;
-  font-weight: 600;
-  text-decoration: none;
-  transition: color 180ms ease, transform 180ms ease;
-
-  &:hover {
-    color: $primary;
-    transform: translateX(2px);
-  }
-}
-
-.systems-art {
-  position: relative;
-  min-height: 560px;
-  padding: 36px;
-  border: 1px solid rgba(59, 130, 246, 0.14);
-  border-radius: 28px;
-  background:
-    radial-gradient(circle at top right, rgba(96, 165, 250, 0.22), transparent 24%),
-    linear-gradient(160deg, rgba(255, 255, 255, 0.96), rgba(233, 238, 245, 0.9)),
-    $white;
-  box-shadow: 0 30px 80px rgba(16, 20, 27, 0.1);
-  overflow: hidden;
-}
-
-.systems-rail {
-  position: absolute;
-  background: linear-gradient(180deg, rgba(96, 165, 250, 0.28), rgba(96, 165, 250, 0));
-  border-radius: 999px;
-  pointer-events: none;
-}
-
-.systems-rail-a {
-  top: 72px;
-  left: 180px;
-  width: 1px;
-  height: 248px;
-}
-
-.systems-rail-b {
-  top: 210px;
-  right: 146px;
-  width: 180px;
-  height: 1px;
-}
-
-.systems-grid {
-  position: absolute;
-  inset: 0;
-  background-image:
-    linear-gradient(rgba(59, 130, 246, 0.1) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(59, 130, 246, 0.1) 1px, transparent 1px);
-  background-size: 52px 52px;
-  mask-image: radial-gradient(circle at center, black 42%, transparent 88%);
-  pointer-events: none;
-}
-
-.systems-card {
-  position: absolute;
-  max-width: 260px;
-  padding: 20px 20px 18px;
-  border: 1px solid rgba(59, 130, 246, 0.14);
-  border-radius: 20px;
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.92), rgba(241, 245, 249, 0.86));
-  backdrop-filter: blur(10px);
-  box-shadow: 0 18px 36px rgba(16, 20, 27, 0.1);
-
-  strong {
-    display: block;
-    margin-bottom: 0.45rem;
-    color: $black;
-    font-size: 1.15rem;
-    line-height: 1.25;
-  }
-
-  p {
-    margin: 0;
-    font-size: 0.95rem;
-    line-height: 1.65;
-  }
-}
-
-.systems-label {
-  display: inline-block;
-  margin-bottom: 0.55rem;
-  color: $primary;
-  font-size: 0.72rem;
-  font-weight: 600;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-}
-
-.systems-card-primary {
-  top: 44px;
-  left: 36px;
-}
-
-.systems-card-secondary {
-  top: 160px;
-  right: 34px;
-}
-
-.systems-card-tertiary {
-  bottom: 150px;
-  left: 78px;
-}
-
-.systems-panel {
-  position: absolute;
-  right: 32px;
-  bottom: 32px;
-  width: 280px;
-  padding: 24px;
-  border: 1px solid rgba(96, 165, 250, 0.22);
-  border-radius: 22px;
-  background: linear-gradient(180deg, rgba(15, 23, 42, 0.92), rgba(26, 34, 48, 0.94));
-  box-shadow: 0 22px 46px rgba(3, 7, 18, 0.34);
-
-  strong {
-    display: block;
-    margin-bottom: 0.9rem;
-    color: #f8fbff;
-    font-size: 1.15rem;
-    line-height: 1.3;
-  }
-
-  ul {
-    margin: 0;
-    padding-left: 1rem;
-  }
+.platform-tags {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.25rem;
 
   li {
-    margin-bottom: 0.5rem;
-    color: rgba(226, 232, 240, 0.82);
+    font-family: $font-mono;
+    font-size: 0.8rem;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: $ink;
+  }
+}
+
+// =============================================================================
+// Trust — two-column hairline table
+// =============================================================================
+
+.home-trust {
+  padding: 128px 0;
+  background: $paper;
+  border-bottom: 1px solid $rule;
+}
+
+.trust-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  border-top: 1px solid $rule;
+
+  @include media-breakpoint-up(md) {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.trust-row {
+  padding: 2rem 0;
+  border-bottom: 1px solid $rule;
+
+  @include media-breakpoint-up(md) {
+    padding: 2rem;
+
+    &:nth-child(odd) {
+      border-right: 1px solid $rule;
+    }
+  }
+
+  h3 {
+    font-family: $font-display;
+    font-weight: 500;
+    font-size: 1.3rem;
+    line-height: 1.2;
+    color: $ink;
+    margin: 0 0 0.75rem 0;
+  }
+
+  p {
+    margin: 0;
+    color: $mute;
     line-height: 1.6;
   }
 }
 
-.systems-node {
-  position: absolute;
-  border-radius: 999px;
-  background: radial-gradient(circle, rgba(59, 130, 246, 0.34), rgba(96, 165, 250, 0.05));
-}
-
-.systems-node-a {
-  width: 180px;
-  height: 180px;
-  top: -26px;
-  right: -30px;
-}
-
-.systems-node-b {
-  width: 110px;
-  height: 110px;
-  bottom: 88px;
-  right: 90px;
-}
-
-.systems-node-c {
-  width: 72px;
-  height: 72px;
-  bottom: 26px;
-  left: 34px;
-}
-
-.home-hero,
-.services-hero,
-.clients-hero {
-  padding: 96px 0 58px;
-
-  @include media-breakpoint-up(md) {
-    padding: 138px 0 88px;
-  }
-
-  h1 {
-    max-width: 10ch;
-  }
-
-  h2,
-  p {
-    max-width: 38rem;
-  }
-}
+// =============================================================================
+// Proof — client strip
+// =============================================================================
 
 .home-proof {
-  margin-top: -38px;
-  padding: 0 0 42px;
-  position: relative;
-  z-index: 2;
+  padding: 128px 0;
+  background: $paper-deep;
+  border-bottom: 1px solid $rule;
 }
 
-.proof-shell {
-  padding: 34px 30px;
-  border: 1px solid rgba(59, 130, 246, 0.14);
-  border-radius: 26px;
-  background:
-    linear-gradient(180deg, rgba(255, 255, 255, 0.94), rgba(233, 238, 245, 0.92));
-  box-shadow: 0 20px 48px rgba(16, 20, 27, 0.07);
-
-  @include media-breakpoint-up(md) {
-    padding: 34px;
-  }
-}
-
-.proof-copy {
-  margin-bottom: 1.7rem;
-}
-
-.proof-grid {
+.proof-strip {
+  list-style: none;
+  margin: 0;
+  padding: 0;
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 12px;
+  border-top: 1px solid $rule;
+  border-bottom: 1px solid $rule;
+
+  @include media-breakpoint-up(sm) {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
 
   @include media-breakpoint-up(md) {
     grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -276,295 +485,109 @@
 }
 
 .proof-item {
-  padding: 14px 16px;
-  border: 1px solid rgba(59, 130, 246, 0.12);
-  border-radius: 999px;
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.94), rgba(233, 238, 245, 0.9));
-  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 96px;
+  padding: 1rem 1.25rem;
+  border-right: 1px solid $rule;
+  border-bottom: 1px solid $rule;
 
-  span {
-    color: $graphite;
-    font-size: 0.92rem;
-    font-weight: 600;
+  img {
+    max-height: 48px;
+    max-width: 140px;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    opacity: 0.85;
+    transition: opacity 180ms ease;
+
+    &:hover {
+      opacity: 1;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      transition: none;
+    }
   }
 
-  transition: transform 180ms ease, border-color 180ms ease, background 180ms ease;
+  // Text tile fallback for entries without a logo — same cell rhythm.
+  .proof-item-text {
+    font-family: $font-mono;
+    font-size: 0.88rem;
+    letter-spacing: 0.02em;
+    color: $ink;
+    text-align: center;
+  }
 
-  &:hover {
-    transform: translateY(-2px);
-    border-color: rgba(59, 130, 246, 0.22);
-    background: linear-gradient(180deg, rgba(255, 255, 255, 1), rgba(219, 234, 254, 0.9));
+  // Hide right border on the last column per row to avoid a double line.
+  &:nth-child(2n) {
+    border-right: 0;
+  }
+
+  @include media-breakpoint-up(sm) {
+    &:nth-child(2n) { border-right: 1px solid $rule; }
+    &:nth-child(3n) { border-right: 0; }
+  }
+
+  @include media-breakpoint-up(md) {
+    &:nth-child(3n) { border-right: 1px solid $rule; }
+    &:nth-child(4n) { border-right: 0; }
   }
 }
 
-.home-services,
-.services-overview,
-.clients-archive {
-  padding: 56px 0 88px;
+.proof-note {
+  margin: 1.5rem 0 0 0;
+  font-family: $font-mono;
+  font-size: 0.82rem;
+  color: $mute;
 }
 
-.home-platform {
-  padding: 12px 0 88px;
-  background:
-    linear-gradient(180deg, rgba(16, 20, 27, 0.02), rgba(59, 130, 246, 0.05));
-}
+// =============================================================================
+// Closing CTA — full-width ink band
+// =============================================================================
 
-.home-value-strip {
-  padding: 0 0 84px;
-}
+.home-cta {
+  padding: 128px 0;
+  background: $ink;
+  color: $paper;
 
-.value-shell {
-  padding: 36px 0 0;
-}
-
-.home-trust {
-  padding: 20px 0 104px;
-}
-
-.trust-card {
-  height: 100%;
-  padding: 24px;
-  border: 1px solid rgba(59, 130, 246, 0.12);
-  border-radius: 22px;
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.98), rgba(233, 238, 245, 0.94));
-  box-shadow: 0 18px 32px rgba(16, 20, 27, 0.06);
-
-  h3 {
-    margin-bottom: 0.65rem;
-    color: $black;
+  h2 {
+    font-family: $font-display;
+    font-weight: 500;
+    font-size: clamp(2rem, 4vw, 3rem);
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+    color: $paper;
+    margin: 0 0 1rem 0;
+    max-width: 22ch;
   }
 
   p {
-    margin-bottom: 0;
+    color: rgba($paper, 0.75);
+    max-width: 40rem;
+    margin: 0 0 2rem 0;
+    font-size: 1.05rem;
+    line-height: 1.6;
   }
 
-  transition: transform 180ms ease, box-shadow 180ms ease;
+  .text-link {
+    color: $paper;
+    border-color: $paper;
+    font-size: 1.1rem;
 
-  &:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 22px 40px rgba(16, 20, 27, 0.08);
-  }
-}
+    &:hover {
+      color: $accent;
+      border-color: $accent;
+    }
 
-.services-systems-art,
-.clients-systems-art {
-  min-height: 390px;
-}
-
-.page-home {
-  .feature {
-    min-height: 100%;
-  }
-}
-
-/* Stronger section theming for the redesigned homepage, services, and clients pages */
-.home-hero,
-.services-hero,
-.clients-hero {
-  background:
-    radial-gradient(circle at top left, rgba(59, 130, 246, 0.18), transparent 24%),
-    radial-gradient(circle at bottom right, rgba(96, 165, 250, 0.12), transparent 20%),
-    linear-gradient(180deg, #10141b 0%, #121924 100%);
-
-  h1 {
-    color: #f8fbff;
-    font-size: clamp(3.4rem, 7vw, 5.9rem);
-    line-height: 0.94;
-    letter-spacing: -0.045em;
-  }
-
-  h2,
-  p {
-    color: rgba(226, 232, 240, 0.84);
-  }
-
-  .intro-eyebrow {
-    color: #dbeafe;
-    border-color: rgba(147, 197, 253, 0.24);
-    background: rgba(15, 23, 42, 0.34);
-  }
-
-  .hero-link {
-    color: #dbeafe;
-  }
-}
-
-.home-hero .systems-art,
-.services-hero .systems-art,
-.clients-hero .systems-art {
-  background:
-    radial-gradient(circle at top right, rgba(96, 165, 250, 0.16), transparent 24%),
-    linear-gradient(160deg, rgba(17, 24, 39, 0.92), rgba(26, 34, 48, 0.9)),
-    #0f172a;
-  box-shadow: 0 30px 80px rgba(3, 7, 18, 0.34);
-}
-
-.page-home {
-  .home-services {
-    position: relative;
-    z-index: 1;
-  }
-
-  .overview-card:nth-child(odd) {
-    transform: translateY(14px);
-  }
-
-  .home-value-strip {
-    .value-shell {
-      padding-top: 12px;
+    &--accent {
+      color: $accent;
+      border-color: $accent;
     }
   }
 }
 
-.home-hero .systems-card,
-.services-hero .systems-card,
-.clients-hero .systems-card {
-  background: linear-gradient(180deg, rgba(248, 250, 252, 0.96), rgba(226, 232, 240, 0.92));
-}
-
-.overview-card {
-  height: 100%;
-  padding: 26px;
-  border: 1px solid rgba(59, 130, 246, 0.12);
-  border-radius: 22px;
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.96), rgba(233, 238, 245, 0.92));
-  box-shadow: 0 20px 36px rgba(16, 20, 27, 0.06);
-
-  h3 {
-    margin-bottom: 0.75rem;
-    color: $black;
-  }
-
-  p {
-    margin-bottom: 0;
-  }
-
-  transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease;
-
-  &:hover {
-    transform: translateY(-4px);
-    border-color: rgba(59, 130, 246, 0.22);
-    box-shadow: 0 24px 42px rgba(16, 20, 27, 0.09);
-  }
-}
-
-.overview-index {
-  display: inline-block;
-  margin-bottom: 0.9rem;
-  color: $primary;
-  font-size: 0.82rem;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-}
-
-.home-value-strip .feature,
-.clients-archive .feature,
-.services-specialized .service-summary {
-  transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease;
-
-  &:hover {
-    transform: translateY(-4px);
-    border-color: rgba(59, 130, 246, 0.22);
-    box-shadow: 0 24px 42px rgba(16, 20, 27, 0.09);
-  }
-}
-
-.platform-card {
-  height: 100%;
-  padding: 28px;
-  border: 1px solid rgba(59, 130, 246, 0.12);
-  border-radius: 24px;
-  background:
-    linear-gradient(180deg, rgba(255, 255, 255, 0.98), rgba(233, 238, 245, 0.94));
-  box-shadow: 0 20px 36px rgba(16, 20, 27, 0.06);
-  transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease;
-
-  h3 {
-    margin-bottom: 0.8rem;
-    color: $black;
-  }
-
-  p {
-    margin-bottom: 1.2rem;
-  }
-
-  &:hover {
-    transform: translateY(-4px);
-    border-color: rgba(59, 130, 246, 0.22);
-    box-shadow: 0 24px 42px rgba(16, 20, 27, 0.09);
-  }
-}
-
-.platform-label {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  min-width: 48px;
-  height: 32px;
-  margin-bottom: 1rem;
-  padding: 0 0.9rem;
-  border-radius: 999px;
-  background: rgba(59, 130, 246, 0.1);
-  color: $primary;
-  font-size: 0.82rem;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-}
-
-.platform-tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-
-  span {
-    display: inline-flex;
-    align-items: center;
-    min-height: 34px;
-    padding: 0.45rem 0.8rem;
-    border: 1px solid rgba(59, 130, 246, 0.12);
-    border-radius: 999px;
-    background: rgba(255, 255, 255, 0.82);
-    color: $graphite;
-    font-size: 0.88rem;
-    font-weight: 600;
-  }
-}
-
-@media (max-width: 991px) {
-  .systems-art,
-  .services-systems-art,
-  .clients-systems-art {
-    min-height: 520px;
-    margin-top: 28px;
-  }
-
-  .systems-card {
-    max-width: 220px;
-  }
-
-  .systems-card-primary {
-    top: 28px;
-    left: 24px;
-  }
-
-  .systems-card-secondary {
-    top: 132px;
-    right: 20px;
-  }
-
-  .systems-card-tertiary {
-    bottom: 138px;
-    left: 42px;
-  }
-
-  .systems-panel {
-    right: 20px;
-    bottom: 20px;
-    width: calc(100% - 40px);
-  }
-
-  .systems-rail-a,
-  .systems-rail-b {
-    display: none;
-  }
+.cta-body {
+  max-width: 48rem;
 }

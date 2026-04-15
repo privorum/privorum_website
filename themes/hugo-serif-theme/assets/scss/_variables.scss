@@ -1,20 +1,59 @@
-$primary: #3b82f6;
-$secondary: #60a5fa;
-$black: #10141b;
-$white: #ffffff;
-$steel: #64748b;
-$ghost: #e7edf5;
-$graphite: #1a2230;
-$mist: #cbd5e1;
-$paper: #f3f5f7;
-$cloud: #e9eef5;
+// =============================================================================
+// Privorum — Technical Editorial design tokens
+// =============================================================================
+// This is the locked design anchor. Everything downstream must reference these.
+// Don't introduce ad-hoc colors, fonts, or spacing elsewhere.
+
+// -- Color hierarchy (not a palette — a committed order) ----------------------
+
+$ink:         #0B0D0E;  // primary text, structural black
+$paper:       #FFFFFF;  // page background — white so client logos render cleanly
+$paper-deep:  #F7F7F5;  // alternate section background — near-white with a hint of warmth
+$rule:        #1F1C18;  // 1px hairline dividers
+$accent:      #C2410C;  // the ONLY non-neutral on the page
+$mute:        #6B6459;  // secondary text, metadata, mono labels
+
+$white:       #FFFFFF;
+
+// -- Type roles ---------------------------------------------------------------
+
+$font-display: 'Fraunces', Georgia, serif;                    // H1–H2, pull quotes
+$font-body:    'IBM Plex Sans', Helvetica, Arial, sans-serif; // body
+$font-mono:    'IBM Plex Mono', ui-monospace, monospace;      // eyebrows, labels, metrics, ledger
+
+// -- Section spacing (8px base) -----------------------------------------------
+
+$space-section-sm: 96px;
+$space-section-md: 128px;
+$space-section-lg: 160px;
+
+// -- Z-index scale ------------------------------------------------------------
+
+$z-nav:      10;
+$z-dropdown: 20;
+$z-modal:    30;
+$z-toast:    50;
+
+// =============================================================================
+// Legacy aliases — in place only while Phases 3–5 rebuild the downstream SCSS.
+// Do not reference these in new code.
+// =============================================================================
+
+$primary:   $accent;
+$secondary: $mute;
+$black:     $ink;
+$graphite:  $ink;
+$steel:     $mute;
+$ghost:     $paper-deep;
+$mist:      $paper-deep;
+$cloud:     $paper-deep;
 
 // Links
-$link-color: $primary;
-$link-decoration: none;
-$link-hover-color: darken($primary, 8%);
+$link-color:            $accent;
+$link-decoration:       none;
+$link-hover-color:      darken($accent, 8%);
 $link-hover-decoration: underline;
 
-// Fonts
-$font-family-base: 'IBM Plex Sans', Helvetica, Arial, sans-serif, -apple-system;
-$font-family-heading: 'Fraunces', Georgia, serif;
+// Legacy font aliases
+$font-family-base:    $font-body;
+$font-family-heading: $font-display;
