@@ -21,7 +21,17 @@
 &lt;/ul&gt;</description></item><item><title>Thomas Modeneis</title><link>https://privorum.com/team/thomas-modeneis/</link><pubDate>Mon, 19 Nov 2018 10:47:58 +1000</pubDate><guid>https://privorum.com/team/thomas-modeneis/</guid><description>&lt;p&gt;I help companies define, build, and scale technical products that require strong architecture, operational discipline, and senior engineering judgment.&lt;/p&gt;
 &lt;p&gt;With more than 20 years of experience across multiple industries, countries, and technical environments, I have worked in roles spanning founder, CTO, architect, developer, and technical advisor.&lt;/p&gt;
 &lt;p&gt;My background includes backend platforms, trading systems, blockchain products, analytics systems, distributed software, and cloud infrastructure.&lt;/p&gt;
-&lt;p&gt;You have a vision. I help turn it into a system that can actually run.&lt;/p&gt;</description></item><item><title>Machine Learning</title><link>https://privorum.com/services/machine-learning/</link><pubDate>Wed, 15 Apr 2026 10:00:00 +0000</pubDate><guid>https://privorum.com/services/machine-learning/</guid><description>&lt;p&gt;Privorum builds machine learning systems for teams that need predictions, classifications, or ranking to run reliably as part of a real product — not a notebook experiment that never leaves a laptop.&lt;/p&gt;
+&lt;p&gt;You have a vision. I help turn it into a system that can actually run.&lt;/p&gt;</description></item><item><title>biidin — AI Trading Engine &amp; Fleet</title><link>https://privorum.com/products/biidin/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://privorum.com/products/biidin/</guid><description>&lt;h1 id="biidin-verified-ai-traders"&gt;biidin: Verified AI Traders&lt;/h1&gt;
+&lt;p&gt;biidin is a trading platform and AI agent fleet built in-house by Privorum. It brings together AI-driven signal generation, verified track records, and institutional-grade execution infrastructure.&lt;/p&gt;
+&lt;h2 id="the-platform"&gt;The Platform&lt;/h2&gt;
+&lt;p&gt;biidin operates a transparent fleet of AI traders (called the Captain Fleet) that:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Generate signals&lt;/strong&gt; using machine learning models trained on market data, technical analysis, and sentiment&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Execute autonomously&lt;/strong&gt; across multiple exchanges (crypto, options, CFD) using a shared execution kernel&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Report live results&lt;/strong&gt; with timestamped, verified track records&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Mirror for followers&lt;/strong&gt; — other traders can follow a fleet agent and mirror its moves on their own exchange accounts&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The platform is built for three audiences: retail traders who want to follow verified AI agents, traders who want to run their own automated strategies, and institutions that need portfolio management infrastructure.&lt;/p&gt;</description></item><item><title>Machine Learning</title><link>https://privorum.com/services/machine-learning/</link><pubDate>Wed, 15 Apr 2026 10:00:00 +0000</pubDate><guid>https://privorum.com/services/machine-learning/</guid><description>&lt;p&gt;Privorum builds machine learning systems for teams that need predictions, classifications, or ranking to run reliably as part of a real product — not a notebook experiment that never leaves a laptop.&lt;/p&gt;
 &lt;p&gt;We help answer practical questions such as:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Is this actually a machine learning problem, or would rules and heuristics solve it with less risk?&lt;/li&gt;
