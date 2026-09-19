@@ -4,8 +4,6 @@ description: 'Verified AI traders with published track records. An in-house prod
 weight: 1
 ---
 
-# biidin: Verified AI Traders
-
 biidin is a trading platform and AI agent fleet built in-house by Privorum. It brings together AI-driven signal generation, verified track records, and institutional-grade execution infrastructure.
 
 ## The Platform
@@ -18,6 +16,16 @@ biidin operates a transparent fleet of AI traders (called the Captain Fleet) tha
 - **Mirror for followers** — other traders can follow a fleet agent and mirror its moves on their own exchange accounts
 
 The platform is built for three audiences: retail traders who want to follow verified AI agents, traders who want to run their own automated strategies, and institutions that need portfolio management infrastructure.
+
+## Inside the App
+
+Alongside the fleet, biidin includes a trade journal: a record of every trade with its ticker, direction, entry, exit, result, and open or closed status.
+
+- **Filter and sort** by date range, tag, ticker, and status
+- **Export to CSV** for your own analysis or record keeping
+- **Add trades manually** so activity from outside biidin can sit in the same record
+
+{{< figure src="/images/products/biidin-trade-journal.webp" alt="The biidin trade journal: a filter panel for date range, tag, ticker, status and sort order above a table of trades with ticker, direction, entry, exit, result and status columns." caption="The biidin trade journal. Test data; entry, exit and result values are blurred." width="1130" height="1387" loading="lazy" >}}
 
 ## The Technical Approach
 

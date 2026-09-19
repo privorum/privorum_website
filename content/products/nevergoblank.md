@@ -4,8 +4,6 @@ description: 'AI-powered career coaching for high-stakes moments: interviews, pe
 weight: 2
 ---
 
-# NeverGoBlank: AI Career Coaching
-
 NeverGoBlank is an AI-powered career coaching platform built in-house by Privorum. It helps professionals prepare for the moments where a career is decided: interviews, performance reviews, and negotiations.
 
 ## The Platform
@@ -17,6 +15,12 @@ NeverGoBlank gives each user:
 - **Support for high-stakes moments** — interviews, performance reviews, and negotiations
 
 It also has a desktop companion app that captures audio, transcribes it, and connects it to an AI assistant, so preparation can happen alongside the user's normal workflow.
+
+## The Product Today
+
+NeverGoBlank speaks to a specific fear: the moment in an interview or a review when your mind goes blank. Its homepage puts it plainly: "My mind went blank. Never again." The product trains you so the right words are there when the moment arrives.
+
+{{< figure src="/images/products/nevergoblank-hero.webp" alt="The NeverGoBlank homepage: the headline 'My mind went blank. Never again.' with a short description and calls to action to get started or see pricing." caption="The NeverGoBlank homepage at nevergoblank.com." width="1440" height="717" loading="lazy" >}}
 
 ## Why We Built It
 
