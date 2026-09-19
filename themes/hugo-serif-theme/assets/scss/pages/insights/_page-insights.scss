@@ -6,6 +6,70 @@
   background: $paper-deep;
 }
 
+.insight-cats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 2rem;
+}
+
+.insight-cat-chip {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0.5rem;
+  padding: 0.35rem 0.75rem;
+  border: 1px solid $rule;
+  border-radius: 2px;
+  font-family: $font-mono;
+  font-size: 0.78rem;
+  letter-spacing: 0.02em;
+  color: $ink;
+  text-decoration: none;
+
+  span {
+    color: $mute;
+  }
+
+  &:hover {
+    border-color: $accent;
+    color: $accent;
+    text-decoration: none;
+  }
+}
+
+.insight-group {
+  scroll-margin-top: 96px;
+
+  & + & {
+    margin-top: 72px;
+  }
+}
+
+.insight-group-head {
+  margin-bottom: 1.25rem;
+
+  h2 {
+    display: flex;
+    align-items: baseline;
+    gap: 0.75rem;
+    margin: 0 0 0.4rem;
+    font-size: clamp(1.4rem, 2.6vw, 1.9rem);
+  }
+
+  p {
+    max-width: 40rem;
+    margin: 0;
+    color: $mute;
+  }
+}
+
+.insight-group-count {
+  font-family: $font-mono;
+  font-size: 0.8rem;
+  font-weight: 400;
+  color: $mute;
+}
+
 .insight-meta {
   font-family: $font-mono;
   font-size: 0.78rem;

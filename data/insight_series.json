@@ -1,0 +1,26 @@
+[
+  {
+    "name": "LLM tool calling in production",
+    "description": "What breaks when open-weight models call tools in production, and how to test for it."
+  },
+  {
+    "name": "Evaluating models",
+    "description": "Qualifying models and building evals and tests you can trust."
+  },
+  {
+    "name": "Agent design patterns",
+    "description": "General patterns for agent loops, tools and tiered models."
+  },
+  {
+    "name": "LLM operations",
+    "description": "Cost tracking, alerting and monitoring for LLM features."
+  },
+  {
+    "name": "Output guardrails",
+    "description": "Validating, containing and caching what models return."
+  },
+  {
+    "name": "Retrieval",
+    "description": "Retrieval and reranking for search and RAG pipelines."
+  }
+]

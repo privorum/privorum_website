@@ -1,0 +1,7 @@
+<li class="services-row">
+  <a href="{{ .RelPermalink }}" class="services-row-link">
+    <span class="services-title">{{ .Title }}</span>
+    <span class="services-summary">{{ or .Description (.Summary | plainify | truncate 160) }}</span>
+    <span class="services-arrow" aria-hidden="true">&rarr;</span>
+  </a>
+</li>

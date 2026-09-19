@@ -3,28 +3,52 @@
 {{ define "header_classes" }}{{ end }}
 
 {{ define "main" }}
+{{ $pages := .Pages.ByDate.Reverse }}
+{{ $known := slice }}
+{{ range hugo.Data.insight_series }}{{ $known = $known | append .name }}{{ end }}
+{{ $other := where $pages "Params.series" "not in" $known }}
+
 <section class="page-hero">
   <div class="container">
     <div class="hero-eyebrow">Insights</div>
     {{ .Content }}
+    <nav class="insight-cats" aria-label="Categories">
+      {{ range hugo.Data.insight_series }}
+      {{ $n := len (where $pages "Params.series" .name) }}
+      {{ if $n }}<a class="insight-cat-chip" href="#{{ urlize .name }}">{{ .name }} <span>{{ $n }}</span></a>{{ end }}
+      {{ end }}
+      {{ if $other }}<a class="insight-cat-chip" href="#more">More <span>{{ len $other }}</span></a>{{ end }}
+    </nav>
   </div>
 </section>
 
 <section class="insights-archive">
   <div class="container">
-    <ol class="services-list">
-      {{ range .Pages.ByDate.Reverse }}
-      <li class="services-row">
-        <a href="{{ .RelPermalink }}" class="services-row-link">
-          <span class="services-title">{{ .Title }}</span>
-          <span class="services-summary">
-            {{ with .Params.series }}<span class="insight-meta">{{ . }} · </span>{{ end }}{{ or .Description (.Summary | plainify | truncate 160) }}
-          </span>
-          <span class="services-arrow" aria-hidden="true">&rarr;</span>
-        </a>
-      </li>
-      {{ end }}
-    </ol>
+    {{ range $i, $s := hugo.Data.insight_series }}
+    {{ $group := where $pages "Params.series" $s.name }}
+    {{ if $group }}
+    <div class="insight-group" id="{{ urlize $s.name }}">
+      <header class="insight-group-head">
+        <h2>{{ $s.name }} <span class="insight-group-count">{{ len $group }}</span></h2>
+        <p>{{ $s.description }}</p>
+      </header>
+      <ol class="services-list">
+        {{ range $group }}{{ partial "insight-row.html" . }}{{ end }}
+      </ol>
+    </div>
+    {{ end }}
+    {{ end }}
+
+    {{ if $other }}
+    <div class="insight-group" id="more">
+      <header class="insight-group-head">
+        <h2>More <span class="insight-group-count">{{ len $other }}</span></h2>
+      </header>
+      <ol class="services-list">
+        {{ range $other }}{{ partial "insight-row.html" . }}{{ end }}
+      </ol>
+    </div>
+    {{ end }}
   </div>
 </section>
 {{ end }}
