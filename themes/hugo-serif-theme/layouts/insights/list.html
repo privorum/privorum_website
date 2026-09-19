@@ -1,0 +1,30 @@
+{{ define "header_css" }}{{ end }}
+{{ define "body_classes" }}page-insights-list{{ end }}
+{{ define "header_classes" }}{{ end }}
+
+{{ define "main" }}
+<section class="page-hero">
+  <div class="container">
+    <div class="hero-eyebrow">Insights</div>
+    {{ .Content }}
+  </div>
+</section>
+
+<section class="insights-archive">
+  <div class="container">
+    <ol class="services-list">
+      {{ range .Pages.ByDate.Reverse }}
+      <li class="services-row">
+        <a href="{{ .RelPermalink }}" class="services-row-link">
+          <span class="services-title">{{ .Title }}</span>
+          <span class="services-summary">
+            {{ with .Params.series }}<span class="insight-meta">{{ . }} · </span>{{ end }}{{ or .Description (.Summary | plainify | truncate 160) }}
+          </span>
+          <span class="services-arrow" aria-hidden="true">&rarr;</span>
+        </a>
+      </li>
+      {{ end }}
+    </ol>
+  </div>
+</section>
+{{ end }}

@@ -12,8 +12,10 @@
   {{ $ogTitle := cond .IsHome .Site.Params.homepage_meta_tags.meta_og_title (printf "%s — %s" .Title .Site.Title) }}
   {{ $ogImage := "images/og-cover.png" | absURL }}
   <meta name="description" content="{{ $desc }}" />
+  <link rel="canonical" href="{{ .Permalink }}" />
+  {{ with .Params.keywords }}<meta name="keywords" content="{{ delimit . ", " }}" />{{ end }}
   <meta property="og:title" content="{{ $ogTitle }}" />
-  <meta property="og:type" content="website" />
+  <meta property="og:type" content="{{ if and .IsPage (eq .Section "insights") }}article{{ else }}website{{ end }}" />
   <meta property="og:url" content="{{ .Permalink }}" />
   <meta property="og:image" content="{{ $ogImage }}" />
   <meta property="og:image:width" content="1200" />
@@ -26,8 +28,16 @@
   <meta name="twitter:title" content="{{ $ogTitle }}" />
   <meta name="twitter:description" content="{{ $desc }}" />
   <meta name="twitter:image" content="{{ $ogImage }}" />
+  {{ if and .IsPage (eq .Section "insights") }}
+  <meta property="article:published_time" content="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}" />
+  {{ with .Lastmod }}<meta property="article:modified_time" content="{{ .Format "2006-01-02T15:04:05Z07:00" }}" />{{ end }}
+  {{ range .Params.tags }}<meta property="article:tag" content="{{ . }}" />
+  {{ end }}
+  {{ partial "article-jsonld.html" . }}
+  {{ end }}
   {{ end }}
   <link rel="icon" href="{{ "favicon-32x32.png" | relURL }}">
+  {{ with .Site.Home.OutputFormats.Get "RSS" }}<link rel="alternate" type="application/rss+xml" title="{{ $.Site.Title }}" href="{{ .Permalink }}" />{{ end }}
   <link rel="preload" as="font" type="font/woff2" href="{{ "fonts/fraunces-600.woff2" | relURL }}" crossorigin>
   <link rel="preload" as="font" type="font/woff2" href="{{ "fonts/ibm-plex-sans-400.woff2" | relURL }}" crossorigin>
 

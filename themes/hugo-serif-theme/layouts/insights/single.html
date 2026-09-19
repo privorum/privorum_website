@@ -1,0 +1,55 @@
+{{ define "header_css" }}{{ end }}
+{{ define "body_classes" }}page-insights-single{{ end }}
+{{ define "header_classes" }}{{ end }}
+
+{{ define "main" }}
+<section class="page-hero">
+  <div class="container">
+    <div class="hero-eyebrow"><a href="{{ "insights/" | relURL }}">Insights</a>{{ with .Params.series }} · {{ . }}{{ end }}</div>
+    <h1 class="title">{{ .Title }}</h1>
+    <p class="insight-byline">
+      <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2 January 2006" }}</time>
+      · {{ .ReadingTime }} min read
+    </p>
+  </div>
+</section>
+
+<section class="service-body">
+  <div class="container">
+    <div class="insight-grid">
+      <article class="insight-main">
+        {{ if and (ne .Params.toc false) (gt .WordCount 600) }}
+        <nav class="insight-toc" aria-label="Table of contents">
+          <div class="insight-toc-label">On this page</div>
+          {{ .TableOfContents }}
+        </nav>
+        {{ end }}
+
+        <div class="content">{{ .Content }}</div>
+
+        {{ with .Params.source_url }}
+        <p class="insight-credit">Lessons from building <a href="{{ . }}" rel="noopener">{{ $.Params.source_product | default . }}</a>.</p>
+        {{ end }}
+
+        {{ with .Params.tags }}
+        <ul class="insight-tags" aria-label="Tags">
+          {{ range . }}<li>{{ . }}</li>{{ end }}
+        </ul>
+        {{ end }}
+      </article>
+
+      <aside class="insight-aside">
+        {{ with .Params.related_service }}
+        {{ with $.Site.GetPage (printf "/services/%s" .) }}
+        <h3>Related service</h3>
+        <p><a href="{{ .RelPermalink }}">{{ .Title }}</a></p>
+        {{ end }}
+        {{ end }}
+        <h3>Working on something similar?</h3>
+        <p>Privorum helps teams ship AI workflows that hold up in production.</p>
+        <a class="button" href="{{ "contact/" | relURL }}">Book a consultation</a>
+      </aside>
+    </div>
+  </div>
+</section>
+{{ end }}

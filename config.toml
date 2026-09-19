@@ -55,7 +55,7 @@ theme = "hugo-serif-theme"
   [[menu.main]]
       name = "Contact"
       url = "/contact/"
-        weight = 6
+        weight = 7
 
   # Footer Menu
   [[menu.footer]]
@@ -67,3 +67,13 @@ theme = "hugo-serif-theme"
     name = "Contact"
     url = "/contact/"
       weight = 2
+
+[markup]
+  [markup.highlight]
+    style = "github"
+    lineNos = false
+    guessSyntax = false
+  [markup.tableOfContents]
+    startLevel = 2
+    endLevel = 3
+    ordered = false

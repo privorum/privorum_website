@@ -13,21 +13,21 @@ biidin is a trading platform and AI agent fleet built in-house by Privorum. It b
 biidin operates a transparent fleet of AI traders (called the Captain Fleet) that:
 
 - **Generate signals** using machine learning models trained on market data, technical analysis, and sentiment
-- **Execute autonomously** across multiple exchanges (crypto, options, CFD) using a shared execution kernel
+- **Execute autonomously** across multiple exchanges (crypto, options, CFD)
 - **Report live results** with timestamped, verified track records
 - **Mirror for followers** — other traders can follow a fleet agent and mirror its moves on their own exchange accounts
 
 The platform is built for three audiences: retail traders who want to follow verified AI agents, traders who want to run their own automated strategies, and institutions that need portfolio management infrastructure.
 
-## The Technical Stack
+## The Technical Approach
 
-biidin is built on:
+biidin is built around:
 
-- **Backend** — Go monolith (Fiber) serving REST APIs and WebSocket real-time feeds
-- **Execution** — 9-phase pipeline for order routing across Kraken, Phemex, Hydra, IG, Alpaca, and other venues
-- **AI Engine** — LLM-powered signal generation (Captain AI) with credit-based tiering
-- **Infrastructure** — Kubernetes deployment with PostgreSQL, Redis, and multi-tenant architecture
-- **Desktop** — Lean standalone binary for BYOK (Bring Your Own Keys) traders who want local execution
+- **Backend** — a production backend platform serving APIs and real-time feeds
+- **Execution** — automated order routing across multiple crypto, options, and CFD venues
+- **AI Engine** — LLM-powered signal generation (Captain AI)
+- **Infrastructure** — cloud-native deployment designed for continuous, multi-user operation
+- **Desktop** — a standalone app for traders who want to run execution on their own machine
 
 ## The Incubator Story
 
@@ -36,19 +36,17 @@ biidin started as an in-house experiment at Privorum: "What if we built the trad
 The project combines:
 
 - **Privorum's backend expertise** — reliable, auditable systems built for production from day one
-- **AI integration** — intelligent signal generation using multiple LLM providers and fallback chains
+- **AI integration** — intelligent signal generation with LLMs
 - **Deep exchange knowledge** — connectors for crypto, derivatives, CFDs, and traditional brokers
 - **Verified track records** — on-chain proof that results are real, not backtested
 
-What began as a research project evolved into a fully-operated product with thousands of users, a thriving community, and a published fleet of AI traders managing real capital.
+What began as a research project evolved into a fully-operated product with thousands of users and a published fleet of AI traders managing real capital.
 
 ## Key Features
 
 **AI Signal Generation**
 - Multi-timeframe technical analysis (RSI, MACD, SMA, volume confluences)
 - LLM-powered sentiment and macro analysis
-- Credit-based access to premium LLM models
-- Community-contributed strategies and signal feeds
 
 **Verified Execution**
 - Live track records for every AI trader in the fleet
@@ -59,7 +57,6 @@ What began as a research project evolved into a fully-operated product with thou
 **Institutional Features**
 - Multi-broker support with unified position tracking
 - Performance reporting and analytics
-- Role-based access (agents, followers, operators)
 - Scalable infrastructure for high-frequency updates
 
 ## The Result
@@ -67,9 +64,8 @@ What began as a research project evolved into a fully-operated product with thou
 Today, biidin is:
 
 - **Operationally independent** — runs as its own product with its own user base and revenue
-- **Technically robust** — handles 24/7 execution, real-time WebSocket updates, and multi-venue order routing
+- **Technically robust** — handles 24/7 execution, real-time updates, and multi-venue order routing
 - **Profitable** — uses a freemium + premium tier model for retail, plus enterprise licensing
-- **Community-driven** — trading signals come from both Privorum-built AI models and community contributors
 
 ## Learn More
 
