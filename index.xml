@@ -27,7 +27,7 @@
 &lt;p&gt;biidin operates a transparent fleet of AI traders (called the Captain Fleet) that:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;Generate signals&lt;/strong&gt; using machine learning models trained on market data, technical analysis, and sentiment&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Execute autonomously&lt;/strong&gt; across multiple exchanges (crypto, options, CFD) using a shared execution kernel&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Execute autonomously&lt;/strong&gt; across multiple exchanges (crypto, options, CFD)&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Report live results&lt;/strong&gt; with timestamped, verified track records&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Mirror for followers&lt;/strong&gt; — other traders can follow a fleet agent and mirror its moves on their own exchange accounts&lt;/li&gt;
 &lt;/ul&gt;
@@ -52,7 +52,16 @@
 &lt;p&gt;Python, PyTorch, scikit-learn, Hugging Face, Ray, MLflow, Kubernetes, and the cloud infrastructure needed to train and serve models without surprises.&lt;/p&gt;</description></item><item><title>Ivens Signorini</title><link>https://privorum.com/team/ivens-signorini/</link><pubDate>Wed, 01 Apr 2026 10:00:00 +0000</pubDate><guid>https://privorum.com/team/ivens-signorini/</guid><description>&lt;p&gt;I am a Senior Backend Engineer with more than 18 years of experience designing, building, and maintaining high-performance systems across fintech, e-commerce, blockchain, and analytics.&lt;/p&gt;
 &lt;p&gt;I specialize in Golang, Java, and Solidity, with strong expertise in microservices architecture, CI/CD automation, and cloud deployment.&lt;/p&gt;
 &lt;p&gt;Throughout my career, I have focused on building scalable, reliable, and maintainable systems with a practical, solution-oriented approach.&lt;/p&gt;
-&lt;p&gt;I work best when the system has to hold up under real load, integrate cleanly with the rest of the stack, and stay maintainable once it&amp;rsquo;s in production.&lt;/p&gt;</description></item><item><title>Data Engineering &amp; Pipelines</title><link>https://privorum.com/services/data-engineering/</link><pubDate>Wed, 15 Apr 2026 10:00:00 +0000</pubDate><guid>https://privorum.com/services/data-engineering/</guid><description>&lt;p&gt;Privorum designs and builds data platforms, pipelines, and ingestion systems for teams that need their analytics, ML, and operational reporting to run on data they can actually trust.&lt;/p&gt;
+&lt;p&gt;I work best when the system has to hold up under real load, integrate cleanly with the rest of the stack, and stay maintainable once it&amp;rsquo;s in production.&lt;/p&gt;</description></item><item><title>NeverGoBlank — AI Career Coaching</title><link>https://privorum.com/products/nevergoblank/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://privorum.com/products/nevergoblank/</guid><description>&lt;h1 id="nevergoblank-ai-career-coaching"&gt;NeverGoBlank: AI Career Coaching&lt;/h1&gt;
+&lt;p&gt;NeverGoBlank is an AI-powered career coaching platform built in-house by Privorum. It helps professionals prepare for the moments where a career is decided: interviews, performance reviews, and negotiations.&lt;/p&gt;
+&lt;h2 id="the-platform"&gt;The Platform&lt;/h2&gt;
+&lt;p&gt;NeverGoBlank gives each user:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Personalised guidance&lt;/strong&gt; — preparation shaped around the person and the situation, not generic advice&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Scenario practice&lt;/strong&gt; — rehearse the conversation before it happens, so the real one is not the first attempt&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Support for high-stakes moments&lt;/strong&gt; — interviews, performance reviews, and negotiations&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;It also has a desktop companion app that captures audio, transcribes it, and connects it to an AI assistant, so preparation can happen alongside the user&amp;rsquo;s normal workflow.&lt;/p&gt;</description></item><item><title>Data Engineering &amp; Pipelines</title><link>https://privorum.com/services/data-engineering/</link><pubDate>Wed, 15 Apr 2026 10:00:00 +0000</pubDate><guid>https://privorum.com/services/data-engineering/</guid><description>&lt;p&gt;Privorum designs and builds data platforms, pipelines, and ingestion systems for teams that need their analytics, ML, and operational reporting to run on data they can actually trust.&lt;/p&gt;
 &lt;p&gt;We help answer practical questions such as:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Where should the source of truth live, and which systems should read from it?&lt;/li&gt;
