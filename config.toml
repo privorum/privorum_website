@@ -2,6 +2,8 @@ baseURL = "https://privorum.com"
 languageCode = "en-us"
 title = "Privorum — AI, Automation & Backend Engineering"
 themesDir = "themes"
+# Tags stay as article metadata; tag/category archive pages would be thin duplicates of the insights list.
+disableKinds = ["taxonomy", "term"]
 theme = "hugo-serif-theme"
 
 [params]
