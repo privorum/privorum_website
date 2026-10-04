@@ -64,4 +64,6 @@ The cheap model was chosen by a benchmark that could not detect the failure. Tha
 
 If any answer is no, a failure in that place will be quiet.
 
+A fallback is not the only way a failure goes quiet. A parser that rejects an answer it cannot read does the same, and we describe a case in [The model answered. We threw the answer away.](/insights/a-tool-call-that-arrives-as-text/)
+
 If you are designing an LLM workflow and want it reviewed for failure modes like this one, [get in touch](/contact/).

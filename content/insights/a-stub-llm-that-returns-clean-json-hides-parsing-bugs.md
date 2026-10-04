@@ -56,4 +56,6 @@ Be honest about how you run the dirty mode. Ours is a manual run, not part of th
 
 The same shape of problem shows up in evaluation: a check that inspects the wrong thing and reports success. See [The eval that scored 100% with zero tool calls](/insights/eval-scored-100-percent-with-zero-tool-calls/).
 
+The reverse also happens: a parser that is too strict throws away a valid answer written in an unexpected format. [The model answered. We threw the answer away.](/insights/a-tool-call-that-arrives-as-text/) is an example.
+
 If you want a review of the test strategy around an LLM feature, [get in touch](/contact/).

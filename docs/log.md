@@ -1,5 +1,66 @@
 # Work Log
 
+## 2026-10-04
+
+### Done (Insights draft: when the model writes its tool call as text)
+
+- Added `content/insights/a-tool-call-that-arrives-as-text.md` as `draft: true` (series "LLM tool calling in production", products referenced by URL only). Written as a story for marketing, not a how-to: an open-weight model wrote its tool call as tag text, our parser threw valid answers away as errors, how we found it, how we built a parser that refuses ambiguity, and the bug we found in our own fix (an optional `null` skipped the duplicate check). Structure: hook, the raw response, why it stayed hidden, the tempting fix and why it is a trap, the twist, how it was proven, takeaways, contact CTA.
+- Followed the plan's disclosure rules: no vendor or model names, no internal names, no tuning values, no counts or dates from production, no prompts or schemas. The code sample is written for the article, run against six failure cases and checked by removing its duplicate guard.
+- Verified: `hugo` into a scratch directory shows the draft is absent from a normal build and rendered under `hugo -D` (title, canonical URL, series anchor, both related links resolve). No em dashes or non-ASCII characters in the file.
+
+### Done (review fixes for the tool-call-as-text draft)
+
+- Standards: description trimmed to 155 chars (plan range 140-160), `toc: true` (siblings over ~730 words all have it), tone trimmed ("most dangerous", "pleased with ourselves", "best one" removed), three links added to published siblings (fallback-hid-an-outage, record-and-replay-for-llm-tests, a-stub-llm-that-returns-clean-json-hides-parsing-bugs); all resolve under `hugo -D`.
+- Disclosure: tool, field and value names are now invented (`submit_review`, `decision`, `score`, `notes`, `weight`) and the article says so in a note. Removed "action", "typed result" and "incident log" wording, and the "every parse error came from one model" claim is now "clustered on one model". The optional `size` field (hinted at the product domain) is now `weight`.
+- Code: the sample parser had holes found by running it (a forged extra parameter via an echoed `</parameter>`, `nan`/`inf` scores, a non-list value in a list field). It now rejects unknown names, non-finite numbers and wrong-shaped lists. Tested with 16 cases (all pass) and by removing each guard in turn (known-names, duplicate, finite, list-shape, last-closer, seen-before-continue): each removal fails at least one case. The text now says "last `</function>`" and lists the new guards, and the "break every guard" bullet includes the known-names check.
+- Wording at the owner's request: "three problems" from the adversarial review is now "a few problems".
+
+### Done (release of the tool-call-as-text article)
+
+- Removed `draft: true` from `content/insights/a-tool-call-that-arrives-as-text.md`, so it publishes with the Insights section.
+- Added back-links to it from `fallback-hid-an-outage.md` and `a-stub-llm-that-returns-clean-json-hides-parsing-bugs.md`.
+- Scrubbed three internal project and path names from this log before publishing, because the repository is public and the plan's disclosure rules forbid internal names.
+- Left out of the commit on purpose: `docs/seo-article-plan-agentic-llm.md` (needs owner review; it also names internal projects), the unreferenced third-party screenshot in `static/images/clients/`, and the local `.gitignore` edit.
+
+### Plan
+
+- Owner reviews `docs/seo-article-plan-agentic-llm.md`, then commits it. Before that, strip the internal project names and paths it contains, since the repository is public.
+
+## 2026-09-19
+
+### Done (SEO article plan for agentic development / LLM tool-calling)
+
+- Added `docs/seo-article-plan-agentic-llm.md`: backlog of ~25 article ideas in six tracks, publishing prerequisites, and disclosure rules. Products are referenced only by URL (www.biidin.com, www.nevergoblank.com); the plan carries no internal file paths, names, or implementation details, and articles are to teach general lessons rather than document internals.
+- Key finding: neither product's codebase contains HuggingFace Inference Providers / router / Inference API work. The tool-calling R&D used an OpenAI-compatible provider for open-weight models. The plan reframes the articles accordingly and lists real HF content as a separate R&D track.
+- Follow-up (same day): implemented the plan's publishing prerequisites and reviewed the plan. See "Done (SEO plan implementation)" below.
+
+### Done (SEO plan implementation + NeverGoBlank product page)
+
+- Added `content/products/nevergoblank.md` (same structure as `biidin.md`, limited to what `data/clients.json` and the product README support: career coaching for interviews, reviews and negotiations, plus a desktop companion). No usage, revenue or stack claims.
+- Added an `insights` section: `content/insights/_index.md` (kept `draft: true` until the first article is ready; the nav entry is in its front matter), `layouts/insights/list.html` and `single.html`, `archetypes/insights.md`, `assets/scss/pages/insights/_page-insights.scss`, and `layouts/partials/article-jsonld.html`.
+- `baseof.html`: added canonical URL and RSS alternate link on all pages, optional `keywords`, and `og:type=article`, `article:*` tags and `Article` JSON-LD for insights articles.
+- `config.toml`: Contact menu weight 6 -> 7 (leaves 6 for Insights); added `[markup]` highlight (`github` style) and table-of-contents settings.
+- Verified with `make build` (31 pages, no insights output while draft) and a temporary article built with `hugo -D` (canonical, JSON-LD, TOC, code block, related-service link, RSS and sitemap all present; screenshots checked). The test article was removed.
+- Self-review pass: confirmed JSON-LD stays valid when a title contains `</script>` or quotes, articles with no optional front matter render without errors, mobile layout at 390px is fine, and no existing content uses fenced code (so the highlight config changes nothing today). Corrected the plan's HF evidence list (added the NeverGoBlank backend). Updated the stale section lists in `AGENTS.md` and `CLAUDE.md` (`protocols/` was removed earlier; `products/` and `insights/` added).
+- `content/products/biidin.md`: removed the three "community" claims (thriving community, community-contributed strategies, "Community-driven" result bullet) at the owner's direction; they were not true. Other unverified claims on that page (user counts, profitability) are still in place.
+- `content/products/biidin.md`: removed the Go/Fiber framework mention and other sensitive implementation detail at the owner's direction (pipeline phase count, "shared execution kernel", named datastores and Kubernetes, multi-tenant note, BYOK/key-handling note, credit-based tiering, LLM provider fallback chains, role-based access model, WebSocket transport, named execution venues in the stack list). The stack section is now "The Technical Approach" and stays generic. Left in place: freemium/premium and enterprise licensing wording in "The Result", and the unverified user/profit claims.
+- Product pages with screenshots: added `static/images/products/biidin-trade-journal.webp` (cropped from a Playwright visual-test output in the product's own test output; entry/exit/result values blurred, sidebar, alpha banner and test masks cropped out, floating chat bubble removed; captioned as test data) and `nevergoblank-hero.webp` (live capture of nevergoblank.com homepage). Added an "Inside the App" section to `biidin.md` and "The Product Today" to `nevergoblank.md`, describing only what the images show. Added figure/caption styles in `_content.scss`. Removed the duplicate H1 from both product pages (the front-matter title already renders as H1). Deliberately not used: seeded dashboard screenshots (invented equity/P&L/win rate, tier and usage counters), competitor-comparison and pricing pages, admin pages, and three unrelated third-party images sitting untracked in `static/images/clients/`.
+- Wave 1 SEO drafts: added five unpublished articles in `content/insights/` (`draft: true`): fallback-hid-an-outage, eval-scored-100-percent-with-zero-tool-calls, the-400-that-only-happens-on-the-tool-result-turn, catalog-metadata-is-not-a-health-check, llm-cost-tracking-wrong-both-directions. Facts were checked against the internal incident and cost-reconciliation docs in the product repos; unsupported wording was removed. Corrected the plan: B-series and A1 belong to NeverGoBlank, and D1's cached-input gap over-states recorded cost. Verified with `hugo -D`: no broken internal links, descriptions 154-158 chars, disclosure scan clean. Not committed or deployed; waiting on owner review.
+- Wave 2 SEO drafts (Tracks B, C, D, E, F): added 20 unpublished articles in `content/insights/` (`draft: true`). Facts came from four read-only research passes over the product repos plus the official MCP and Hugging Face docs; each draft was then reviewed against those facts and unsupported claims were removed (for example the plan's forced-schema judge claim, which is not true of our judge). F1 is method-only because no HF token is available; F2 includes a real measurement (SciFact, 100 queries, TEI 1.9 CPU, nDCG@10 and Recall@10 with and without rerank) and deliberately no latency numbers. Verified with `hugo -D`: no broken internal links, descriptions 141-160 chars, disclosure scan clean; production build still excludes drafts. Not committed or deployed. Cleaned up: the temporary TEI container and image were removed.
+- Fixed the `nevergoblabk` typo to `nevergoblank` in the plan and this log. Review findings are in section 8 of the plan.
+
+### Plan (SEO)
+
+- Owner: confirm the facts and disclosure decisions for wave 1 (plan section 7 and 8) before any draft is written.
+- To launch the section with the first article: remove `draft: true` from `content/insights/_index.md`.
+- Optional: decide whether to trim stack details from `content/products/biidin.md`.
+
+### Plan
+
+- Section, layouts, menu entry and meta/OG/JSON-LD: done (see above).
+- Write wave 1 once the owner confirms facts: fallback-hid-outage postmortem, zero-calls-scored-100% eval bug, tool-result-turn 400, catalog-metadata-lies, LLM-bill-reconciliation.
+- Decide whether to run the HF Inference Providers probe (Track F). The separate eval-bench project was checked and holds no HF work.
+
 ## 2026-04-15 (late afternoon)
 
 ### Done
