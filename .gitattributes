@@ -1,0 +1,3 @@
+# The change log is encrypted in the repository with git-crypt.
+# It is plaintext only in a working copy that has been unlocked with the key.
+docs/log.md filter=git-crypt diff=git-crypt
