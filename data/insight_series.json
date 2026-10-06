@@ -8,12 +8,16 @@
     "description": "Qualifying models and building evals and tests you can trust."
   },
   {
+    "name": "Changing models and providers",
+    "description": "When a provider retires your model: replacements, other hosts for the same weights, and routing."
+  },
+  {
     "name": "Agent design patterns",
     "description": "General patterns for agent loops, tools and tiered models."
   },
   {
     "name": "LLM operations",
-    "description": "Cost tracking, alerting and monitoring for LLM features."
+    "description": "Cost tracking, alerting, monitoring and reliability for LLM features."
   },
   {
     "name": "Output guardrails",
