@@ -1,6 +1,6 @@
 ---
 title: "Our provider retired a model. The API said nothing."
-description: "An inference provider retired our production model with about ten days of notice, posted only on a changelog. How we missed it, and what we watch now."
+description: "An inference provider retired our production model with nine days of notice, posted only on a changelog. How we missed it, and what we watch now."
 date: 2026-10-06T13:00:00+02:00
 tags: ["llm", "operations", "monitoring", "inference-providers"]
 keywords: ["llm model deprecation", "inference provider model retired", "llm model not found 404", "llm model deprecation monitoring", "open-weight model removed from provider"]
@@ -27,9 +27,9 @@ Neither raised an alert. Uptime checks and incident alerts watch for failures, a
 
 ## The notice existed. We were not reading it.
 
-When we asked the provider, the answer was polite and short: the model was not coming back, and retirements are announced on the changelog page of the documentation.
+When we asked the provider, the answer was polite and short: there was no plan to restore the model, and retirements are announced on the changelog page of the documentation.
 
-They were right. The notice had been posted about ten days before the removal, in a batch with other models.
+They were right. The notice had been posted nine days before the removal, in a batch with other models.
 
 Three things about that notice are worth knowing if you depend on any hosted open-weight model:
 
