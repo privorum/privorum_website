@@ -61,5 +61,6 @@ C4Deployment
 
 - The `Makefile` supports local development with `./hugo server --watch=true`.
 - The `build` target removes `public/` and regenerates the site with `./hugo`.
-- `deploy.sh` indicates a Git-based publication flow using the generated `public/` directory and pushing to a publish branch.
+- `deploy.sh` is the manual publish step: `public/` is a worktree of the `gh-pages` branch, the script clears it, runs `hugo --minify`, commits and pushes `gh-pages`. There is no CI, so a push to `master` does not publish.
+- The site is served at `https://privorum.com` (`baseURL` in `config.toml`, `CNAME` in `static/`). Hosting on GitHub Pages is inferred from the `gh-pages` branch and the `CNAME`; the Pages setting is not visible from this repository.
 - No server-side compute, database, or queue is defined in this repository.

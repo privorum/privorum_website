@@ -28,7 +28,7 @@ The site is content-driven and theme-based:
 - `docs/architecture/` C4 architecture documentation
 - `config.toml` site metadata, menus, logo, and analytics settings
 - `Makefile` local development helpers
-- `deploy.sh` legacy publish script
+- `deploy.sh` publish script (builds into `public/`, a `gh-pages` worktree, and pushes it)
 
 ## Local Development
 
@@ -60,7 +60,7 @@ Generate the static site:
 make build
 ```
 
-That command removes `public/` and rebuilds the site with Hugo.
+That command removes `public/` and rebuilds the site with Hugo. `public/` is also the `gh-pages` worktree used by `./deploy.sh`, which recreates it on the next run.
 
 ## Configuration Notes
 
@@ -101,6 +101,10 @@ It includes:
 
 ## Deployment
 
-The repository includes a `deploy.sh` script that reflects a Git-based publish flow using generated output from `public/`.
+The site is published manually; there is no CI, so pushing to `master` does not publish.
 
-Treat it as project-specific deployment history, not as the current source of truth for automated releases. Review it carefully before using it in any live publish workflow.
+```bash
+make deploy    # same as ./deploy.sh
+```
+
+The script makes sure `public/` is a worktree of the `gh-pages` branch, clears it, runs `hugo --minify`, commits "Publish site to gh-pages" and pushes `gh-pages`. The site is served at `https://privorum.com` (`baseURL` in `config.toml`, `CNAME` in `static/`), most likely by GitHub Pages. Commit and push `master` before publishing so the source matches what goes live. `./deploy.sh setup` only repairs the worktree.
