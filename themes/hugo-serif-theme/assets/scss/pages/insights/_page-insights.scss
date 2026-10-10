@@ -70,12 +70,18 @@
   color: $mute;
 }
 
+.insight-row-head {
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+}
+
 .insight-meta {
   font-family: $font-mono;
   font-size: 0.78rem;
   letter-spacing: 0.04em;
   text-transform: uppercase;
-  color: $ink;
+  color: $mute;
 }
 
 .page-insights-single {

@@ -2,6 +2,7 @@
 title: "Our provider retired a model. The API said nothing."
 description: "An inference provider retired our production model with nine days of notice, posted only on a changelog. How we missed it, and what we watch now."
 date: 2026-10-06T13:00:00+02:00
+lastmod: 2026-10-09T21:00:00+02:00
 tags: ["llm", "operations", "monitoring", "inference-providers"]
 keywords: ["llm model deprecation", "inference provider model retired", "llm model not found 404", "llm model deprecation monitoring", "open-weight model removed from provider"]
 series: "Changing models and providers"

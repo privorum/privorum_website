@@ -1,7 +1,16 @@
+{{ $page := .page }}
 <li class="services-row">
-  <a href="{{ .RelPermalink }}" class="services-row-link">
-    <span class="services-title">{{ .Title }}</span>
-    <span class="services-summary">{{ or .Description (.Summary | plainify | truncate 160) }}</span>
+  <a href="{{ $page.RelPermalink }}" class="services-row-link">
+    <span class="insight-row-head">
+      <span class="services-title">{{ $page.Title }}</span>
+      {{ if .showDate }}
+      <span class="insight-meta">
+        <time datetime="{{ $page.Date.Format "2006-01-02" }}">{{ $page.Date.Format "2 Jan 2006" }}</time>
+        {{- if gt ($page.Lastmod.Format "20060102") ($page.Date.Format "20060102") }} · Updated <time datetime="{{ $page.Lastmod.Format "2006-01-02" }}">{{ $page.Lastmod.Format "2 Jan 2006" }}</time>{{ end }}
+      </span>
+      {{ end }}
+    </span>
+    <span class="services-summary">{{ or $page.Description ($page.Summary | plainify | truncate 160) }}</span>
     <span class="services-arrow" aria-hidden="true">&rarr;</span>
   </a>
 </li>

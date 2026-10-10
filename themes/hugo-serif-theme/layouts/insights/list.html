@@ -13,6 +13,7 @@
     <div class="hero-eyebrow">Insights</div>
     {{ .Content }}
     <nav class="insight-cats" aria-label="Categories">
+      {{ if $pages }}<a class="insight-cat-chip" href="#latest">Latest</a>{{ end }}
       {{ range hugo.Data.insight_series }}
       {{ $n := len (where $pages "Params.series" .name) }}
       {{ if $n }}<a class="insight-cat-chip" href="#{{ urlize .name }}">{{ .name }} <span>{{ $n }}</span></a>{{ end }}
@@ -24,6 +25,18 @@
 
 <section class="insights-archive">
   <div class="container">
+    {{ if $pages }}
+    <div class="insight-group" id="latest">
+      <header class="insight-group-head">
+        <h2>Latest</h2>
+        <p>The five most recent articles, newest first.</p>
+      </header>
+      <ol class="services-list">
+        {{ range first 5 $pages }}{{ partial "insight-row.html" (dict "page" . "showDate" true) }}{{ end }}
+      </ol>
+    </div>
+    {{ end }}
+
     {{ range $i, $s := hugo.Data.insight_series }}
     {{ $group := where $pages "Params.series" $s.name }}
     {{ if $group }}
@@ -33,7 +46,7 @@
         <p>{{ $s.description }}</p>
       </header>
       <ol class="services-list">
-        {{ range $group }}{{ partial "insight-row.html" . }}{{ end }}
+        {{ range $group }}{{ partial "insight-row.html" (dict "page" . "showDate" false) }}{{ end }}
       </ol>
     </div>
     {{ end }}
@@ -45,7 +58,7 @@
         <h2>More <span class="insight-group-count">{{ len $other }}</span></h2>
       </header>
       <ol class="services-list">
-        {{ range $other }}{{ partial "insight-row.html" . }}{{ end }}
+        {{ range $other }}{{ partial "insight-row.html" (dict "page" . "showDate" false) }}{{ end }}
       </ol>
     </div>
     {{ end }}

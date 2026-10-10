@@ -2,6 +2,7 @@
 title: "{{ replace .TranslationBaseName "-" " " | title }}"
 description: ""            # 140-160 characters
 date: {{ .Date }}
+# lastmod: set this when a published article is corrected; it shows as "Updated"
 draft: true
 tags: []
 keywords: []

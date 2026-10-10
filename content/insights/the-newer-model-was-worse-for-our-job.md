@@ -2,6 +2,7 @@
 title: "The newer model was worse for our job"
 description: "We tried to replace DeepSeek V3.2 with its V4 Flash successors on one provider and lost a working confidence threshold. What to test before a swap."
 date: 2026-10-06T12:30:00+02:00
+lastmod: 2026-10-09T21:00:00+02:00
 tags: ["llm", "model-selection", "evals", "tool-calling"]
 keywords: ["deepseek v3.2 vs v4 flash", "llm model upgrade regression", "llm confidence threshold calibration", "replace deprecated llm model", "deepseek v4.1 flash tool calling"]
 series: "Changing models and providers"

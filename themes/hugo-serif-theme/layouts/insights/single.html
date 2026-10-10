@@ -8,7 +8,8 @@
     <div class="hero-eyebrow"><a href="{{ "insights/" | relURL }}">Insights</a>{{ with .Params.series }} · <a href="{{ "insights/" | relURL }}#{{ urlize . }}">{{ . }}</a>{{ end }}</div>
     <h1 class="title">{{ .Title }}</h1>
     <p class="insight-byline">
-      <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2 January 2006" }}</time>
+      Published <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2 January 2006" }}</time>
+      {{- if gt (.Lastmod.Format "20060102") (.Date.Format "20060102") }} · Updated <time datetime="{{ .Lastmod.Format "2006-01-02" }}">{{ .Lastmod.Format "2 January 2006" }}</time>{{ end }}
       · {{ .ReadingTime }} min read
     </p>
   </div>
