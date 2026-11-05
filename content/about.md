@@ -22,10 +22,11 @@ Privorum supports products and platforms across:
 
 Our engineering experience spans:
 
-- **Languages** — Golang, Java, Node.js, TypeScript, Solidity
+- **Languages** — Golang, Rust, Python, Java, TypeScript, Node.js, Solidity
+- **AI and ML** — RAG pipelines, agent orchestration, LLM integration, speech-to-text and voice AI
 - **Frontend** — React, React Native
-- **Infrastructure** — Kubernetes, Docker, Terraform, AWS
-- **Data** — PostgreSQL, ArangoDB, Redis
+- **Infrastructure** — Kubernetes, Docker, Helm, Terraform, Ansible, AWS, Google Cloud
+- **Data** — PostgreSQL, MySQL, MongoDB, Redis, ArangoDB, Kafka, Elasticsearch, ClickHouse, BigQuery
 
 That breadth matters because most serious systems are not isolated. They involve product constraints, infrastructure tradeoffs, data flows, integrations, and operational reliability.
 

@@ -8,10 +8,12 @@ linkedinurl: "https://www.linkedin.com/in/ivens-signorini/"
 weight: 2
 ---
 
-I am a Senior Backend Engineer with more than 18 years of experience designing, building, and maintaining high-performance systems across fintech, e-commerce, blockchain, and analytics.
+I am a Senior Backend Engineer with more than 20 years of experience shipping production systems, from mission-critical banking and consumer-credit platforms to Go services for trading and AI start-ups.
 
-I specialize in Golang, Java, and Solidity, with strong expertise in microservices architecture, CI/CD automation, and cloud deployment.
+I work mainly in Go, Java, and Python, on Kubernetes. I have written Java since 2005 and Go since 2016.
 
-Throughout my career, I have focused on building scalable, reliable, and maintainable systems with a practical, solution-oriented approach.
+For six years I was technical lead of the private-label credit card platform of one of Brazil's largest fashion retailers, a high-volume consumer-credit system. At Banco Santander I worked on the systems integration for its acquisition of Banco Real, and I have led migrations from legacy monoliths to services in Java and Spring.
+
+At Privorum I have built backend services for Vosbor Exchange, AI-agent and ML-pipeline components for Genie AI, Go services on Kubernetes for MDL Talent Hub and Reusify, and the real-time voice assistant in NeverGoBlank.
 
 I work best when the system has to hold up under real load, integrate cleanly with the rest of the stack, and stay maintainable once it's in production.
