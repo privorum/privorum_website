@@ -26,5 +26,9 @@
   {
     "name": "Retrieval",
     "description": "Retrieval and reranking for search and RAG pipelines."
+  },
+  {
+    "name": "Security",
+    "description": "Scanners, CI gates and adversarial tests for code, dependencies and AI agents."
   }
 ]
